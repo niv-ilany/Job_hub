@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-03-10T19:36:56.513Z",
+    "lastUpdated": "2026-03-10T20:09:20.096Z",
     "jobCount": 245
   },
   "trackerJobs": [
@@ -4546,18 +4546,20 @@
       "status": "הגישה אותי בלינק",
       "lastUpdate": "2026-02-15",
       "interviewNotes": "בארץ מוצר, מרקטינג, להצטרף לקבוצת הדאטה. תפקיד מגוון עם כל מיני ממשקים.צוות פייד, צוות פאנל וצוות מוצר.ראש צוות go to market funnel מתחום הדאטה. 2-3 ימים מהמשרד, בלונדון מיניסטור. ראיון היכירות עם מנהל מגייס שחר (לא טכני) משימת בית, גישה לדאטה בייס (SQL ואנליטי ולהציג כשלב הבא) ראיון HR חניון נאות אביב!",
-      "companySize": 300,
+      "companySize": "300",
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": null,
       "numInterviews": null,
       "sqlTest": null,
       "analyticsTest": null,
-      "caseStudy": null
+      "caseStudy": null,
+      "companyType": null,
+      "processOverride": "closed_thankyou"
     },
     {
       "id": "hist-198",
