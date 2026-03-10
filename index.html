@@ -628,7 +628,11 @@ pre { white-space: pre-wrap; word-break: break-all; }
         </div>
         <div id="autofill-status" style="font-size:11px;margin-top:6px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;min-height:16px;"></div>
       </div>
-      <div class="form-group"><label class="form-label">Company *</label><input class="form-input" id="f-company"></div>
+      <div class="form-group">
+        <label class="form-label">Company *</label>
+        <input class="form-input" id="f-company" oninput="onCompanyInput(this.value)" autocomplete="off">
+        <div id="company-hint" style="font-size:11px;margin-top:4px;font-family:'JetBrains Mono',monospace;min-height:15px;"></div>
+      </div>
       <div class="form-group"><label class="form-label">Title *</label><input class="form-input" id="f-title"></div>
       <div class="form-group full"><label class="form-label">Application Method / Contact Notes</label><input class="form-input" id="f-applicationMethod"></div>
       <div class="form-group full"><label class="form-label">Status / What Happened</label><textarea class="form-textarea" id="f-status"></textarea></div>
@@ -939,6 +943,46 @@ document.getElementById('t-filter-method').addEventListener('change', renderTrac
 // ─────────────────────────────────────────────────────────────
 //  ADD / EDIT MODAL
 // ─────────────────────────────────────────────────────────────
+function onCompanyInput(val) {
+  const hint = document.getElementById('company-hint');
+  if (!hint || !val.trim()) { if (hint) hint.innerHTML = ''; return; }
+
+  const q = val.trim().toLowerCase();
+  // Find all jobs matching this company name (excluding current edit)
+  const matches = jobs.filter(j => {
+    if (editId && j.id === editId) return false;
+    return (j.company||'').toLowerCase() === q;
+  });
+
+  if (matches.length === 0) {
+    // Check for partial match to auto-copy companyType
+    const partial = jobs.find(j => (j.company||'').toLowerCase() === q && j.companyType);
+    hint.innerHTML = '';
+    return;
+  }
+
+  // Auto-copy companyType from existing entry if not already set
+  const withType = matches.find(j => j.companyType);
+  if (withType && !document.getElementById('f-companyType').value) {
+    document.getElementById('f-companyType').value = withType.companyType;
+  }
+
+  // Flag duplicate
+  const openCount  = matches.filter(j => isOpen(j)).length;
+  const totalCount = matches.length;
+  const names = [...new Set(matches.map(j => j.title||'?'))].slice(0,3).join(', ');
+
+  let msg = '', color = '';
+  if (openCount > 0) {
+    msg = `⚠️ ${totalCount} existing entr${totalCount>1?'ies':'y'} — ${openCount} still OPEN (${names})`;
+    color = '#e65c00';
+  } else {
+    msg = `ℹ️ ${totalCount} previous entr${totalCount>1?'ies':'y'} — all closed (${names})`;
+    color = '#888';
+  }
+  hint.innerHTML = `<span style="color:${color}">${msg}</span>`;
+}
+
 function openAddModal() {
   editId = null;
   document.getElementById('modal-title').textContent = 'Add Job';
@@ -970,6 +1014,7 @@ function openEditModal(id) {
 function clearForm() {
   ['f-month','f-lastUpdate','f-company','f-title','f-url','f-applicationMethod','f-status','f-interviewNotes','f-companySize','f-companyType','f-processOverride','f-numInterviews'].forEach(id => document.getElementById(id).value='');
   const afStatus = document.getElementById('autofill-status'); if (afStatus) afStatus.textContent = '';
+  const coHint = document.getElementById('company-hint'); if (coHint) coHint.innerHTML = '';
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => document.getElementById('f-'+k).checked=false);
 }
 function closeModal() { document.getElementById('modal-overlay').classList.add('hidden'); }
@@ -1819,7 +1864,10 @@ function fillModalFields(data) {
   const today = new Date().toISOString().slice(0,10);
   const month = today.slice(0,7);
   if (data.title)       document.getElementById('f-title').value = data.title;
-  if (data.company)     document.getElementById('f-company').value = data.company;
+  if (data.company) {
+    document.getElementById('f-company').value = data.company;
+    onCompanyInput(data.company); // trigger duplicate check + type copy
+  }
   if (data.companyType) document.getElementById('f-companyType').value = data.companyType;
   if (data.companySize) document.getElementById('f-companySize').value = data.companySize;
   if (!document.getElementById('f-month').value) document.getElementById('f-month').value = month;
