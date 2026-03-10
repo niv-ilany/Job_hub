@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-03-10T20:12:25.357Z",
+    "lastUpdated": "2026-03-10T20:22:30.902Z",
     "jobCount": 245
   },
   "trackerJobs": [
@@ -4963,15 +4963,15 @@
       "company": "teads",
       "url": "https://www.linkedin.com/jobs/view/4353812363/",
       "applicationMethod": "שלחתי לאייל הודעה",
-      "status": "",
-      "lastUpdate": "2026-01-20",
+      "status": "Thank you email sent",
+      "lastUpdate": "2026-03-10",
       "interviewNotes": "",
       "companySize": null,
       "applied": false,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": null,
       "numInterviews": null,
