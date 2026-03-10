@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-03-10T20:25:34.895Z",
+    "lastUpdated": "2026-03-10T20:26:19.354Z",
     "jobCount": 245
   },
   "trackerJobs": [
@@ -4334,10 +4334,10 @@
     {
       "id": "hist-188",
       "month": "2026-01",
-      "title": "Product Data Analyst - Fraud ",
+      "title": "Product Data Analyst - Fraud",
       "company": "Lemonade",
       "url": "https://www.linkedin.com/jobs/view/4360792600/",
-      "applicationMethod": "שלחתי הודעה לשיראל ",
+      "applicationMethod": "שלחתי הודעה לשיראל",
       "status": "אמרה שתשתלח אלי לינק",
       "lastUpdate": "2026-01-19",
       "interviewNotes": "היה ראיון ראשוני שמסמן שכנראה אין התאמה לתפקידים הפתוחים אבל נראה לגבי זה, אמרה שתחזור אלי",
@@ -4346,13 +4346,15 @@
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
       "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
-      "caseStudy": null
+      "caseStudy": null,
+      "companyType": null,
+      "processOverride": null
     },
     {
       "id": "hist-189",
