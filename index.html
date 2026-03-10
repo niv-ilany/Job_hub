@@ -2044,7 +2044,7 @@ function buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExc
 - MBA Marketing, Bar-Ilan.
 
 === PREVIOUSLY INTERVIEWED — SKIP THESE ===
-Do not return jobs from: \${uniqueExcluded.length > 0 ? uniqueExcluded.slice(0,20).join(', ') : 'none'}
+Do not return jobs from: \${uniqueExcluded.length > 0 ? uniqueExcluded.slice(0,10).join(', ') : 'none'}
 This is critical — returning a tracked company wastes a search result and costs money.
 
 === SEARCH BY JOB DESCRIPTION — NOT TITLE ===
@@ -2118,21 +2118,14 @@ Only return jobs posted in the last 30 days. Accept up to 45 days max for a stro
 - LinkedIn: always use f_TPR=r2592000 (30-day filter) in search URLs
 - Always include postedDate — "today", "X days ago", "X weeks ago". If you cannot determine date, skip the job.
 
-=== SEARCH STRATEGY — LinkedIn ONLY, 3 searches max ===
-Search ONLY on LinkedIn (site:linkedin.com/jobs). Do not search Drushim or AllJobs this run.
+=== SEARCH STRATEGY — 2 LinkedIn searches only ===
+Run exactly 2 searches. Keep results concise.
 
-SEARCH 1 — Business/Senior analyst + insight language:
-site:linkedin.com/jobs "senior business analyst" OR "business analyst" OR "revenue analyst" OR "strategic analyst" SQL Israel
+SEARCH 1:
+site:linkedin.com/jobs ("business analyst" OR "senior business analyst" OR "marketing analyst" OR "marketing science" OR "growth analyst" OR "revenue analyst") SQL Israel
 
-SEARCH 2 — Marketing/Growth/Measurement titles:
-site:linkedin.com/jobs "marketing analyst" OR "marketing science" OR "growth analyst" OR "attribution analyst" OR "incrementality" SQL Israel
-
-SEARCH 3 — Data analyst + BI tools + business impact:
-site:linkedin.com/jobs "data analyst" SQL "actionable insights" OR "dashboard" OR "Tableau" OR "Looker" OR "Power BI" Israel
-
-After searches, scan these high-priority company LinkedIn pages for fresh openings not caught by keyword search:
-Yad2, Monday.com, Lemonade, Riskified, Yotpo, Wolt, Fiverr, Taboola, AppsFlyer,
-INCRMNTAL, Lightricks, eToro, Melio, Playtika, Moon Active, Wix, Global-e, Papaya Global
+SEARCH 2:
+site:linkedin.com/jobs ("data analyst" OR "insights analyst" OR "attribution analyst" OR "CRM analyst") (Tableau OR Looker OR "Power BI" OR Sisense OR Amplitude) Israel
 
 === ANTI-HALLUCINATION RULES — ABSOLUTE ===
 NEVER invent job listings. Every result must come from an actual search result.
@@ -2243,7 +2236,7 @@ async function runSearch() {
       headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
       body: JSON.stringify({
         model:'claude-sonnet-4-20250514',
-        max_tokens:3000,
+        max_tokens:1500,
         tools:[{type:'web_search_20250305',name:'web_search'}],
         system:systemPrompt,
         messages:[{role:'user',content:'Search LinkedIn for analyst job openings in Israel from the last 30 days. Run all 3 searches. Return 5-8 jobs as a JSON array. SKIP any job showing No longer accepting applications, or posted/reposted more than 45 days ago. Return all real jobs you found — do not return an empty array.'}]
