@@ -2243,7 +2243,7 @@ async function runSearch() {
       headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
       body: JSON.stringify({
         model:'claude-sonnet-4-20250514',
-        max_tokens:1500,
+        max_tokens:3000,
         tools:[{type:'web_search_20250305',name:'web_search'}],
         system:systemPrompt,
         messages:[{role:'user',content:'Search LinkedIn for analyst job openings in Israel from the last 30 days. Run all 3 searches. Return 5-8 jobs as a JSON array. SKIP any job showing No longer accepting applications, or posted/reposted more than 45 days ago. Return all real jobs you found — do not return an empty array.'}]
@@ -2284,7 +2284,12 @@ async function runSearch() {
         })
       });
       const retryData = await retry.json();
-      let retryText = ''; for (const b of retryData.content) { if (b.type==='text') retryText+=b.text; }
+      let retryText = '';
+      if (retryData && Array.isArray(retryData.content)) {
+        for (const b of retryData.content) { if (b.type==='text') retryText+=b.text; }
+      } else {
+        throw new Error('Retry API call failed: ' + JSON.stringify(retryData).slice(0,200));
+      }
       log('Retry raw: ' + retryText.slice(0,300), 'info');
       try { const m=retryText.match(/\[[\s\S]*\]/); if(m) parsed=JSON.parse(m[0]); }
       catch(e2) {}
