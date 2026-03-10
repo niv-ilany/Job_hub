@@ -2256,10 +2256,25 @@ async function runSearch() {
     const data = await response.json();
     log('Agent responded','success');
     let text = ''; for (const block of data.content) { if (block.type==='text') text+=block.text; }
+
+    // Log which searches were performed
+    const searchBlocks = data.content.filter(b => b.type === 'tool_use' && b.name === 'web_search');
+    searchBlocks.forEach((s,i) => log('Search ' + (i+1) + ': ' + (s.input && s.input.query ? s.input.query : '?'), 'info'));
+
+    // Log raw text if no JSON found — helps debug empty results
+    if (!text.trim()) {
+      log('Warning: Agent returned no text at all','warn');
+    } else if (!text.includes('[')) {
+      log('Warning — no JSON in response: ' + text.slice(0, 400), 'warn');
+    }
+
     let parsed = [];
     try { const m=text.match(/\[[\s\S]*\]/); if(m) parsed=JSON.parse(m[0]); }
     catch(e) { try { parsed=JSON.parse(text.replace(/```json|```/g,'').trim()); } catch(e2) { throw new Error('Could not parse job listings'); } }
-    if (!Array.isArray(parsed)||parsed.length===0) throw new Error('Agent returned no listings');
+    if (!Array.isArray(parsed)||parsed.length===0) {
+      if (text.trim()) log('Full raw response: ' + text.slice(0, 600), 'warn');
+      throw new Error('Agent returned no listings');
+    }
 
     // ── Client-side quality filter ──
     const beforeFilter = parsed.length;
