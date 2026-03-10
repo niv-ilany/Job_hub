@@ -1389,8 +1389,9 @@ function isGhConfigured() {
 }
 
 // Call this whenever data changes — debounces to avoid hammering GitHub API
+let ghAppReady = false; // prevents sync during initial load
 function scheduleGhSync() {
-  if (!isGhConfigured()) return;
+  if (!isGhConfigured() || !ghAppReady) return;
   if (ghSyncTimer) clearTimeout(ghSyncTimer);
   setGhSyncStatus('pending');
   ghSyncTimer = setTimeout(() => syncToGitHub(), 3000); // 3s debounce
@@ -1478,7 +1479,14 @@ async function syncToGitHub(silent = false) {
       if (!silent) showToast('Saved to GitHub ✓', '🐙');
     } else {
       const err = await res.json();
-      throw new Error(err.message || `HTTP ${res.status}`);
+      let msg = err.message || `HTTP ${res.status}`;
+      if (res.status === 403 && msg.includes('personal access token')) {
+        msg = 'Token needs "repo" scope. Go to github.com/settings/tokens → use Tokens (classic), NOT fine-grained, tick "repo" scope.';
+      }
+      if (res.status === 404) {
+        msg = 'Repo not found — check username and repo name (use underscore if that is how your repo is named).';
+      }
+      throw new Error(msg);
     }
   } catch(e) {
     setGhSyncStatus('error');
@@ -1911,8 +1919,9 @@ function renderFinderJobs() {
 //  INIT — async, fetches data.json first
 // ─────────────────────────────────────────────────────────────
 async function initApp() {
-  // Show loading state
-  document.getElementById('tracker-body').innerHTML =
+  // Show loading state — guard in case DOM element doesn't exist yet
+  const tbodyEl = document.getElementById('tracker-body');
+  if (tbodyEl) tbodyEl.innerHTML =
     '<tr><td colspan="99" style="text-align:center;padding:40px;color:var(--text-muted)">⏳ Loading your data...</td></tr>';
 
   try {
@@ -1953,7 +1962,8 @@ async function initApp() {
       jobs = JSON.parse(lsJobs);
       console.warn('data.json not reachable, using localStorage fallback:', err.message);
     } else {
-      document.getElementById('tracker-body').innerHTML = `
+      const tbErr = document.getElementById('tracker-body');
+      if (tbErr) tbErr.innerHTML = `
         <tr><td colspan="99" style="text-align:center;padding:40px;">
           <div style="color:#ff6b6b;font-size:15px;font-weight:600;margin-bottom:12px;">⚠️ Could not load data.json</div>
           <div style="color:var(--text-muted);font-size:13px;line-height:1.7;">
@@ -1972,9 +1982,10 @@ async function initApp() {
   renderTracker();
   renderFinderJobs();
   updateNavStats();
+  ghAppReady = true; // now safe to sync changes to GitHub
 }
 
-initApp();
+document.addEventListener('DOMContentLoaded', initApp);
 </script>
 </body>
 </html>
