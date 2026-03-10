@@ -2035,9 +2035,8 @@ function buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExc
 - Preference: B2C, B2B2C, marketplaces, ad-tech, fintech, gaming. Strong B2B track record too.
 - MBA Marketing, Bar-Ilan.
 
-=== PREVIOUSLY INTERVIEWED — DO NOT RETURN THESE COMPANIES ===
-Niv has already interviewed at these companies. Do NOT return jobs from them (applying again is fine, but these are already known):
-\${uniqueExcluded.length > 0 ? uniqueExcluded.join(', ') : 'none'}
+=== PREVIOUSLY INTERVIEWED — SKIP THESE ===
+Do not return jobs from: \${uniqueExcluded.length > 0 ? uniqueExcluded.slice(0,20).join(', ') : 'none'}
 This is critical — returning a tracked company wastes a search result and costs money.
 
 === SEARCH BY JOB DESCRIPTION — NOT TITLE ===
@@ -2138,7 +2137,7 @@ VALID LinkedIn URL format ONLY:
   ✗ linkedin.com/jobs/search/?keywords=analyst (FORBIDDEN)
   ✗ linkedin.com/jobs/data-analyst-jobs (FORBIDDEN)
 
-3 real verified jobs > 8 invented ones. If unsure — leave it out.
+Return what you actually found. 3 real jobs is fine. DO NOT return an empty array [] — if you found jobs, include them even if you cannot verify every detail. Only omit if the URL is clearly a search page.
 
 === SCORING ===
 88-95: SQL + BI tool + insight-impact language + cohort/LTV/A/B/attribution/incrementality + B2C or marketplace or ad-tech
@@ -2260,8 +2259,26 @@ async function runSearch() {
     try { const m=text.match(/\[[\s\S]*\]/); if(m) parsed=JSON.parse(m[0]); }
     catch(e) { try { parsed=JSON.parse(text.replace(/```json|```/g,'').trim()); } catch(e2) { throw new Error('Could not parse job listings'); } }
     if (!Array.isArray(parsed)||parsed.length===0) {
-      if (text.trim()) log('Full raw response: ' + text.slice(0, 600), 'warn');
-      throw new Error('Agent returned no listings');
+      if (text.trim()) log('Raw response: ' + text.slice(0, 600), 'warn');
+      // Retry once with a simpler, more permissive message
+      log('Empty result — retrying with relaxed prompt...', 'warn');
+      const retry = await fetch('https://api.anthropic.com/v1/messages', {
+        method:'POST',
+        headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+        body: JSON.stringify({
+          model:'claude-sonnet-4-20250514',
+          max_tokens:1500,
+          tools:[{type:'web_search_20250305',name:'web_search'}],
+          system: systemPrompt,
+          messages:[{role:'user',content:'Search LinkedIn for data analyst or business analyst jobs in Israel from the last 30 days. Return whatever real jobs you find as a JSON array. Include jobs even if you are not 100% certain — I will verify them myself. Return at least 3-5 results.'}]
+        })
+      });
+      const retryData = await retry.json();
+      let retryText = ''; for (const b of retryData.content) { if (b.type==='text') retryText+=b.text; }
+      log('Retry raw: ' + retryText.slice(0,300), 'info');
+      try { const m=retryText.match(/\[[\s\S]*\]/); if(m) parsed=JSON.parse(m[0]); }
+      catch(e2) {}
+      if (!Array.isArray(parsed)||parsed.length===0) throw new Error('Agent returned no listings after retry');
     }
 
     // ── Client-side quality filter ──
