@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "description": "Niv Ilany — Job Search Hub data file. This is YOUR file. Edit it freely. The app (index.html) fetches this on load and never overwrites it.",
-    "version": "1.0",
-    "lastUpdated": "2026-03-09"
+    "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
+    "lastUpdated": "2026-03-10T19:31:35.835Z",
+    "jobCount": 245
   },
   "trackerJobs": [
     {
@@ -3358,7 +3358,7 @@
       "thankYouEmail": null,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": true,
       "analyticsTest": null,
       "caseStudy": null
@@ -3381,7 +3381,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3404,7 +3404,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3427,7 +3427,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": true,
       "analyticsTest": false,
       "caseStudy": false
@@ -3450,7 +3450,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3473,7 +3473,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3496,7 +3496,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 3.0,
+      "numInterviews": 3,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3519,7 +3519,7 @@
       "thankYouEmail": null,
       "choseNotToApply": true,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3542,7 +3542,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3565,7 +3565,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3588,7 +3588,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": true,
       "analyticsTest": true,
       "caseStudy": null
@@ -3611,7 +3611,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3634,7 +3634,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3657,7 +3657,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3680,7 +3680,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 8.0,
+      "numInterviews": 8,
       "sqlTest": null,
       "analyticsTest": true,
       "caseStudy": true
@@ -3703,7 +3703,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": true,
       "analyticsTest": null,
       "caseStudy": null
@@ -3726,7 +3726,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 4.0,
+      "numInterviews": 4,
       "sqlTest": true,
       "analyticsTest": true,
       "caseStudy": true
@@ -3749,7 +3749,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3772,7 +3772,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 3.0,
+      "numInterviews": 3,
       "sqlTest": true,
       "analyticsTest": true,
       "caseStudy": null
@@ -3795,7 +3795,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": null,
       "analyticsTest": true,
       "caseStudy": null
@@ -3841,7 +3841,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3864,7 +3864,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": true,
       "analyticsTest": null,
       "caseStudy": null
@@ -3956,7 +3956,7 @@
       "thankYouEmail": null,
       "choseNotToApply": true,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -3979,7 +3979,7 @@
       "thankYouEmail": null,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4002,7 +4002,7 @@
       "thankYouEmail": null,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": null,
       "analyticsTest": true,
       "caseStudy": null
@@ -4163,7 +4163,7 @@
       "thankYouEmail": null,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 4.0,
+      "numInterviews": 4,
       "sqlTest": true,
       "analyticsTest": null,
       "caseStudy": null
@@ -4186,7 +4186,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 3.0,
+      "numInterviews": 3,
       "sqlTest": true,
       "analyticsTest": true,
       "caseStudy": null
@@ -4209,7 +4209,7 @@
       "thankYouEmail": true,
       "choseNotToApply": true,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4232,7 +4232,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4255,7 +4255,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4301,7 +4301,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 3.0,
+      "numInterviews": 3,
       "sqlTest": true,
       "analyticsTest": true,
       "caseStudy": null
@@ -4324,7 +4324,7 @@
       "thankYouEmail": null,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4347,7 +4347,7 @@
       "thankYouEmail": null,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4370,7 +4370,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 5.0,
+      "numInterviews": 5,
       "sqlTest": true,
       "analyticsTest": true,
       "caseStudy": null
@@ -4393,7 +4393,7 @@
       "thankYouEmail": null,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4416,7 +4416,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4439,7 +4439,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4462,7 +4462,7 @@
       "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4485,7 +4485,7 @@
       "thankYouEmail": null,
       "choseNotToApply": null,
       "interviewed": null,
-      "numInterviews": 0.0,
+      "numInterviews": 0,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4508,7 +4508,7 @@
       "thankYouEmail": null,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2.0,
+      "numInterviews": 2,
       "sqlTest": true,
       "analyticsTest": null,
       "caseStudy": null
@@ -4531,7 +4531,7 @@
       "thankYouEmail": null,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 1.0,
+      "numInterviews": 1,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null
@@ -4546,7 +4546,7 @@
       "status": "הגישה אותי בלינק",
       "lastUpdate": "2026-02-15",
       "interviewNotes": "בארץ מוצר, מרקטינג, להצטרף לקבוצת הדאטה. תפקיד מגוון עם כל מיני ממשקים.צוות פייד, צוות פאנל וצוות מוצר.ראש צוות go to market funnel מתחום הדאטה. 2-3 ימים מהמשרד, בלונדון מיניסטור. ראיון היכירות עם מנהל מגייס שחר (לא טכני) משימת בית, גישה לדאטה בייס (SQL ואנליטי ולהציג כשלב הבא) ראיון HR חניון נאות אביב!",
-      "companySize": 300.0,
+      "companySize": 300,
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
@@ -5644,9 +5644,6 @@
   "finderJobs": [],
   "finderFeedback": {},
   "settings": {
-    "threshold": 80,
-    "telegramToken": "",
-    "telegramChatId": "",
-    "apiKey": ""
+    "threshold": "80"
   }
 }
