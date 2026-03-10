@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-03-10T19:31:35.835Z",
+    "lastUpdated": "2026-03-10T19:36:56.513Z",
     "jobCount": 245
   },
   "trackerJobs": [
@@ -4497,18 +4497,18 @@
       "company": "Appreel tv",
       "url": "",
       "applicationMethod": "פנה אלי מעין מגייס אמריקאי וקבע ראיון",
-      "status": "",
+      "status": "הם החליטו להתקדם עם מועמדים אחרים\nאני חושד שזה בגלל נושא ההקמה שבכלל מחפשים מהנדס דאטה במסווה של אנליסט\nאולי מגבלת זמן שאני אבא ל2",
       "lastUpdate": "2026-02-15",
       "interviewNotes": "",
-      "companySize": null,
+      "companySize": "11-50",
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": true,
-      "numInterviews": 2,
+      "numInterviews": 3,
       "sqlTest": true,
       "analyticsTest": null,
       "caseStudy": null
