@@ -1504,35 +1504,23 @@ function buildLinkedIn(company) {
 }
 
 // ── URL Validator ─────────────────────────────────────────────
-// Checks: (1) URL responds with 200, (2) LinkedIn jobs not closed
+// LinkedIn blocks all proxy fetches — trust URL format only.
+// Non-LinkedIn: fetch via proxy to check for 404/closed.
 async function validateJobUrl(url, company) {
   if (!url || !url.startsWith('http')) return { ok: false, reason: 'no URL' };
 
   try {
-    // Use a no-cors HEAD request first — just checks reachability
-    // For LinkedIn we need to fetch + check page content
     const isLinkedIn = url.includes('linkedin.com');
 
     if (isLinkedIn) {
-      // Fetch via allorigins proxy to read page content
-      const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
-      const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(8000) });
-      if (!res.ok) return { ok: false, reason: `HTTP ${res.status}` };
-      const data = await res.json();
-      const body = (data.contents || '').toLowerCase();
-
-      // LinkedIn redirected to login — cannot verify, remove
-      if (body.includes('join now') && body.includes('sign in') && !body.includes('apply')) {
-        return { ok: false, reason: 'LinkedIn requires login — unverifiable URL' };
+      // LinkedIn always requires login — proxy fetch always times out.
+      // URL format already validated by client-side filter (/jobs/view/ + 7-digit ID).
+      // Just confirm structure is intact and pass through.
+      const hasViewPath = /\/jobs\/view\//i.test(url);
+      const hasJobId = /[0-9]{7,}/.test(url);
+      if (!hasViewPath || !hasJobId) {
+        return { ok: false, reason: 'LinkedIn URL missing /jobs/view/ or numeric job ID' };
       }
-      // Check for closed/expired job
-      if (body.includes('no longer accepting applications')) {
-        return { ok: false, reason: 'No longer accepting applications' };
-      }
-      if (body.includes('this job is no longer available') || body.includes('job has expired')) {
-        return { ok: false, reason: 'Job expired' };
-      }
-      // If we got real content, it's valid
       return { ok: true };
     } else {
       // For non-LinkedIn: simple fetch with timeout
