@@ -381,7 +381,7 @@ pre { white-space: pre-wrap; word-break: break-all; }
 <!-- ─── GLOBAL NAV ─────────────────────────────── -->
 <nav class="global-nav">
   <div class="nav-logo">Niv's <em>Job Hub</em></div>
-  <button class="nav-tab active" onclick="showTab('finder',this)">🔍 Job Finder</button>
+  <button class="nav-tab active" onclick="showTab('finder',this)">🎯 Job Analyzer</button>
   <button class="nav-tab" onclick="showTab('tracker',this)">📋 Job Tracker</button>
   <button class="nav-tab" onclick="showTab('analysis',this)">📊 Analysis</button>
   <div class="nav-right">
@@ -397,6 +397,7 @@ pre { white-space: pre-wrap; word-break: break-all; }
 <div class="tab-page active" id="tab-finder">
 <div class="finder-wrap">
 
+  <!-- Settings Panel (kept for API key + integrations) -->
   <div class="settings-panel">
     <button class="settings-toggle" onclick="toggleSettings()">
       <div class="settings-left">
@@ -462,78 +463,64 @@ pre { white-space: pre-wrap; word-break: break-all; }
     </div>
   </div>
 
-  <div class="profile-section">
-    <div class="profile-header">
-      <h2>Your preference profile</h2>
-      <span style="font-size:11px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;" id="finder-tracked-count">245 positions analyzed</span>
-    </div>
-    <div class="cluster-group">
-      <button class="cluster-btn data active" onclick="toggleCluster('data',this)">Data Analyst</button>
-      <button class="cluster-btn business active" onclick="toggleCluster('business',this)">Business Analyst</button>
-      <button class="cluster-btn product active" onclick="toggleCluster('product',this)">Product Analyst</button>
-      <button class="cluster-btn marketing active" onclick="toggleCluster('marketing',this)">Marketing Analyst / Ops</button>
-    </div>
-    <div class="profile-meta">
-      👤 <strong>9 yrs exp</strong> · Finance, Cybersecurity, Gaming &nbsp;·&nbsp;
-      🛠 <strong>SQL, Tableau, Sisense,</strong> A/B, cohort, LTV &nbsp;·&nbsp;
-      📍 <strong>Herzliya</strong> + Remote &nbsp;·&nbsp;
-      🎯 Leaning <strong style="color:var(--accent4)">B2C</strong> · Proven <strong style="color:var(--accent)">B2B</strong>
-    </div>
-  </div>
-
-  <div class="controls">
-    <button class="search-btn" id="search-btn" onclick="runSearch()">⚡ Find New Jobs</button>
-    <button class="inline-btn" onclick="previewPrompt()" style="height:40px;font-size:13px;padding:0 16px;border-radius:9px;" title="See exactly what will be sent to the API — zero cost">🔍 Preview Prompt</button>
-    <div class="filter-group">
-      <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
-      <button class="filter-btn" onclick="setFilter('liked',this)">👍 Liked</button>
-      <button class="filter-btn" onclick="setFilter('new',this)">New</button>
-      <button class="filter-btn" onclick="setFilter('b2c',this)">B2C</button>
-    </div>
-  </div>
-
-  <!-- Preview Modal -->
-  <div class="modal-overlay hidden" id="preview-overlay" onclick="if(event.target===this)document.getElementById('preview-overlay').classList.add('hidden')">
-    <div class="modal" style="max-width:780px;">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
-        <div class="modal-title" style="margin-bottom:0">📋 Prompt Preview — Zero Cost</div>
-        <button class="t-btn t-btn-ghost" onclick="document.getElementById('preview-overlay').classList.add('hidden')">✕ Close</button>
+  <!-- ── JOB ANALYZER ── -->
+  <div style="margin-top:28px;">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;">
+      <div>
+        <h2 style="font-size:18px;font-weight:600;color:var(--text);">🎯 Job Fit Analyzer</h2>
+        <p style="font-size:13px;color:var(--text-muted);margin-top:3px;">Paste a job description → get an honest fit score, red flags, and what to emphasize</p>
       </div>
-      <div style="background:#1a1a2a;border-radius:10px;padding:6px 14px 4px;margin-bottom:12px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#43d9ad;">✓ Model: claude-sonnet-4-20250514</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#ffd166;">⚡ max_tokens cap: <strong style="color:#fff" id="prev-maxtokens">1,500</strong></span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6080ff;">🔍 Searches: 3 max</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#ffd166;">💰 Est. cost: ~$0.03–0.08 per run</span>
+      <div style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);padding-top:4px;">~$0.01 per analysis</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+      <!-- Input -->
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+          <label style="font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;">Job Description</label>
+          <button class="inline-btn" onclick="clearAnalyzer()" style="font-size:11px;height:24px;">✕ Clear</button>
+        </div>
+        <!-- URL fetch row -->
+        <div style="display:flex;gap:7px;margin-bottom:8px;">
+          <input type="url" id="jd-url" placeholder="Paste job URL to auto-fetch (LinkedIn, Drushim, etc.)" style="flex:1;background:var(--surface);border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;font-family:'Inter',sans-serif;color:var(--text);transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'" onkeydown="if(event.key==='Enter')fetchJdFromUrl()" />
+          <button class="inline-btn" onclick="fetchJdFromUrl()" id="fetch-url-btn" style="height:36px;padding:0 14px;font-size:12px;white-space:nowrap;">🔗 Fetch</button>
+        </div>
+        <div id="fetch-status" style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text-muted);margin-bottom:6px;min-height:14px;"></div>
+        <textarea id="jd-input" placeholder="...or paste the job description directly here.
+
+Include: title, company, responsibilities, requirements.
+The more text the better." style="width:100%;height:280px;background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:14px;font-size:13px;font-family:'Inter',sans-serif;color:var(--text);resize:vertical;line-height:1.6;transition:border-color 0.2s;" oninput="onJdInput()" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;">
+          <span id="jd-char-count" style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text-dim);">0 chars</span>
+          <button class="search-btn" id="analyze-btn" onclick="runAnalysis()" disabled style="padding:10px 24px;">
+            <span id="analyze-btn-text">⚡ Analyze Fit</span>
+          </button>
+        </div>
       </div>
-      <div style="margin-bottom:8px;font-size:11px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">System Prompt sent to Claude:</div>
-      <pre id="preview-system" style="background:#f5f4f0;border:1px solid var(--border);border-radius:8px;padding:14px;font-size:11px;font-family:'JetBrains Mono',monospace;line-height:1.7;max-height:340px;overflow-y:auto;white-space:pre-wrap;word-break:break-word;color:var(--text);"></pre>
-      <div style="margin:12px 0 8px;font-size:11px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">User Message:</div>
-      <pre id="preview-user" style="background:#f5f4f0;border:1px solid var(--border);border-radius:8px;padding:14px;font-size:11px;font-family:'JetBrains Mono',monospace;line-height:1.7;white-space:pre-wrap;word-break:break-word;color:var(--text);"></pre>
-      <div style="margin:12px 0 8px;font-size:11px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Excluded companies (from tracker — interviewed last 60 days):</div>
-      <div id="preview-excluded" style="background:#fef8ed;border:1px solid #f0d080;border-radius:8px;padding:12px;font-size:12px;font-family:'JetBrains Mono',monospace;color:#7a5500;line-height:1.8;"></div>
-      <div style="margin:12px 0 8px;font-size:11px;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;">Active filters:</div>
-      <div id="preview-filters" style="background:#eef1ff;border:1px solid #c0caff;border-radius:8px;padding:12px;font-size:12px;font-family:'JetBrains Mono',monospace;color:#2d3a99;line-height:1.8;"></div>
-      <div class="modal-actions" style="margin-top:16px;">
-        <button class="t-btn t-btn-ghost" onclick="document.getElementById('preview-overlay').classList.add('hidden')">Close</button>
-        <button class="t-btn t-btn-primary" onclick="document.getElementById('preview-overlay').classList.add('hidden'); runSearch()">Looks good — Run Search ⚡</button>
+
+      <!-- Result -->
+      <div>
+        <div style="margin-bottom:6px;">
+          <label style="font-size:12px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;">Analysis</label>
+        </div>
+        <div id="analysis-result" style="height:340px;background:var(--surface);border:1.5px solid var(--border);border-radius:10px;padding:16px;overflow-y:auto;font-size:13px;line-height:1.7;color:var(--text-muted);">
+          <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;color:var(--text-dim);">
+            <div style="font-size:32px;">🎯</div>
+            <div style="font-weight:600;color:var(--text-muted);">Paste a JD and click Analyze</div>
+            <div style="font-size:12px;text-align:center;max-width:240px;">You'll get a fit score, honest assessment, red flags, and what to highlight in your application</div>
+          </div>
+        </div>
+        <div id="analysis-actions" style="margin-top:10px;display:none;gap:8px;flex-wrap:wrap;">
+          <button class="t-btn t-btn-primary" onclick="addAnalyzedJobToTracker()" id="add-to-tracker-btn">➕ Add to Tracker</button>
+          <button class="inline-btn" onclick="copyAnalysis()" style="height:36px;">📋 Copy</button>
+        </div>
       </div>
     </div>
+
+    <!-- Agent log -->
+    <div class="agent-log" id="agent-log" style="margin-top:16px;"></div>
   </div>
 
-  <div class="results-header">
-    <h2 class="results-title">Results</h2>
-    <span class="results-count-f" id="results-count"></span>
-  </div>
-
-  <div id="results-area">
-    <div class="empty-state-f">
-      <div class="empty-icon">🔍</div>
-      <h3>Ready to search</h3>
-      <p>Configure your API key in Settings, then click "Find New Jobs"</p>
-    </div>
-  </div>
-
-  <div class="agent-log" id="agent-log"></div>
 </div><!-- /finder-wrap -->
 </div><!-- /tab-finder -->
 
@@ -2029,6 +2016,270 @@ async function syncFromTelegram() {
     btn.disabled = false;
     btn.textContent = '📩 Sync Telegram';
   }
+}
+
+// ═══════════════════════════════════════════════════════
+//  JOB FIT ANALYZER
+// ═══════════════════════════════════════════════════════
+
+let lastAnalysis = null; // store result for add-to-tracker
+
+function onJdInput() {
+  const val = document.getElementById('jd-input').value;
+  document.getElementById('jd-char-count').textContent = val.length + ' chars';
+  document.getElementById('analyze-btn').disabled = val.trim().length < 100;
+}
+
+function clearAnalyzer() {
+  document.getElementById('jd-input').value = '';
+  document.getElementById('jd-url').value = '';
+  document.getElementById('jd-char-count').textContent = '0 chars';
+  document.getElementById('fetch-status').textContent = '';
+  document.getElementById('analyze-btn').disabled = true;
+  document.getElementById('analysis-result').innerHTML = '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:10px;color:var(--text-dim);"><div style="font-size:32px;">🎯</div><div style="font-weight:600;color:var(--text-muted);">Paste a JD and click Analyze</div></div>';
+  document.getElementById('analysis-actions').style.display = 'none';
+  document.getElementById('agent-log').innerHTML = '';
+  document.getElementById('agent-log').classList.remove('visible');
+  lastAnalysis = null;
+}
+
+async function fetchJdFromUrl() {
+  const url = document.getElementById('jd-url').value.trim();
+  if (!url || !url.startsWith('http')) { showToast('Enter a valid URL first', '⚠️'); return; }
+
+  const btn = document.getElementById('fetch-url-btn');
+  const status = document.getElementById('fetch-status');
+  btn.disabled = true;
+  btn.textContent = '⏳';
+  status.textContent = 'Fetching page...';
+  status.style.color = 'var(--text-muted)';
+
+  try {
+    const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
+    const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(10000) });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    const raw = data.contents || '';
+
+    if (!raw || raw.length < 200) throw new Error('Page returned no content — may require login');
+
+    // Strip HTML tags to get readable text
+    const tmp = document.createElement('div');
+    tmp.innerHTML = raw;
+    // Remove script/style noise
+    tmp.querySelectorAll('script,style,nav,header,footer').forEach(el => el.remove());
+    let text = (tmp.innerText || tmp.textContent || '').replace(/[ \t]{3,}/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
+
+    // LinkedIn check — login wall
+    if (text.toLowerCase().includes('join now') && text.toLowerCase().includes('sign in') && text.length < 500) {
+      throw new Error('LinkedIn requires login — paste the JD text manually instead');
+    }
+
+    // Trim to reasonable length
+    if (text.length > 6000) text = text.slice(0, 6000) + '\n[truncated]';
+
+    document.getElementById('jd-input').value = text;
+    onJdInput();
+    status.textContent = '✓ Fetched ' + text.length + ' chars — review and click Analyze';
+    status.style.color = 'var(--accent3)';
+  } catch(e) {
+    status.textContent = '⚠️ ' + e.message;
+    status.style.color = 'var(--accent2)';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '🔗 Fetch';
+  }
+}
+
+function copyAnalysis() {
+  if (!lastAnalysis) return;
+  const nl = '\n';
+  const text = lastAnalysis.verdict + ' — Score: ' + lastAnalysis.score + '/100\n\n'
+    + lastAnalysis.summary + '\n\n'
+    + 'GREEN FLAGS:\n' + (lastAnalysis.greenFlags||[]).join(nl) + '\n\n'
+    + 'RED FLAGS:\n' + (lastAnalysis.redFlags||[]).join(nl) + '\n\n'
+    + 'EXPECTED OBJECTIONS:\n' + (lastAnalysis.objections||[]).join(nl) + '\n\n'
+    + 'EMPHASIZE:\n' + (lastAnalysis.emphasize||[]).join(nl);
+  navigator.clipboard.writeText(text).then(() => showToast('Copied to clipboard', '📋'));
+}
+
+async function runAnalysis() {
+  const apiKey = document.getElementById('api-key').value.trim();
+  if (!apiKey) { showToast('Enter your API key in Settings first', '⚠️'); toggleSettings(); return; }
+
+  const jd = document.getElementById('jd-input').value.trim();
+  if (jd.length < 100) return;
+
+  const btn = document.getElementById('analyze-btn');
+  const btnText = document.getElementById('analyze-btn-text');
+  btn.disabled = true;
+  btnText.textContent = '⏳ Analyzing...';
+
+  const resultEl = document.getElementById('analysis-result');
+  resultEl.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;gap:12px;color:var(--text-muted);"><div class="spinner"></div><span>Analyzing your fit...</span></div>';
+  document.getElementById('analysis-actions').style.display = 'none';
+
+  const logEl = document.getElementById('agent-log');
+  logEl.innerHTML = '';
+  logEl.classList.add('visible');
+  log('Sending JD to Claude for analysis...', 'info');
+
+  const systemPrompt = `You are a brutal-but-fair job fit analyst for Niv Ilany, an analyst in Herzliya, Israel.
+
+NIV'S PROFILE:
+- 9 years experience: Finance → Cybersecurity (Checkmarx, Mend) → Gaming (BeachBum)
+- Current: Data Analyst @ BeachBum Gaming (B2C) — SQL/Redshift, Tableau, A/B testing, cohort/LTV
+- Previous: Senior Marketing Analyst @ Checkmarx (B2B SaaS) — Sisense, MQL funnel, attribution
+- Skills: SQL (strong), Tableau, Sisense, Excel, A/B testing, cohort analysis, LTV, funnel analysis
+- Python: basic/light — NOT a core skill
+- NO experience with: dbt, Airflow, Spark, PySpark, Kafka, data pipelines, data engineering
+- MBA Marketing, Bar-Ilan University
+
+SCORING GUIDE:
+88-100: Strong match — SQL + BI tool + insight-impact language + cohort/LTV/A/B + right industry
+75-87: Good match — SQL + some BI + business stakeholders + analytics-focused
+60-74: Stretch — partial match, one major gap
+Below 60: Do not apply — will likely be rejected
+
+RED FLAGS (penalize heavily):
+- dbt, Airflow, Spark, PySpark, Kafka as REQUIRED skills (-25)
+- "build data pipelines" or "data infrastructure" as primary job (-20)
+- Python as MUST with engineering tools (-15)
+- Primary stakeholder is R&D/Engineering, not business (-10)
+- "Big Data" in title with engineering requirements (-15)
+- Pure PM/project coordination with no hands-on analytics (-20)
+- Role clearly needs 7+ years (-15)
+
+GREEN FLAGS (score up):
+- SQL + BI tool (Tableau/Looker/Power BI/Sisense/Amplitude) as core
+- "translate data to insights", "actionable insights", "drive decisions"
+- A/B testing, cohort, LTV, retention, funnel mentioned
+- Marketing attribution, incrementality, paid channel analysis
+- Working with marketing/product/growth/GM/leadership (not R&D)
+- B2C, marketplace, gaming, fintech, ad-tech industry
+
+KNOWN REJECTION REASONS FOR NIV:
+1. "lacks B2C background" — counter: BeachBum IS B2C gaming
+2. "wants someone who can build from scratch" — counter: built Redshift+Tableau stack at BeachBum
+3. "needs more engineering/Python" — this is a real gap, flag it honestly
+
+Return ONLY valid JSON, no markdown:
+{
+  "score": 82,
+  "verdict": "✅ Apply" | "⚠️ Apply with caution" | "🚫 Skip",
+  "company": "extracted company name or null",
+  "title": "extracted job title or null",
+  "summary": "2-3 sentence honest assessment of fit",
+  "greenFlags": ["specific match reason 1", "..."],
+  "redFlags": ["specific concern 1", "..."],
+  "objections": ["likely objection they will raise 1", "..."],
+  "emphasize": ["what Niv should highlight in application 1", "..."],
+  "cluster": "data|business|product|marketing"
+}`;
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: 'Analyze my fit for this job:\n\n' + jd }]
+      })
+    });
+
+    if (!response.ok) {
+      const err = await response.json();
+      throw new Error(err.error?.message || 'API error');
+    }
+
+    const data = await response.json();
+    let text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    text = text.replace(/```json|```/g, '').trim();
+
+    let result;
+    try { result = JSON.parse(text); }
+    catch(e) {
+      const m = text.match(/\{[\s\S]*\}/);
+      if (m) result = JSON.parse(m[0]);
+      else throw new Error('Could not parse analysis response');
+    }
+
+    lastAnalysis = result;
+    log('Analysis complete — score: ' + result.score + '/100', 'success');
+    renderAnalysis(result);
+
+  } catch(e) {
+    log('Error: ' + e.message, 'error');
+    resultEl.innerHTML = '<div style="padding:20px;color:var(--accent2);">⚠️ Analysis failed: ' + e.message + '</div>';
+  } finally {
+    btn.disabled = false;
+    btnText.textContent = '⚡ Analyze Fit';
+  }
+}
+
+function renderAnalysis(r) {
+  const scoreColor = r.score >= 80 ? '#1a7a4a' : r.score >= 65 ? '#b07800' : '#cc2222';
+  const scoreBg = r.score >= 80 ? '#e6f9f0' : r.score >= 65 ? '#fff8e6' : '#fef0f0';
+  const verdictColor = r.verdict.includes('✅') ? '#1a7a4a' : r.verdict.includes('⚠️') ? '#b07800' : '#cc2222';
+
+  const listHtml = (items, color) => items.length
+    ? items.map(i => `<div style="display:flex;gap:8px;margin-bottom:5px;"><span style="color:${color};flex-shrink:0;">•</span><span>${i}</span></div>`).join('')
+    : '<div style="color:var(--text-dim);font-style:italic;">None</div>';
+
+  document.getElementById('analysis-result').innerHTML = `
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);">
+      <div style="background:${scoreBg};color:${scoreColor};font-size:26px;font-weight:700;font-family:'JetBrains Mono',monospace;padding:8px 14px;border-radius:10px;line-height:1;">${r.score}</div>
+      <div>
+        <div style="font-size:16px;font-weight:700;color:${verdictColor};">${r.verdict}</div>
+        ${r.title ? `<div style="font-size:12px;color:var(--text-muted);margin-top:2px;">${r.title}${r.company ? ' @ ' + r.company : ''}</div>` : ''}
+      </div>
+    </div>
+    <div style="font-size:13px;color:var(--text);margin-bottom:14px;line-height:1.6;">${r.summary}</div>
+    <div style="margin-bottom:12px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#1a7a4a;margin-bottom:6px;">✅ Green Flags</div>
+      <div style="font-size:12px;color:var(--text);">${listHtml(r.greenFlags || [], '#1a7a4a')}</div>
+    </div>
+    <div style="margin-bottom:12px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#cc2222;margin-bottom:6px;">🚩 Red Flags</div>
+      <div style="font-size:12px;color:var(--text);">${listHtml(r.redFlags || [], '#cc2222')}</div>
+    </div>
+    <div style="margin-bottom:12px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#b07800;margin-bottom:6px;">⚠️ Expected Objections</div>
+      <div style="font-size:12px;color:var(--text);">${listHtml(r.objections || [], '#b07800')}</div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:6px;">💡 Emphasize in Application</div>
+      <div style="font-size:12px;color:var(--text);">${listHtml(r.emphasize || [], 'var(--accent)')}</div>
+    </div>
+  `;
+
+  const actions = document.getElementById('analysis-actions');
+  actions.style.display = 'flex';
+}
+
+function addAnalyzedJobToTracker() {
+  if (!lastAnalysis) return;
+  // Pre-fill the add modal with extracted info
+  openAddModal();
+  if (lastAnalysis.title) document.getElementById('f-title').value = lastAnalysis.title;
+  if (lastAnalysis.company) {
+    document.getElementById('f-company').value = lastAnalysis.company;
+    onCompanyInput(lastAnalysis.company);
+  }
+  // Set status to analysis summary
+  const notes = lastAnalysis.verdict + ' (Score: ' + lastAnalysis.score + '/100) — ' + lastAnalysis.summary;
+  document.getElementById('f-status').value = notes;
+  // Set month to current
+  const now = new Date();
+  document.getElementById('f-month').value = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0');
+  showToast('Job pre-filled from analysis — review and save', '🎯');
 }
 
 function buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExcluded) {
