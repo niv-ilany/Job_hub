@@ -645,6 +645,19 @@ pre { white-space: pre-wrap; word-break: break-all; }
           <option value="Government">Government</option>
         </select>
       </div>
+      <div class="form-group">
+        <label class="form-label">Process Status</label>
+        <select class="form-input" id="f-processOverride" onchange="onProcessOverrideChange(this.value)">
+          <option value="">Auto-detect</option>
+          <option value="open">🟢 Open</option>
+          <option value="closed_thankyou">✕ Closed — Thank You Sent</option>
+          <option value="closed_rejected">✕ Closed — Rejected</option>
+          <option value="closed_withdrew">✕ Closed — Withdrew</option>
+          <option value="closed_filled">✕ Closed — Position Filled</option>
+          <option value="pending">– Pending (not applied yet)</option>
+        </select>
+        <div class="field-hint" style="margin-top:4px">Leave as "Auto-detect" to let the app decide based on checkboxes and notes</div>
+      </div>
       <div class="form-group"><label class="form-label"># Interviews</label><input class="form-input" id="f-numInterviews" placeholder="0"></div>
       <div class="form-group full">
         <label class="form-label">Flags</label>
@@ -747,19 +760,30 @@ function getStatus(j) {
 
 // A process is CLOSED if: chose not to apply, sent thank-you (post-rejection),
 // or status text contains rejection signals
-const REJECTION_KEYWORDS = /reject|declined|not moving|no longer|passed|unfortunately|not selected|closed|filled|withdrawn|not a fit/i;
+const REJECTION_KEYWORDS = /reject|declined|not moving|no longer|passed|unfortunately|not selected|closed|filled|withdrawn|not a fit|המשרה נסגרה/i;
 function isClosed(j) {
+  // Manual override takes priority
+  if (j.processOverride && j.processOverride.startsWith('closed')) return true;
+  if (j.processOverride === 'open' || j.processOverride === 'pending') return false;
+  // Auto-detect
   if (j.choseNotToApply) return true;
   if (j.thankYouEmail) return true;
   if (j.status && REJECTION_KEYWORDS.test(j.status)) return true;
+  if (j.interviewNotes && REJECTION_KEYWORDS.test(j.interviewNotes)) return true;
   return false;
 }
 function isOpen(j) {
-  if (!j.applied) return false; // never applied = not a live process
+  if (j.processOverride === 'open') return true;
+  if (j.processOverride && j.processOverride.startsWith('closed')) return false;
+  if (j.processOverride === 'pending') return false;
+  if (!j.applied) return false;
   return !isClosed(j);
 }
 
 function processStatus(j) {
+  if (j.processOverride === 'open') return 'open';
+  if (j.processOverride && j.processOverride.startsWith('closed')) return 'closed';
+  if (j.processOverride === 'pending') return 'pending';
   if (!j.applied && !j.choseNotToApply) return 'pending';
   if (isClosed(j)) return 'closed';
   return 'open';
@@ -772,9 +796,25 @@ function statusBadge(j) {
 }
 function processBadge(j) {
   const ps = processStatus(j);
+  const closedLabel = j.processOverride === 'closed_rejected' ? '✕ Rejected'
+    : j.processOverride === 'closed_withdrew' ? '✕ Withdrew'
+    : j.processOverride === 'closed_filled'   ? '✕ Filled'
+    : j.thankYouEmail ? '✕ Thank You Sent'
+    : '✕ Closed';
   if (ps === 'open')   return `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600;background:#e6f9f0;color:#1a7a4a;border:1px solid #a8e6c8;">● Open</span>`;
-  if (ps === 'closed') return `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600;background:#f5f5f5;color:#999;border:1px solid #ddd;">✕ Closed</span>`;
+  if (ps === 'closed') return `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600;background:#f5f5f5;color:#999;border:1px solid #ddd;">${closedLabel}</span>`;
   return `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600;background:#fff8e6;color:#b07800;border:1px solid #ffd166;">– Pending</span>`;
+}
+
+function onProcessOverrideChange(val) {
+  // Auto-tick relevant checkboxes when user picks a closed reason
+  if (val === 'closed_thankyou') document.getElementById('f-thankYouEmail').checked = true;
+  if (val === 'closed_withdrew')  document.getElementById('f-choseNotToApply').checked = true;
+  if (val === 'open' || val === '') {
+    // Clear closure checkboxes if reopening
+    document.getElementById('f-thankYouEmail').checked  = false;
+    document.getElementById('f-choseNotToApply').checked = false;
+  }
 }
 function esc(s) { return (s||'').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function shortHost(url) {
@@ -827,7 +867,14 @@ function tSorted(arr) {
 //  RENDER TRACKER
 // ─────────────────────────────────────────────────────────────
 function renderTracker() {
-  const filtered = tSorted(getFiltered());
+  let filtered = tSorted(getFiltered());
+  // In Open tab: interviewed processes always float to top
+  if (tTab === 'open') {
+    filtered = [
+      ...filtered.filter(j => j.interviewed),
+      ...filtered.filter(j => !j.interviewed)
+    ];
+  }
   document.getElementById('t-count').textContent = `Showing ${filtered.length} of ${jobs.length} jobs`;
 
   const tbody = document.getElementById('t-tbody');
@@ -912,7 +959,8 @@ function openEditModal(id) {
   document.getElementById('f-status').value = j.status||'';
   document.getElementById('f-interviewNotes').value = j.interviewNotes||'';
   document.getElementById('f-companySize').value = j.companySize||'';
-  document.getElementById('f-companyType').value = j.companyType||'';
+  document.getElementById('f-companyType').value     = j.companyType||'';
+  document.getElementById('f-processOverride').value = j.processOverride||'';
   document.getElementById('f-numInterviews').value = j.numInterviews!=null?j.numInterviews:'';
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => {
     document.getElementById('f-'+k).checked = !!j[k];
@@ -920,7 +968,7 @@ function openEditModal(id) {
   document.getElementById('modal-overlay').classList.remove('hidden');
 }
 function clearForm() {
-  ['f-month','f-lastUpdate','f-company','f-title','f-url','f-applicationMethod','f-status','f-interviewNotes','f-companySize','f-companyType','f-numInterviews'].forEach(id => document.getElementById(id).value='');
+  ['f-month','f-lastUpdate','f-company','f-title','f-url','f-applicationMethod','f-status','f-interviewNotes','f-companySize','f-companyType','f-processOverride','f-numInterviews'].forEach(id => document.getElementById(id).value='');
   const afStatus = document.getElementById('autofill-status'); if (afStatus) afStatus.textContent = '';
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => document.getElementById('f-'+k).checked=false);
 }
@@ -939,7 +987,8 @@ function saveJob() {
     status: document.getElementById('f-status').value.trim(),
     interviewNotes: document.getElementById('f-interviewNotes').value.trim(),
     companySize: document.getElementById('f-companySize').value.trim()||null,
-    companyType: document.getElementById('f-companyType').value||null,
+    companyType:      document.getElementById('f-companyType').value||null,
+    processOverride:  document.getElementById('f-processOverride').value||null,
     numInterviews: document.getElementById('f-numInterviews').value!=='' ? parseFloat(document.getElementById('f-numInterviews').value) : null,
   };
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => {
