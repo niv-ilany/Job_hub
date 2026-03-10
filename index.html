@@ -2044,132 +2044,131 @@ function buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExc
 - Previous: Senior Marketing Analyst @ Checkmarx (B2B SaaS) — Sisense, MQL funnel, attribution, budget
 - Skills: SQL, Tableau, Sisense, Excel, A/B testing, cohort analysis, KPI dev, LTV, funnel analysis
 - Location: Herzliya — open to Tel Aviv metro + Remote from Israel
-- Preference: leaning B2C, strong B2B track record. MBA Marketing, Bar-Ilan.
+- Preference: B2C, B2B2C, marketplaces, ad-tech, fintech, gaming. Strong B2B track record too.
+- MBA Marketing, Bar-Ilan.
 
-=== SEARCH BY JOB DESCRIPTION — NOT TITLE (this is the most important signal) ===
-Do NOT anchor on job titles. Instead, search for roles whose DESCRIPTION mentions these responsibilities and skills.
-Niv has successfully interviewed at companies where the role involved:
+=== PREVIOUSLY INTERVIEWED — DO NOT RETURN THESE COMPANIES ===
+Niv has already interviewed at these companies. Do NOT return jobs from them (applying again is fine, but these are already known):
+\${uniqueExcluded.length > 0 ? uniqueExcluded.join(', ') : 'none'}
+This is critical — returning a tracked company wastes a search result and costs money.
 
-CORE RESPONSIBILITIES TO LOOK FOR IN JOB DESCRIPTIONS:
+=== SEARCH BY JOB DESCRIPTION — NOT TITLE ===
+Do NOT anchor on job titles. Search for roles whose DESCRIPTION matches Niv's responsibilities.
+
+CORE RESPONSIBILITIES TO FIND (any 3+ = strong match):
 - Building and owning dashboards, KPI reporting, business intelligence
-- SQL queries for data extraction and analysis
+- SQL for data extraction, ad hoc analysis, self-serve analytics
 - A/B testing, experimentation, statistical analysis
-- Cohort analysis, retention analysis, LTV (lifetime value) modeling
-- Marketing funnel analysis, attribution modeling, campaign performance
-- Product analytics, user behavior analysis, feature impact measurement
-- CRITICAL SIGNAL — look for language about turning data into business impact:
-  "translate data into actionable insights", "drive business decisions",
-  "identify growth opportunities through data", "partner with stakeholders to improve performance",
-  "proactively surface insights", "analytical thought leadership", "data storytelling",
-  "connect dots between data and business outcomes", "influence strategy with data"
-- Working with ANY business team — marketing, product, growth, finance, operations,
-  sales, customer success, strategy, executive team, R&D, monetization, CRM, BI
-- Tools: Tableau, Sisense, Looker, Power BI, Qlik, Metabase, Grafana, Mode, Amplitude,
-  Mixpanel, Heap, Redash, Google Data Studio / Looker Studio, MicroStrategy, Domo,
-  Periscope, Superset, Chartio, or any BI/visualization tool
+- Cohort analysis, retention, LTV, funnel analysis
+- Marketing attribution, incrementality measurement, paid channel efficiency, media mix
+- Product analytics, user behavior, feature impact, monetization
+- "Single source of truth", "cockpit", operational dashboards for GM/leadership
+- Revenue analysis, pricing analysis, growth analytics, GTM analytics
+- CRM analytics, customer segmentation, lifecycle analysis
 
-INDUSTRIES WHERE NIV HAS INTERVIEWED SUCCESSFULLY (prioritize):
-- Mobile gaming / casual gaming (Playtika, Plarium, Candivore, Moon Active type companies)
-- B2C SaaS / consumer apps (Wolt, Lemonade, MyHeritage, Wix type)
-- Fintech / payments (Melio, Finonex type)
-- Cybersecurity / enterprise SaaS (Checkmarx, Cato, Akamai type)
-- Ad-tech / marketing-tech (AppsFlyer, IronSource, Taboola type)
-- E-commerce / DTC brands (Edikted, MAËLYS type)
+INSIGHT-TO-IMPACT LANGUAGE — strong positive signal (find roles using this language):
+"translate data into actionable insights", "drive business decisions", "identify growth opportunities",
+"partner with stakeholders", "proactively surface insights", "data storytelling",
+"influence strategy with data", "don't just report — make the news",
+"challenge assumptions with data", "single source of truth", "cockpit for the business",
+"prescribe solutions", "end-to-end ownership", "shape strategy"
 
-REAL EXAMPLES OF ROLES NIV HAS BEEN INTERVIEWED FOR (use these as description templates):
-- "Data Analyst" at gaming companies focusing on economy, segmentation, monetization
-- "Business Analyst" supporting marketing or strategy teams with SQL + dashboards
-- "Marketing Data Analyst" building attribution, funnel, and campaign performance reports
-- "Product Data Analyst" measuring feature adoption, retention, A/B test results
-- "Senior Marketing Analyst" owning BI for marketing org, Sisense/Tableau
-- "Business Strategy Analyst" at product-led companies (Unity-style)
-- "Marketing BI Analyst" building Sisense/Tableau dashboards for marketing teams
-- "Growth Analyst" or "Monetization Analyst" at gaming/consumer companies
+BI TOOLS — any of these = good signal:
+Tableau, Sisense, Looker, Power BI, Qlik, Metabase, Amplitude, Mixpanel,
+Redash, Google Data Studio, Mode, Grafana, Superset, Databricks (for BI), Domo
 
-=== LIKED JOBS (search for more like these) ===
+INDUSTRIES (prioritize in this order):
+1. Digital marketplaces / classifieds (Yad2, Fiverr, Booking type) — HIGHEST PRIORITY
+2. Ad-tech / marketing measurement (AppsFlyer, INCRMNTAL, Taboola, IronSource type)
+3. Mobile/casual gaming (Playtika, Moon Active, Candivore type)
+4. Fintech / payments / insurtech (Melio, eToro, Lemonade, Payoneer type)
+5. B2C SaaS / consumer apps (Wolt, MyHeritage, Wix, Elementor type)
+6. E-commerce / DTC (Edikted, MAËLYS, Global-e type)
+7. Cybersecurity / enterprise SaaS (Checkmarx, Cato, Akamai type)
+
+VALID TITLE PATTERNS — wide net, description rules over title:
+"Data Analyst", "Senior Data Analyst", "Senior Business Analyst", "Business Analyst",
+"Marketing Analyst", "Senior Marketing Analyst", "Marketing Science",
+"Growth Analyst", "Revenue Analyst", "Revenue Strategy Analyst",
+"Insights Analyst", "Strategic Analyst", "Strategic Product Analyst",
+"BI Analyst", "Performance Analyst", "CRM Analyst", "Commercial Analyst",
+"GTM Analyst", "Business Strategy Analyst", "Customer Success Data Analyst",
+"Monetization Analyst", "Attribution Analyst", "Marketing Measurement Analyst",
+"Paid Media Analyst", "Customer Analytics", "Acquisition Analyst"
+
+=== LIKED JOBS (find more like these) ===
 \${likedTitles}
 
 === DISMISSED (avoid these types) ===
 \${dismissedTitles}
 
-=== DO NOT RETURN jobs from these companies (recently interviewed) ===
-\${uniqueExcluded.length > 0 ? uniqueExcluded.join(', ') : 'none'}
+=== HARD DISQUALIFIERS — skip immediately if ANY appear as REQUIRED/MUST ===
+These roles will reject Niv for lacking engineering background:
+- dbt, Airflow, Spark, PySpark, Kafka — listed as MUST
+- "build data pipelines", "data infrastructure ownership", "data modeling" as primary job
+- AWS/GCP/Azure infrastructure building as core requirement
+- Python as MUST alongside pipeline/engineering tools
+- Primary stakeholder is R&D/Engineering (not business/marketing/product)
+- Titles: "Data Engineer", "Analytics Engineer", "Big Data Engineer", "Big Data Analyst"
+- "Customer Success" roles where analytics is secondary to account management
+- Pure project management / PM coordination with no hands-on analytics
+- Pure finance analyst (P&L, FP&A) with no business/product analytics
+NOTE: Python as a bonus/advantage is fine. SQL + Python (no engineering tools) is fine.
 
-=== STRICT QUALITY RULES ===
-1. NO student / intern / junior (0-2 yrs) / entry-level roles — Niv has 9 years experience
-2. NO broken or unverifiable URLs — only include jobs with a real working direct link
-3. NO roles requiring primarily engineering/coding skills (data engineering, ETL pipelines, Python-heavy)
-4. Only full-time permanent positions in Israel or remote-from-Israel
-5. Title alone does NOT disqualify — a role called "Insights Manager", "Analytics Lead", "Growth Analyst", "BI Analyst", "Performance Analyst", "Revenue Analyst", "CRM Analyst", "Commercial Analyst" is fine if the description matches
-6. Experience cap: only roles requiring UP TO 6 years experience. Reject roles that say "7+ years", "8+ years", "10+ years" etc.
-7. DO reject: pure finance analyst, pure BI developer/engineer, data scientist (ML-heavy), operations manager without analytics, roles with no insight/decision-making component
+=== FRESHNESS ===
+Prefer jobs posted in the last 30 days. Accept up to 45 days if the role is strong.
+- Reject anything older than 45 days
+- LinkedIn: use f_TPR=r2592000 (30 days) in URLs
+- Always include postedDate in your result — "today", "X days ago", "X weeks ago"
 
-=== FRESHNESS REQUIREMENT — CRITICAL ===
-ONLY return jobs posted in the LAST 7 DAYS. This is the most important filter.
-- On LinkedIn: filter by "Past week" — add "f_TPR=r604800" to search URLs, or search with "posted this week"
-- On Drushim/AllJobs: jobs auto-expire after 30 days but prioritize newest listings
-- Include "past week" or "last 7 days" in every search query
-- If you cannot confirm a job was posted within the last 7 days, DO NOT include it
-- The postedDate field must be filled: "today", "1 day ago", "2 days ago", "3 days ago", "4 days ago", "5 days ago", "6 days ago", or "this week" — nothing older
+=== SEARCH STRATEGY — LinkedIn ONLY, 3 searches max ===
+Search ONLY on LinkedIn (site:linkedin.com/jobs). Do not search Drushim or AllJobs this run.
 
-=== SEARCH STRATEGY — search by DESCRIPTION KEYWORDS, not titles ===
-Use these description-keyword-based queries on high-quality Israeli platforms:
+SEARCH 1 — Business/Senior analyst + insight language:
+site:linkedin.com/jobs "senior business analyst" OR "business analyst" OR "revenue analyst" OR "strategic analyst" SQL Israel
 
-QUERY SET 1 — Core analytics responsibilities:
-- "SQL Tableau dashboard analyst Israel" site:linkedin.com/jobs past week
-- "cohort analysis LTV analyst Israel" site:linkedin.com/jobs past week
-- "A/B testing analytics Israel gaming" site:linkedin.com/jobs past week
+SEARCH 2 — Marketing/Growth/Measurement titles:
+site:linkedin.com/jobs "marketing analyst" OR "marketing science" OR "growth analyst" OR "attribution analyst" OR "incrementality" SQL Israel
 
-QUERY SET 2 — Israeli job boards with description search:
-- site:drushim.co.il "SQL" "Tableau" "אנליסט" (analyst with SQL+Tableau)
-- site:alljobs.co.il "SQL" "דשבורד" OR "BI" "אנליסט"
+SEARCH 3 — Data analyst + BI tools + business impact:
+site:linkedin.com/jobs "data analyst" SQL "actionable insights" OR "dashboard" OR "Tableau" OR "Looker" OR "Power BI" Israel
 
-QUERY SET 3 — Industry + description combos:
-- "marketing analytics funnel attribution Israel" site:linkedin.com/jobs past week
-- "product analytics retention A/B Israel" site:linkedin.com/jobs past week
-- "business intelligence dashboard gaming Israel" OR "fintech analyst Israel" site:linkedin.com/jobs past week
+After searches, scan these high-priority company LinkedIn pages for fresh openings not caught by keyword search:
+Yad2, Monday.com, Lemonade, Riskified, Yotpo, Wolt, Fiverr, Taboola, AppsFlyer,
+INCRMNTAL, Lightricks, eToro, Melio, Playtika, Moon Active, Wix, Global-e, Papaya Global
 
-TARGET COMPANIES — check career pages directly for new openings matching the description:
-Wix, Monday.com, Fiverr, Playtika, Moon Active, Akamai, Varonis, CyberArk, SimilarWeb,
-IronSource, DoubleVerify, AppsFlyer, Taboola, Lemonade, Melio, WalkMe, Outbrain,
-Lightricks, Papaya Global, Tipalti, eToro, Payoneer, NICE, Verint
+=== ANTI-HALLUCINATION RULES — ABSOLUTE ===
+NEVER invent job listings. Every result must come from an actual search result.
+FORBIDDEN:
+- Generic company names ("Israeli Tech Company", "Multiple Companies", "Leading SaaS")
+- Search-page URLs — linkedin.com/jobs/search/... is FORBIDDEN
+- Any LinkedIn URL without /jobs/view/ and a numeric ID
+- Recruitment agency listed as the employer
 
-Only return results with a real working direct URL.
+VALID LinkedIn URL format ONLY:
+  ✓ linkedin.com/jobs/view/senior-business-analyst-yad2-4375521524
+  ✗ linkedin.com/jobs/search/?keywords=analyst (FORBIDDEN)
+  ✗ linkedin.com/jobs/data-analyst-jobs (FORBIDDEN)
 
-=== TOKEN EFFICIENCY — HARD LIMITS ===
-- Maximum 3 web searches total — stop after 3 even if you want more data
-- Return maximum 5-6 jobs — do not pad with low-quality results to hit a number
-- If you only find 2-3 real verified jobs, return just those
-- Every extra search costs money — be ruthless about only searching when necessary
+3 real verified jobs > 8 invented ones. If unsure — leave it out.
 
-=== STRICT ANTI-HALLUCINATION RULES — MOST CRITICAL ===
-NEVER invent or fabricate job listings. Every single result must be a REAL job you actually found in search results.
-FORBIDDEN — never do these:
-- NEVER use generic company names like "Israeli Tech Company", "Israeli Consumer Company", "Israeli Cyber Company", "Multiple Companies", or any placeholder name
-- NEVER use search-page URLs like linkedin.com/jobs/data-analyst-jobs or drushim.co.il/jobs/search/... — these are search results pages, NOT job listings
-- NEVER invent a job listing because you couldn't find enough real ones
-- NEVER use a recruitment agency name (e.g. "Goldman Recruitment") as the company — use the actual hiring company name
-- NEVER use a URL that goes to a list/search page — every URL must go directly to a single specific job posting
+=== SCORING ===
+88-95: SQL + BI tool + insight-impact language + cohort/LTV/A/B/attribution/incrementality + B2C or marketplace or ad-tech
+78-87: SQL + BI tool + insight language + business team partnership + fintech/B2B SaaS
+65-77: SQL + some insight language, narrower scope or mild domain stretch
+Below 65: do not return
 
-IF YOU CANNOT FIND 8 REAL JOBS WITH REAL URLS: return only the ones you actually found. 3 real jobs is better than 8 fabricated ones. Quality over quantity is absolute.
+BONUS +3 each: "actionable insights", "drive decisions", "single source of truth",
+  "cockpit", "influence strategy", "incrementality", "paid channel efficiency",
+  "prescribe solutions", "proactively identify", "end-to-end ownership"
+PENALTY -10: dbt/Airflow/Spark/pySpark as required; Python+engineering as core; "build infrastructure" primary
+PENALTY -5: primary stakeholder is R&D not business; customer success heavier than analytics
 
-HOW TO VERIFY a URL is real: it must contain a specific job ID or job title slug, e.g.:
-  ✓ linkedin.com/jobs/view/data-analyst-at-wix-3456789012
-  ✓ drushim.co.il/job/12345/data-analyst
-  ✗ linkedin.com/jobs/data-analyst-jobs  (search page — FORBIDDEN)
-  ✗ drushim.co.il/jobs/search/אנליסט    (search page — FORBIDDEN)
+matchReason must include: (1) tools matched, (2) responsibilities matched,
+(3) insight/impact language found, (4) industry fit, (5) any red flags or penalties applied
 
-=== SCORING — based on DESCRIPTION match, not title ===
-Score based on how closely the job DESCRIPTION matches Niv's actual work:
-- 88-95: SQL + any visualization tool + insight-to-business-impact language + cohort/LTV/retention/A/B + B2C industry (gaming, consumer, fintech, e-commerce) = "Strong match — description mirrors BeachBum/Checkmarx responsibilities"
-- 78-87: SQL + BI tool + insight/decision-making language + working with any business team in B2B SaaS or mixed = "Good match — analytics-to-impact role, B2B fit"
-- 65-77: Analytics role with SQL + some insight language but narrower scope, or good description but domain is a stretch
-- Below 65: Skip unless industry is highly relevant
-BONUS +3 points if description explicitly uses: "actionable insights", "drive decisions", "business impact", "influence strategy", "proactive analysis"
-Always explain in matchReason: (1) which tools matched, (2) which responsibilities matched, (3) which insight/impact language appeared in the description
-
-Return ONLY a valid JSON array, no markdown, no explanation:
-[{"id":"unique-id","title":"","company":"","location":"","remote":true,"salary":null,"url":"MUST_BE_REAL_DIRECT_URL","linkedinCompany":"","source":"linkedin|drushim|alljobs|wellfound|company-site","matchScore":85,"matchReason":"","cluster":"data","postedDate":""}]
+Return ONLY valid JSON array, no markdown, no explanation:
+[{"id":"unique-id","title":"","company":"","location":"","remote":false,"salary":null,"url":"MUST_BE_REAL_LINKEDIN_VIEW_URL","linkedinCompany":"","source":"linkedin","matchScore":85,"matchReason":"","cluster":"data","postedDate":""}]
 
 cluster must be one of: data, business, product, marketing`;
 }
@@ -2180,29 +2179,31 @@ function previewPrompt() {
   const dismissedTitles = finderJobs.filter(j=>finderFeedback[j.id]==='dismissed').map(j=>j.title).join(', ')||'none yet';
   const threshold = parseInt(document.getElementById('threshold').value);
 
-  const sixtyDaysAgo = new Date(); sixtyDaysAgo.setDate(sixtyDaysAgo.getDate() - 60);
-  const recentlyInterviewed = jobs
-    .filter(j => j.interviewed && j.lastUpdate && new Date(j.lastUpdate) >= sixtyDaysAgo)
-    .map(j => j.company.toLowerCase().trim());
-  const uniqueExcluded = [...new Set(recentlyInterviewed)];
+  // Exclude companies where Niv has already interviewed (not just applied)
+  const interviewedCompanies = jobs
+    .filter(j => j.interviewed)
+    .map(j => (j.company||'').toLowerCase().trim())
+    .filter(Boolean);
+  const uniqueExcluded = [...new Set(interviewedCompanies)];
 
   // Build the same system prompt as runSearch so what you see is exactly what gets sent
   const systemPrompt = buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExcluded);
-  const userMsg = 'Search for analyst job openings in Israel posted in the LAST 7 DAYS only. Use recency filters on every platform. Be efficient: 5-6 searches max, return 8-10 high-quality FRESH results as a JSON array only. Skip anything older than 7 days.';
+  const userMsg = 'Search LinkedIn for analyst job openings in Israel posted in the last 30 days. Run exactly 3 LinkedIn searches. Return 5-8 high-quality results as a JSON array only. Exclude any company already in my tracker list.';
 
   document.getElementById('preview-system').textContent = systemPrompt;
   document.getElementById('preview-user').textContent = userMsg;
-  document.getElementById('prev-maxtokens').textContent = '3,000';
+  document.getElementById('prev-maxtokens').textContent = '1,500';
   document.getElementById('preview-excluded').textContent = uniqueExcluded.length > 0
-    ? uniqueExcluded.map(c => '✗  ' + c).join('\n')
-    : '(none — no companies interviewed in the last 60 days)';
+    ? uniqueExcluded.length + ' interviewed companies excluded — e.g. ' + uniqueExcluded.slice(0,8).join(', ') + (uniqueExcluded.length > 8 ? ' +' + (uniqueExcluded.length-8) + ' more' : '')
+    : '(none)';
   document.getElementById('preview-filters').textContent = [
     '✓  Clusters: ' + clusterNames,
-    '✓  Experience cap: up to 6 years',
-    '✓  Freshness: posted in last 7 days only',
-    '✓  Excluded: student / intern / junior / entry-level / graduate',
+    '✓  Source: LinkedIn ONLY (3 searches)',
+    '✓  Freshness: posted in last 30 days (up to 45 days for strong match)',
+    '✓  Excluded: ' + uniqueExcluded.length + ' previously-interviewed companies',
+    '✓  Excluded: student / intern / junior / entry-level',
+    '✓  Excluded: data engineering disguised as analyst (dbt/Airflow/PySpark required)',
     '✓  Excluded: 7+ years experience requirements',
-    '✓  Excluded: data engineering / ETL / ML-heavy roles',
     '✓  Telegram alert threshold: ' + threshold + '%',
     '✓  Liked jobs (boosted): ' + likedTitles,
     '✓  Dismissed jobs (downweighted): ' + dismissedTitles,
@@ -2225,21 +2226,21 @@ async function runSearch() {
   const dismissedTitles = finderJobs.filter(j=>finderFeedback[j.id]==='dismissed').map(j=>j.title).join(', ')||'none yet';
   const threshold = parseInt(document.getElementById('threshold').value);
 
-  // ── Build exclusion list from tracker: companies interviewed in last 60 days ──
-  const sixtyDaysAgo = new Date(); sixtyDaysAgo.setDate(sixtyDaysAgo.getDate() - 60);
-  const recentlyInterviewed = jobs
-    .filter(j => j.interviewed && j.lastUpdate && new Date(j.lastUpdate) >= sixtyDaysAgo)
-    .map(j => j.company.toLowerCase().trim());
-  const uniqueExcluded = [...new Set(recentlyInterviewed)];
+  // Exclude companies where Niv has already interviewed — applying again elsewhere is fine
+  const interviewedCompanies = jobs
+    .filter(j => j.interviewed)
+    .map(j => (j.company||'').toLowerCase().trim())
+    .filter(Boolean);
+  const uniqueExcluded = [...new Set(interviewedCompanies)];
 
   log('Starting agent...','info');
   log(`Clusters: ${clusterNames}`,'info');
-  log(`Excluding ${uniqueExcluded.length} recently-interviewed companies`,'info');
+  log(`Excluding ${uniqueExcluded.length} previously-interviewed companies from results`,'info');
 
   const systemPrompt = buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExcluded);
 
   try {
-    log('Calling Claude API (3 searches max, 5-6 results, 1500 token cap)...','info');
+    log('Calling Claude API (LinkedIn only, 3 searches, 30-day window)...','info');
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
@@ -2248,7 +2249,7 @@ async function runSearch() {
         max_tokens:1500,
         tools:[{type:'web_search_20250305',name:'web_search'}],
         system:systemPrompt,
-        messages:[{role:'user',content:'Search for analyst job openings in Israel posted in the LAST 7 DAYS. STRICT LIMIT: maximum 3 web searches total. Return 5-6 real jobs with direct URLs only. JSON array only, no text.'}]
+        messages:[{role:'user',content:'Search LinkedIn for analyst job openings in Israel from the last 30 days. Run exactly 3 searches as specified. Return 5-8 real jobs with direct LinkedIn /jobs/view/ URLs only. Exclude any company from my tracker list. JSON array only, no explanation.'}]
       })
     });
     if (!response.ok) { const err=await response.json(); throw new Error(err.error?.message||'API error'); }
