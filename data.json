@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-03-10T21:18:33.970Z",
+    "lastUpdated": "2026-03-10T21:23:15.914Z",
     "jobCount": 245
   },
   "trackerJobs": [
@@ -5886,7 +5886,23 @@
       "companyType": "B2B"
     }
   ],
-  "finderJobs": [],
+  "finderJobs": [
+    {
+      "id": "similarweb-senior-ba-b2c",
+      "title": "Senior Business Analyst - B2C",
+      "company": "Similarweb",
+      "location": "Tel Aviv-Yafo",
+      "remote": false,
+      "salary": null,
+      "url": "https://il.linkedin.com/jobs/view/senior-business-analyst-b2c-at-similarweb-3747659051",
+      "linkedinCompany": "similarweb",
+      "source": "linkedin",
+      "matchScore": 82,
+      "matchReason": "Strong B2C focus, reports to Director of Product, data infrastructure and insights role. SQL implied for data analysis. Product analytics orientation matches Niv's B2C experience. Similarweb is data analytics company in ideal industry. Some concern about 'establishing data infrastructure' which could lean technical.",
+      "cluster": "business",
+      "postedDate": "45+ days ago"
+    }
+  ],
   "finderFeedback": {},
   "settings": {
     "threshold": "80"
