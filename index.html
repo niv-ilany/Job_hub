@@ -559,20 +559,22 @@ pre { white-space: pre-wrap; word-break: break-all; }
       <option value="employee">Via Employee</option>
       <option value="linkedin">Via LinkedIn</option>
     </select>
-    <div style="margin-left:auto;display:flex;gap:8px;">
+    <div style="margin-left:auto;display:flex;gap:8px;align-items:center;">
       <button class="t-btn t-btn-ghost" onclick="exportCSV()" title="Export as CSV">⬇ CSV</button>
-      <button class="t-btn t-btn-ghost" onclick="exportBackup()" title="Export full backup JSON — use this before updating to a new app version" style="border-color:#43d9ad;color:#43d9ad;">💾 Backup</button>
-      <button class="t-btn t-btn-ghost" onclick="document.getElementById('import-file').click()" title="Restore from a backup JSON file" style="border-color:#ffd166;color:#c08800;">📂 Restore</button>
+      <button class="t-btn t-btn-ghost" id="tg-sync-btn" onclick="syncFromTelegram()" title="Read your Telegram bot messages and update tracker" style="border-color:#29b6f6;color:#0288d1;">📩 Sync Telegram</button>
+      <span id="tg-sync-status" style="font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--text-muted);display:none;"></span>
       <input type="file" id="import-file" accept=".json" style="display:none" onchange="importBackup(event)">
       <button class="t-btn t-btn-primary" onclick="openAddModal()">+ Add Job</button>
     </div>
   </div>
 
   <div class="tracker-tabs-bar">
-    <button class="t-tab active" onclick="setTrackerTab('all',this)">All</button>
+    <button class="t-tab active" onclick="setTrackerTab('open',this)">🟢 Open</button>
+    <button class="t-tab" onclick="setTrackerTab('interviewed',this)">🟠 Interviewed</button>
     <button class="t-tab" onclick="setTrackerTab('applied',this)">Applied</button>
-    <button class="t-tab" onclick="setTrackerTab('interviewed',this)">Interviewed</button>
+    <button class="t-tab" onclick="setTrackerTab('closed',this)">✕ Closed</button>
     <button class="t-tab" onclick="setTrackerTab('notapplied',this)">Not Applied</button>
+    <button class="t-tab" onclick="setTrackerTab('all',this)">All</button>
   </div>
 
   <div class="tracker-table-area">
@@ -583,6 +585,8 @@ pre { white-space: pre-wrap; word-break: break-all; }
           <th onclick="tSortBy('month')" data-col="month">Month ↕</th>
           <th onclick="tSortBy('company')" data-col="company">Company ↕</th>
           <th onclick="tSortBy('title')" data-col="title">Title ↕</th>
+          <th onclick="tSortBy('companyType')" data-col="companyType">Type ↕</th>
+          <th>Process</th>
           <th>Status</th>
           <th>Method</th>
           <th onclick="tSortBy('numInterviews')" data-col="numInterviews"># Int ↕</th>
@@ -616,13 +620,31 @@ pre { white-space: pre-wrap; word-break: break-all; }
     <div class="form-grid">
       <div class="form-group"><label class="form-label">Month</label><input class="form-input" id="f-month" placeholder="2026-03"></div>
       <div class="form-group"><label class="form-label">Last Update</label><input type="date" class="form-input" id="f-lastUpdate"></div>
+      <div class="form-group full" style="grid-column:1/-1;background:linear-gradient(135deg,#eef6ff,#f5f0ff);border-radius:10px;padding:12px;border:1px solid #c0d8ff;">
+        <label class="form-label" style="font-size:12px;color:#4060cc;margin-bottom:6px;display:block;">⚡ Paste a job URL to auto-fill all fields</label>
+        <div style="display:flex;gap:8px;align-items:center;">
+          <input class="form-input" id="f-url" placeholder="https://linkedin.com/jobs/view/…" style="flex:1;margin:0" oninput="onUrlInput(this.value)">
+          <button class="inline-btn" id="autofill-btn" onclick="autoFillFromUrl()" style="height:36px;font-size:12px;white-space:nowrap;min-width:90px;">🔍 Auto-fill</button>
+        </div>
+        <div id="autofill-status" style="font-size:11px;margin-top:6px;color:var(--text-muted);font-family:'JetBrains Mono',monospace;min-height:16px;"></div>
+      </div>
       <div class="form-group"><label class="form-label">Company *</label><input class="form-input" id="f-company"></div>
       <div class="form-group"><label class="form-label">Title *</label><input class="form-input" id="f-title"></div>
-      <div class="form-group full"><label class="form-label">Job URL</label><input class="form-input" id="f-url" placeholder="https://…"></div>
       <div class="form-group full"><label class="form-label">Application Method / Contact Notes</label><input class="form-input" id="f-applicationMethod"></div>
       <div class="form-group full"><label class="form-label">Status / What Happened</label><textarea class="form-textarea" id="f-status"></textarea></div>
       <div class="form-group full"><label class="form-label">Interview Notes</label><textarea class="form-textarea" id="f-interviewNotes"></textarea></div>
       <div class="form-group"><label class="form-label">Company Size</label><input class="form-input" id="f-companySize" placeholder="51-200"></div>
+      <div class="form-group">
+        <label class="form-label">Company Type</label>
+        <select class="form-input" id="f-companyType">
+          <option value="">Unknown</option>
+          <option value="B2C">B2C</option>
+          <option value="B2B">B2B</option>
+          <option value="B2B2C">B2B2C</option>
+          <option value="Marketplace">Marketplace</option>
+          <option value="Government">Government</option>
+        </select>
+      </div>
       <div class="form-group"><label class="form-label"># Interviews</label><input class="form-input" id="f-numInterviews" placeholder="0"></div>
       <div class="form-group full">
         <label class="form-label">Flags</label>
@@ -678,7 +700,7 @@ function saveFinderState() {
 //  TRACKER STATE
 // ─────────────────────────────────────────────────────────────
 let jobs = [];
-let tTab = 'all';
+let tTab = 'open';
 let tSortCol = 'month';
 let tSortDir = -1;
 let editId = null;
@@ -722,10 +744,37 @@ function getStatus(j) {
   if (j.applied) return 'applied';
   return 'notapplied';
 }
+
+// A process is CLOSED if: chose not to apply, sent thank-you (post-rejection),
+// or status text contains rejection signals
+const REJECTION_KEYWORDS = /reject|declined|not moving|no longer|passed|unfortunately|not selected|closed|filled|withdrawn|not a fit/i;
+function isClosed(j) {
+  if (j.choseNotToApply) return true;
+  if (j.thankYouEmail) return true;
+  if (j.status && REJECTION_KEYWORDS.test(j.status)) return true;
+  return false;
+}
+function isOpen(j) {
+  if (!j.applied) return false; // never applied = not a live process
+  return !isClosed(j);
+}
+
+function processStatus(j) {
+  if (!j.applied && !j.choseNotToApply) return 'pending';
+  if (isClosed(j)) return 'closed';
+  return 'open';
+}
+
 function statusBadge(j) {
   const s = getStatus(j);
   const L = { interviewed:'🟠 Interviewed', applied:'🟢 Applied', notapplied:'🔵 Not Applied' };
   return `<span class="t-badge t-badge-${s}">${L[s]}</span>`;
+}
+function processBadge(j) {
+  const ps = processStatus(j);
+  if (ps === 'open')   return `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600;background:#e6f9f0;color:#1a7a4a;border:1px solid #a8e6c8;">● Open</span>`;
+  if (ps === 'closed') return `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600;background:#f5f5f5;color:#999;border:1px solid #ddd;">✕ Closed</span>`;
+  return `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600;background:#fff8e6;color:#b07800;border:1px solid #ffd166;">– Pending</span>`;
 }
 function esc(s) { return (s||'').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 function shortHost(url) {
@@ -739,9 +788,11 @@ function getFiltered() {
   const fM = document.getElementById('t-filter-month').value;
   const fMe = document.getElementById('t-filter-method').value;
   return jobs.filter(j => {
-    if (tTab === 'applied' && getStatus(j) !== 'applied') return false;
+    if (tTab === 'open'        && !isOpen(j)) return false;
+    if (tTab === 'closed'      && !isClosed(j)) return false;
+    if (tTab === 'applied'     && getStatus(j) !== 'applied') return false;
     if (tTab === 'interviewed' && getStatus(j) !== 'interviewed') return false;
-    if (tTab === 'notapplied' && getStatus(j) !== 'notapplied') return false;
+    if (tTab === 'notapplied'  && getStatus(j) !== 'notapplied') return false;
     if (q) {
       const hay = [j.company,j.title,j.status,j.applicationMethod,j.interviewNotes].join(' ').toLowerCase();
       if (!hay.includes(q)) return false;
@@ -799,6 +850,8 @@ function renderTracker() {
       <td style="color:var(--text-dim);white-space:nowrap;font-size:11px;font-family:'JetBrains Mono',monospace">${esc(j.month||'–')}</td>
       <td><div class="t-company">${esc(j.company||'–')}</div>${urlHtml}</td>
       <td><div class="t-title-sm">${esc(j.title||'–')}</div></td>
+      <td>${j.companyType ? `<span class="b2x-badge ${j.companyType==='B2C'?'b2c':j.companyType==='B2B'?'b2b':''}" style="font-size:10px">${esc(j.companyType)}</span>` : '<span style="color:var(--text-dim);font-size:11px">–</span>'}</td>
+      <td>${processBadge(j)}</td>
       <td>${statusBadge(j)}</td>
       <td style="font-size:13px">${method}</td>
       <td style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px">${numInt}</td>
@@ -859,6 +912,7 @@ function openEditModal(id) {
   document.getElementById('f-status').value = j.status||'';
   document.getElementById('f-interviewNotes').value = j.interviewNotes||'';
   document.getElementById('f-companySize').value = j.companySize||'';
+  document.getElementById('f-companyType').value = j.companyType||'';
   document.getElementById('f-numInterviews').value = j.numInterviews!=null?j.numInterviews:'';
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => {
     document.getElementById('f-'+k).checked = !!j[k];
@@ -866,7 +920,8 @@ function openEditModal(id) {
   document.getElementById('modal-overlay').classList.remove('hidden');
 }
 function clearForm() {
-  ['f-month','f-lastUpdate','f-company','f-title','f-url','f-applicationMethod','f-status','f-interviewNotes','f-companySize','f-numInterviews'].forEach(id => document.getElementById(id).value='');
+  ['f-month','f-lastUpdate','f-company','f-title','f-url','f-applicationMethod','f-status','f-interviewNotes','f-companySize','f-companyType','f-numInterviews'].forEach(id => document.getElementById(id).value='');
+  const afStatus = document.getElementById('autofill-status'); if (afStatus) afStatus.textContent = '';
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => document.getElementById('f-'+k).checked=false);
 }
 function closeModal() { document.getElementById('modal-overlay').classList.add('hidden'); }
@@ -884,6 +939,7 @@ function saveJob() {
     status: document.getElementById('f-status').value.trim(),
     interviewNotes: document.getElementById('f-interviewNotes').value.trim(),
     companySize: document.getElementById('f-companySize').value.trim()||null,
+    companyType: document.getElementById('f-companyType').value||null,
     numInterviews: document.getElementById('f-numInterviews').value!=='' ? parseFloat(document.getElementById('f-numInterviews').value) : null,
   };
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => {
@@ -1015,7 +1071,19 @@ function exportCSV() {
 function renderAnalysis() {
   const total   = jobs.length;
   const applied = jobs.filter(j=>j.applied===true).length;
-  const notApp  = jobs.filter(j=>j.applied===false||j.choseNotToApply).length;
+  // B2x breakdown
+  const b2xTypes = ['B2C','B2B','B2B2C','Marketplace','Government'];
+  const byB2x = {};
+  b2xTypes.forEach(t => {
+    const group = jobs.filter(j => j.companyType === t);
+    byB2x[t] = { t: group.length, a: group.filter(j=>j.applied).length, i: group.filter(j=>j.interviewed).length };
+  });
+  const unknown = jobs.filter(j => !j.companyType);
+  byB2x['Unknown'] = { t: unknown.length, a: unknown.filter(j=>j.applied).length, i: unknown.filter(j=>j.interviewed).length };
+  const b2xWithData = Object.entries(byB2x).filter(([,v]) => v.t > 0);
+  const notApp   = jobs.filter(j=>j.applied===false||j.choseNotToApply).length;
+  const openCount   = jobs.filter(j=>isOpen(j)).length;
+  const closedCount = jobs.filter(j=>isClosed(j)).length;
   const interviewed = jobs.filter(j=>j.interviewed).length;
   const gotResp = jobs.filter(j=>j.gotResponse===true).length;
   const viaEmp  = jobs.filter(j=>j.viaEmployee===true).length;
@@ -1055,7 +1123,7 @@ function renderAnalysis() {
     <!-- KPIs -->
     <div class="a-grid4">
       <div class="kpi-card blue"><div class="kpi-num">${total}</div><div class="kpi-label">Total Tracked</div></div>
-      <div class="kpi-card green"><div class="kpi-num">${applied}</div><div class="kpi-label">Applied</div><div class="kpi-sub">${(applied/total*100).toFixed(0)}% of tracked</div></div>
+      <div class="kpi-card green"><div class="kpi-num">${openCount}</div><div class="kpi-label">🟢 Open Processes</div><div class="kpi-sub">actively live</div></div>
       <div class="kpi-card orange"><div class="kpi-num">${interviewed}</div><div class="kpi-label">Interviewed</div><div class="kpi-sub">${intRate} of applied</div></div>
       <div class="kpi-card green"><div class="kpi-num">${gotResp}</div><div class="kpi-label">Got Response</div><div class="kpi-sub">${respRate} of applied</div></div>
     </div>
@@ -1117,6 +1185,31 @@ function renderAnalysis() {
         </table>
       </div>
 
+      <div class="analysis-section">
+        <div class="a-section-title">B2C vs B2B Breakdown</div>
+        <table class="mini-table">
+          <thead><tr><th>Type</th><th>Tracked</th><th>Applied</th><th>Interviewed</th><th>Conv.</th></tr></thead>
+          <tbody>
+            ${b2xWithData.map(([t,v])=>`
+              <tr>
+                <td><span class="b2x-badge ${t==='B2C'?'b2c':t==='B2B'?'b2b':''}" style="font-size:10px">${t}</span></td>
+                <td>${v.t}</td>
+                <td>${v.a}</td>
+                <td>${v.i}</td>
+                <td style="color:var(--text-dim);font-size:11px">${v.a>0?(v.i/v.a*100).toFixed(0)+'%':'–'}</td>
+              </tr>`).join('')}
+          </tbody>
+        </table>
+        <div style="margin-top:8px;font-size:11px;color:var(--text-muted)">
+          ${(()=>{
+            const b2c = byB2x['B2C']||{a:0,i:0}; const b2b = byB2x['B2B']||{a:0,i:0};
+            const b2cRate = b2c.a>0?(b2c.i/b2c.a*100).toFixed(0):0;
+            const b2bRate = b2b.a>0?(b2b.i/b2b.a*100).toFixed(0):0;
+            if (b2c.a>0&&b2b.a>0) return `B2C interview rate: <strong>${b2cRate}%</strong> vs B2B: <strong>${b2bRate}%</strong>`;
+            return 'Add company types to your jobs to see B2C vs B2B conversion rates';
+          })()}
+        </div>
+      </div>
       <div class="analysis-section">
         <div class="a-section-title">Most Interview Rounds</div>
         <table class="mini-table">
@@ -1530,6 +1623,318 @@ async function testGitHubConnection() {
   } finally {
     btn.disabled = false;
     btn.textContent = '🔌 Test connection';
+  }
+}
+
+// ─────────────────────────────────────────────────────────────
+//  AUTO-FILL FROM URL
+// ─────────────────────────────────────────────────────────────
+function onUrlInput(val) {
+  const btn = document.getElementById('autofill-btn');
+  if (btn) btn.style.background = val.startsWith('http') ? '#4f6ef7' : '';
+}
+
+async function autoFillFromUrl() {
+  const url = document.getElementById('f-url').value.trim();
+  const status = document.getElementById('autofill-status');
+  const btn = document.getElementById('autofill-btn');
+  if (!url.startsWith('http')) { status.textContent = '⚠ Enter a valid URL first'; return; }
+
+  btn.disabled = true; btn.textContent = '⏳ Fetching…';
+  status.textContent = 'Scraping job page…';
+  status.style.color = '#6080ff';
+
+  try {
+    // Step 1: Scrape via allorigins proxy
+    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+    const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(10000) });
+    const data = await res.json();
+    const html = data.contents || '';
+
+    // Try to extract fields from raw HTML
+    const extracted = extractFromHtml(html, url);
+
+    if (extracted.title && extracted.company) {
+      // Scrape succeeded — fill fields
+      fillModalFields(extracted);
+      status.textContent = `✓ Auto-filled from page (${extracted.source})`;
+      status.style.color = '#43d9ad';
+    } else {
+      // Scrape got partial data — try Claude API as fallback
+      status.textContent = 'Scrape partial — using Claude to extract…';
+      const apiKey = document.getElementById('api-key').value.trim();
+      if (!apiKey) {
+        fillModalFields(extracted); // fill what we got
+        status.textContent = '⚠ Partial fill — add API key for smarter extraction';
+        status.style.color = '#ffd166';
+        return;
+      }
+      const claudeResult = await extractWithClaude(html.substring(0, 8000), url, apiKey);
+      const merged = { ...extracted, ...claudeResult };
+      fillModalFields(merged);
+      status.textContent = '✓ Auto-filled via Claude';
+      status.style.color = '#43d9ad';
+    }
+  } catch(e) {
+    status.textContent = `⚠ Could not fetch page: ${e.message}`;
+    status.style.color = '#ff6b6b';
+    // Still try Claude if we have an API key
+    const apiKey = document.getElementById('api-key').value.trim();
+    if (apiKey) {
+      status.textContent = 'Trying Claude without page content…';
+      try {
+        const r = await extractWithClaude('', url, apiKey);
+        fillModalFields(r);
+        status.textContent = '✓ Filled via Claude (URL inference)';
+        status.style.color = '#43d9ad';
+      } catch(e2) {
+        status.textContent = `⚠ Auto-fill failed: ${e2.message}`;
+        status.style.color = '#ff6b6b';
+      }
+    }
+  } finally {
+    btn.disabled = false; btn.textContent = '🔍 Auto-fill';
+  }
+}
+
+function extractFromHtml(html, url) {
+  // Parse job details from raw HTML using heuristics
+  const txt = html.replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');
+  const result = { source: 'scrape' };
+
+  // Title — try common patterns
+  const titleM = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+  if (titleM) {
+    let t = titleM[1].replace(/\s*[|\-–].*$/, '').trim(); // strip " | Company" suffix
+    if (t.length > 5 && t.length < 100) result.title = t;
+  }
+
+  // LinkedIn specific
+  if (url.includes('linkedin.com')) {
+    const liTitle = html.match(/class="[^"]*job-details-jobs-unified-top-card__job-title[^"]*"[^>]*>\s*<[^>]+>([^<]+)/i);
+    if (liTitle) result.title = liTitle[1].trim();
+    const liCo = html.match(/class="[^"]*job-details-jobs-unified-top-card__company-name[^"]*"[^>]*>[^<]*<[^>]+>([^<]+)/i);
+    if (liCo) result.company = liCo[1].trim();
+    const liLoc = html.match(/class="[^"]*job-details-jobs-unified-top-card__bullet[^"]*"[^>]*>([^<]+)/i);
+    if (liLoc) result.location = liLoc[1].trim();
+  }
+
+  // Company from URL domain
+  if (!result.company) {
+    const domainM = url.match(/https?:\/\/(?:www\.)?([^./]+)/);
+    if (domainM && !['linkedin','drushim','alljobs','glassdoor','indeed'].includes(domainM[1])) {
+      result.company = domainM[1].charAt(0).toUpperCase() + domainM[1].slice(1);
+    }
+  }
+
+  // Location keywords
+  if (!result.location) {
+    const locM = txt.match(/\b(Tel Aviv|Herzliya|Ramat Gan|Petah Tikva|Jerusalem|Haifa|Remote|Israel)\b/i);
+    if (locM) result.location = locM[1];
+  }
+
+  // Source detection
+  result.source = url.includes('linkedin') ? 'LinkedIn scrape' :
+                  url.includes('drushim')  ? 'Drushim scrape' :
+                  url.includes('alljobs')  ? 'AllJobs scrape' : 'page scrape';
+
+  return result;
+}
+
+async function extractWithClaude(pageText, url, apiKey) {
+  const prompt = pageText
+    ? `Extract job details from this job posting HTML/text. URL: ${url}\n\nPage content (first 8000 chars):\n${pageText}\n\nReturn ONLY valid JSON with these fields (null if not found): {"title":"","company":"","location":"","companyType":"B2C|B2B|B2B2C|Marketplace|","companySize":""}`
+    : `Based on this job URL, infer what you can about the company and role. URL: ${url}\n\nReturn ONLY valid JSON: {"title":"","company":"","location":"","companyType":"B2C|B2B|B2B2C|Marketplace|","companySize":""}`;
+
+  const response = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({
+      model: 'claude-haiku-4-5-20251001', // cheapest model — ~$0.001 per call
+      max_tokens: 300,
+      messages: [{ role: 'user', content: prompt }]
+    })
+  });
+  const d = await response.json();
+  const text = d.content?.[0]?.text || '{}';
+  const clean = text.replace(/```json|```/g,'').trim();
+  return JSON.parse(clean);
+}
+
+function fillModalFields(data) {
+  const today = new Date().toISOString().slice(0,10);
+  const month = today.slice(0,7);
+  if (data.title)       document.getElementById('f-title').value = data.title;
+  if (data.company)     document.getElementById('f-company').value = data.company;
+  if (data.companyType) document.getElementById('f-companyType').value = data.companyType;
+  if (data.companySize) document.getElementById('f-companySize').value = data.companySize;
+  if (!document.getElementById('f-month').value) document.getElementById('f-month').value = month;
+  if (!document.getElementById('f-lastUpdate').value) document.getElementById('f-lastUpdate').value = today;
+  // Auto-detect LinkedIn
+  const url = document.getElementById('f-url').value;
+  if (url.includes('linkedin.com')) document.getElementById('f-viaLinkedin').checked = true;
+}
+
+// ─────────────────────────────────────────────────────────────
+//  TELEGRAM → TRACKER SYNC
+// ─────────────────────────────────────────────────────────────
+// Commands you can send to your bot:
+//   thankyou <company>   → ticks thankYouEmail, marks closed
+//   rejected <company>   → adds rejected status, marks closed
+//   interview <company>  → ticks interviewed
+//   applied <company>    → ticks applied
+//   response <company>   → ticks gotResponse
+//   note <company> <text>→ appends text to status notes
+
+const TG_COMMANDS = [
+  { pattern: /^(thankyou|thank you|thank-you)\s+(.+)/i,   action: 'thankYouEmail' },
+  { pattern: /^(rejected|rejection|reject)\s+(.+)/i,      action: 'rejected'      },
+  { pattern: /^(interview|interviewed)\s+(.+)/i,           action: 'interviewed'   },
+  { pattern: /^(applied|apply)\s+(.+)/i,                   action: 'applied'       },
+  { pattern: /^(response|responded|got response)\s+(.+)/i, action: 'gotResponse'   },
+  { pattern: /^note\s+(\S+)\s+(.+)/i,                      action: 'note'          },
+];
+
+// Store last processed Telegram update_id to avoid reprocessing
+const LS_TG_OFFSET = 'niv_tg_offset';
+
+function findJobByCompany(companyQuery) {
+  const q = companyQuery.toLowerCase().trim();
+  // Exact match first
+  let match = jobs.find(j => (j.company||'').toLowerCase() === q);
+  if (match) return match;
+  // Partial match
+  match = jobs.find(j => (j.company||'').toLowerCase().includes(q) || q.includes((j.company||'').toLowerCase()));
+  return match || null;
+}
+
+async function syncFromTelegram() {
+  const token  = document.getElementById('tg-token').value.trim();
+  const chatId = document.getElementById('tg-chat-id').value.trim();
+  const btn    = document.getElementById('tg-sync-btn');
+  const status = document.getElementById('tg-sync-status');
+
+  if (!token || !chatId) {
+    showToast('Set up Telegram token and Chat ID in Settings first', '⚠️');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Syncing…';
+  status.style.display = 'inline';
+  status.textContent = 'Reading messages…';
+
+  try {
+    const offset = parseInt(localStorage.getItem(LS_TG_OFFSET) || '0');
+    const url = `https://api.telegram.org/bot${token}/getUpdates?offset=${offset}&limit=100&timeout=0`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    if (!data.ok) throw new Error(data.description || 'Telegram API error');
+
+    const updates = data.result || [];
+    if (!updates.length) {
+      status.textContent = '✓ No new messages';
+      setTimeout(() => { status.style.display = 'none'; }, 3000);
+      return;
+    }
+
+    let processed = 0, matched = 0, unmatched = [];
+    const changes = []; // collect all changes for one bulk save
+
+    for (const update of updates) {
+      const msg = update.message || update.edited_message;
+      if (!msg) continue;
+
+      // Only process messages from your own chat
+      if (String(msg.chat.id) !== String(chatId)) continue;
+
+      const text = (msg.text || '').trim();
+      let acted = false;
+
+      for (const cmd of TG_COMMANDS) {
+        const m = text.match(cmd.pattern);
+        if (!m) continue;
+
+        const companyQuery = cmd.action === 'note' ? m[1] : m[2];
+        const noteText     = cmd.action === 'note' ? m[2] : null;
+        const job = findJobByCompany(companyQuery);
+
+        if (!job) {
+          unmatched.push(`"${companyQuery}" (${cmd.action})`);
+          acted = true;
+          break;
+        }
+
+        // Apply the action
+        const change = { jobId: job.id, action: cmd.action, company: job.company };
+        if (cmd.action === 'thankYouEmail') {
+          job.thankYouEmail = true;
+          if (!job.status) job.status = 'Thank you email sent';
+        } else if (cmd.action === 'rejected') {
+          job.status = (job.status ? job.status + ' | ' : '') + 'Rejected';
+          job.thankYouEmail = job.thankYouEmail || false;
+        } else if (cmd.action === 'interviewed') {
+          job.interviewed = true;
+          job.applied = true;
+        } else if (cmd.action === 'applied') {
+          job.applied = true;
+        } else if (cmd.action === 'gotResponse') {
+          job.gotResponse = true;
+        } else if (cmd.action === 'note' && noteText) {
+          job.status = (job.status ? job.status + ' | ' : '') + noteText;
+        }
+        job.lastUpdate = new Date().toISOString().slice(0, 10);
+        changes.push(change);
+        matched++;
+        acted = true;
+        break;
+      }
+      processed++;
+    }
+
+    // Save last update_id so we don't reprocess
+    const lastId = updates[updates.length - 1].update_id + 1;
+    localStorage.setItem(LS_TG_OFFSET, String(lastId));
+
+    if (changes.length > 0) {
+      saveJobs();
+      scheduleGhSync();
+      renderTracker();
+      updateNavStats();
+    }
+
+    // Report results
+    const lines = [];
+    if (matched > 0) {
+      lines.push(`✓ Updated ${matched} job${matched>1?'s':''}: ${changes.map(c=>c.company+' ('+c.action+')').join(', ')}`);
+    }
+    if (unmatched.length > 0) {
+      lines.push(`⚠ No match found for: ${unmatched.join(', ')}`);
+    }
+    if (matched === 0 && unmatched.length === 0) {
+      lines.push('No job commands found in messages');
+    }
+
+    const summary = lines.join(' | ');
+    status.textContent = summary;
+    status.style.color = matched > 0 ? '#43d9ad' : '#ffd166';
+    if (matched > 0) showToast(`Synced ${matched} update${matched>1?'s':''} from Telegram`, '📩');
+
+    setTimeout(() => { status.style.display = 'none'; status.style.color = ''; }, 8000);
+
+  } catch(e) {
+    status.textContent = '✗ ' + e.message;
+    status.style.color = '#ff6b6b';
+    status.style.display = 'inline';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '📩 Sync Telegram';
   }
 }
 
