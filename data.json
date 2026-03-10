@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-03-10T20:09:20.096Z",
+    "lastUpdated": "2026-03-10T20:10:48.738Z",
     "jobCount": 245
   },
   "trackerJobs": [
@@ -3027,19 +3027,21 @@
       "applicationMethod": "",
       "status": "שלחתי במייל לעמית דרנגר לבקשתו",
       "lastUpdate": "2026-01-13",
-      "interviewNotes": "",
+      "interviewNotes": "בראיון עצמו עשתה לי את דוגמת למשפחה שלי יש סופר שהיה רווחי במשך שנים ועכשיו ירידה ברווחיות \nאיך אתה ניגש\n1. מכירות\n2. הוצאות\n3 השילוב שביניהם",
       "companySize": null,
-      "applied": false,
-      "viaEmployee": null,
-      "viaLinkedin": null,
+      "applied": true,
+      "viaEmployee": true,
+      "viaLinkedin": true,
       "gotResponse": null,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "choseNotToApply": null,
-      "interviewed": null,
+      "interviewed": true,
       "numInterviews": null,
       "sqlTest": null,
       "analyticsTest": null,
-      "caseStudy": null
+      "caseStudy": true,
+      "companyType": "B2C",
+      "processOverride": "closed_rejected"
     },
     {
       "id": "hist-132",
