@@ -1513,14 +1513,22 @@ async function validateJobUrl(url, company) {
     const isLinkedIn = url.includes('linkedin.com');
 
     if (isLinkedIn) {
-      // LinkedIn always requires login — proxy fetch always times out.
-      // URL format already validated by client-side filter (/jobs/view/ + 7-digit ID).
-      // Just confirm structure is intact and pass through.
       const hasViewPath = /\/jobs\/view\//i.test(url);
       const hasJobId = /[0-9]{7,}/.test(url);
       if (!hasViewPath || !hasJobId) {
         return { ok: false, reason: 'LinkedIn URL missing /jobs/view/ or numeric job ID' };
       }
+      // Try fetching to catch closed/expired listings
+      try {
+        const proxyUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
+        const res = await fetch(proxyUrl, { signal: AbortSignal.timeout(7000) });
+        if (res.ok) {
+          const data = await res.json();
+          const body = (data.contents || '').toLowerCase();
+          if (body.includes('no longer accepting applications')) return { ok: false, reason: 'No longer accepting applications' };
+          if (body.includes('job has expired') || body.includes('this job is no longer available')) return { ok: false, reason: 'Job expired' };
+        }
+      } catch(e) { /* timeout — fall through, trust URL format */ }
       return { ok: true };
     } else {
       // For non-LinkedIn: simple fetch with timeout
@@ -2102,11 +2110,13 @@ These roles will reject Niv for lacking engineering background:
 - Pure finance analyst (P&L, FP&A) with no business/product analytics
 NOTE: Python as a bonus/advantage is fine. SQL + Python (no engineering tools) is fine.
 
-=== FRESHNESS ===
-Prefer jobs posted in the last 30 days. Accept up to 45 days if the role is strong.
-- Reject anything older than 45 days
-- LinkedIn: use f_TPR=r2592000 (30 days) in URLs
-- Always include postedDate in your result — "today", "X days ago", "X weeks ago"
+=== FRESHNESS — CRITICAL ===
+Only return jobs posted in the last 30 days. Accept up to 45 days max for a strong match.
+- REJECT: anything showing "X months ago", "X years ago", or "reposted X years ago"
+- REJECT: jobs showing "No longer accepting applications"
+- REJECT: jobs with 0 applicants AND reposted (ghost listing)
+- LinkedIn: always use f_TPR=r2592000 (30-day filter) in search URLs
+- Always include postedDate — "today", "X days ago", "X weeks ago". If you cannot determine date, skip the job.
 
 === SEARCH STRATEGY — LinkedIn ONLY, 3 searches max ===
 Search ONLY on LinkedIn (site:linkedin.com/jobs). Do not search Drushim or AllJobs this run.
@@ -2236,7 +2246,7 @@ async function runSearch() {
         max_tokens:1500,
         tools:[{type:'web_search_20250305',name:'web_search'}],
         system:systemPrompt,
-        messages:[{role:'user',content:'Search LinkedIn for analyst job openings in Israel from the last 30 days. Run exactly 3 searches as specified. Return 5-8 real jobs with direct LinkedIn /jobs/view/ URLs only. Exclude any company from my tracker list. JSON array only, no explanation.'}]
+        messages:[{role:'user',content:'Search LinkedIn for analyst job openings in Israel from the last 30 days. Run all 3 searches. Return 5-8 jobs as a JSON array. SKIP any job showing No longer accepting applications, or posted/reposted more than 45 days ago. Return all real jobs you found — do not return an empty array.'}]
       })
     });
     if (!response.ok) { const err=await response.json(); throw new Error(err.error?.message||'API error'); }
