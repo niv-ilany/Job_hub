@@ -579,6 +579,7 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
           <th>Method</th>
           <th onclick="tSortBy('numInterviews')" data-col="numInterviews"># Int ↕</th>
           <th>Tests</th>
+          <th onclick="tSortBy('fitScore')" data-col="fitScore" title="Analyzer fit score">Fit ↕</th>
           <th>Notes</th>
           <th></th>
         </tr>
@@ -896,6 +897,7 @@ function renderTracker() {
       <td style="font-size:13px">${method}</td>
       <td style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px">${numInt}</td>
       <td style="font-size:10px;color:var(--text-dim)">${esc(tests)||'–'}</td>
+      <td style="text-align:center;">${j.fitScore != null ? `<span style="display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:700;font-family:'JetBrains Mono',monospace;background:${j.fitScore>=80?'#e6f9f0':j.fitScore>=65?'#fff8e6':'#fef0f0'};color:${j.fitScore>=80?'#1a7a4a':j.fitScore>=65?'#b07800':'#cc2222'};">${j.fitScore}</span>` : '<span style="color:var(--text-dim);font-size:11px">–</span>'}</td>
       <td class="t-notes" title="${esc(j.status||'')} ${esc(j.interviewNotes||'')}">${esc(noteTxt)}${noteTxt.length>=70?'…':''}</td>
       <td>
         <div style="display:flex;gap:5px">
@@ -1023,6 +1025,7 @@ function saveJob() {
     companySize: document.getElementById('f-companySize').value.trim()||null,
     companyType:      document.getElementById('f-companyType').value||null,
     processOverride:  document.getElementById('f-processOverride').value||null,
+    fitScore:         (editId ? (jobs.find(j=>j.id===editId)||{}).fitScore : null) || document._pendingFitScore || null,
     numInterviews: document.getElementById('f-numInterviews').value!=='' ? parseFloat(document.getElementById('f-numInterviews').value) : null,
   };
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => {
@@ -1038,6 +1041,7 @@ function saveJob() {
     populateMonthFilter();
     showToast('Added ✓','➕');
   }
+  document._pendingFitScore = null;
   saveJobs(); scheduleGhSync(); closeModal(); renderTracker();
 }
 
@@ -2280,6 +2284,8 @@ function addAnalyzedJobToTracker() {
 
   const notes = lastAnalysis.verdict + ' (Score: ' + lastAnalysis.score + '/100) — ' + lastAnalysis.summary;
   document.getElementById('f-status').value = notes;
+  // Store fit score so saveJob can pick it up
+  document._pendingFitScore = lastAnalysis.score;
   const now = new Date();
   document.getElementById('f-month').value = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0');
   // Focus URL field so user can paste/confirm it
