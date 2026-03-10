@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-03-10T21:23:15.914Z",
+    "lastUpdated": "2026-03-10T21:33:07.637Z",
     "jobCount": 245
   },
   "trackerJobs": [
@@ -5887,6 +5887,21 @@
     }
   ],
   "finderJobs": [
+    {
+      "id": "simplex-senior-business-analyst-3100986099",
+      "title": "Senior Business Analyst",
+      "company": "Simplex",
+      "location": "Tel Aviv, Israel",
+      "remote": false,
+      "salary": null,
+      "url": "https://il.linkedin.com/jobs/view/senior-business-analyst-at-simplex-3100986099",
+      "linkedinCompany": "simplex",
+      "source": "linkedin",
+      "matchScore": 84,
+      "matchReason": "Strong match: Fintech industry (high priority), 'actionable insights and recommendations', 'create user-friendly monitoring tools', 'provide management team with briefs about opportunities and risks'. Great storytelling abilities requirement fits Niv's presentation skills. Licensed financial institution with fraud prevention aligns with cybersecurity background.",
+      "cluster": "business",
+      "postedDate": "recent"
+    },
     {
       "id": "similarweb-senior-ba-b2c",
       "title": "Senior Business Analyst - B2C",
