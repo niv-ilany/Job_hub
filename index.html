@@ -2182,7 +2182,7 @@ KNOWN REJECTION REASONS FOR NIV:
 Return ONLY valid JSON, no markdown:
 {
   "score": 82,
-  "verdict": "✅ Apply" | "⚠️ Apply with caution" | "🚫 Skip",
+  "verdict": "✅ Apply" or "⚠️ Apply with caution" or "🚫 Skip",
   "company": "extracted company name or null",
   "title": "extracted job title or null",
   "summary": "2-3 sentence honest assessment of fit",
@@ -2214,9 +2214,11 @@ Return ONLY valid JSON, no markdown:
     });
     clearTimeout(apiTimeout);
 
+    log('API response status: ' + response.status, 'info');
     if (!response.ok) {
       const err = await response.json();
-      throw new Error(err.error?.message || 'API error');
+      const errMsg = err.error?.message || JSON.stringify(err).slice(0,200);
+      throw new Error('HTTP ' + response.status + ': ' + errMsg);
     }
 
     const data = await response.json();
@@ -2236,8 +2238,10 @@ Return ONLY valid JSON, no markdown:
     renderAnalysis(result);
 
   } catch(e) {
-    log('Error: ' + e.message, 'error');
-    resultEl.innerHTML = '<div style="padding:20px;color:var(--accent2);">⚠️ Analysis failed: ' + e.message + '</div>';
+    const msg = e.name === 'AbortError' ? 'Request timed out (55s) — try again' : e.message;
+    log('Error: ' + msg, 'error');
+    log('Error type: ' + e.name, 'warn');
+    resultEl.innerHTML = '<div style="padding:20px;color:var(--accent2);">⚠️ Analysis failed: ' + msg + '</div>';
   } finally {
     btn.disabled = false;
     btnText.textContent = '⚡ Analyze Fit';
