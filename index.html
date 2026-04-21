@@ -1450,6 +1450,7 @@ function setFilter(f, btn) {
 
 function log(msg, type='') {
   const el = document.getElementById('agent-log');
+  if (!el) { console.log('[' + (type||'info') + ']', msg); return; }
   el.classList.add('visible');
   const ts = new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
   const d = document.createElement('div');
@@ -2477,13 +2478,13 @@ function previewPrompt() {
   const systemPrompt = buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExcluded);
   const userMsg = 'Search LinkedIn for analyst job openings in Israel posted in the last 30 days. Run exactly 3 LinkedIn searches. Return 5-8 high-quality results as a JSON array only. Exclude any company already in my tracker list.';
 
-  document.getElementById('preview-system').textContent = systemPrompt;
-  document.getElementById('preview-user').textContent = userMsg;
+  if (document.getElementById('preview-system')) document.getElementById('preview-system').textContent = systemPrompt;
+  if (document.getElementById('preview-user')) document.getElementById('preview-user').textContent = userMsg;
   document.getElementById('prev-maxtokens').textContent = '1,500';
-  document.getElementById('preview-excluded').textContent = uniqueExcluded.length > 0
+  if (document.getElementById('preview-excluded')) document.getElementById('preview-excluded').textContent = uniqueExcluded.length > 0
     ? uniqueExcluded.length + ' interviewed companies excluded — e.g. ' + uniqueExcluded.slice(0,8).join(', ') + (uniqueExcluded.length > 8 ? ' +' + (uniqueExcluded.length-8) + ' more' : '')
     : '(none)';
-  document.getElementById('preview-filters').textContent = [
+  if (document.getElementById('preview-filters')) document.getElementById('preview-filters').textContent = [
     '✓  Clusters: ' + clusterNames,
     '✓  Source: LinkedIn ONLY (3 searches)',
     '✓  Freshness: posted in last 30 days (up to 45 days for strong match)',
@@ -2496,7 +2497,7 @@ function previewPrompt() {
     '✓  Dismissed jobs (downweighted): ' + dismissedTitles,
   ].join('\n');
 
-  document.getElementById('preview-overlay').classList.remove('hidden');
+  if (document.getElementById('preview-overlay')) document.getElementById('preview-overlay').classList.remove('hidden');
 }
 
 async function runSearch() {
@@ -2504,7 +2505,7 @@ async function runSearch() {
   if (!apiKey) { showToast('Enter your API key in Settings first','⚠️'); toggleSettings(); return; }
   if (isSearching) return;
   isSearching = true;
-  document.getElementById('search-btn').disabled = true;
+  if (document.getElementById('search-btn')) document.getElementById('search-btn').disabled = true;
   document.getElementById('results-area').innerHTML = `<div class="loading-state"><div class="spinner"></div><div style="font-size:15px;font-weight:600;color:var(--text);margin-bottom:6px;">Agent is searching...</div><div class="loading-text">Scanning top Israeli job boards for this week's listings…</div></div>`;
   document.getElementById('agent-log').innerHTML = '';
 
@@ -2678,7 +2679,7 @@ async function runSearch() {
   } catch(err) {
     log(`Error: ${err.message}`,'warn');
     document.getElementById('results-area').innerHTML = `<div class="empty-state-f"><div class="empty-icon">⚠️</div><h3>Search failed</h3><p style="color:var(--accent2)">${esc(err.message)}</p></div>`;
-  } finally { isSearching=false; document.getElementById('search-btn').disabled=false; }
+  } finally { isSearching=false; if (document.getElementById('search-btn')) document.getElementById('search-btn').disabled=false; }
 }
 
 async function giveFeedback(id, type) {
@@ -2690,12 +2691,14 @@ async function giveFeedback(id, type) {
 }
 
 function renderFinderJobs() {
+  // Finder tab replaced by analyzer — nothing to render
+  if (!document.getElementById('results-area')) return;
   const area = document.getElementById('results-area');
   let filtered = finderJobs;
   if (activeFilter==='liked') filtered = finderJobs.filter(j=>finderFeedback[j.id]==='liked');
   if (activeFilter==='new') filtered = finderJobs.filter(j=>!finderFeedback[j.id]);
   if (activeFilter==='b2c') filtered = finderJobs.filter(j=>detectB2C(j));
-  document.getElementById('results-count').textContent = `${filtered.length} position${filtered.length!==1?'s':''}`;
+  const rcEl = document.getElementById('results-count'); if (rcEl) rcEl.textContent = `${filtered.length} position${filtered.length!==1?'s':''}`;
   if (!filtered.length && !finderJobs.length) {
     area.innerHTML = `<div class="empty-state-f"><div class="empty-icon">🔍</div><h3>Ready to search</h3><p>Configure Settings then click Find New Jobs</p></div>`;
     return;
@@ -2807,10 +2810,11 @@ async function initApp() {
 
   loadSettings();
   populateMonthFilter();
-  renderTracker();
-  renderFinderJobs();
-  updateNavStats();
-  ghAppReady = true; // now safe to sync changes to GitHub
+  try { renderTracker(); } catch(e) { console.error('renderTracker failed:', e); }
+  try { renderFinderJobs(); } catch(e) { console.error('renderFinderJobs failed:', e); }
+  try { updateNavStats(); } catch(e) { console.error('updateNavStats failed:', e); }
+  ghAppReady = true; // MUST always be reached — wrap above in try/catch
+  console.log('App ready — ghAppReady=true, jobs:', jobs.length);
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
