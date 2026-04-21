@@ -725,9 +725,12 @@ function showTab(name, btn) {
   if (name === 'analysis') renderAnalysis();
 }
 function updateNavStats() {
-  document.getElementById('ns-tracked').textContent = jobs.length;
-  document.getElementById('ns-liked').textContent = Object.values(finderFeedback).filter(v=>v==='liked').length;
-  document.getElementById('finder-tracked-count').textContent = jobs.length + ' positions analyzed';
+  const nsTracked = document.getElementById('ns-tracked');
+  const nsLiked = document.getElementById('ns-liked');
+  const finderCount = document.getElementById('finder-tracked-count');
+  if (nsTracked) nsTracked.textContent = jobs.length;
+  if (nsLiked) nsLiked.textContent = Object.values(finderFeedback).filter(v=>v==='liked').length;
+  if (finderCount) finderCount.textContent = jobs.length + ' positions analyzed';
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -1569,10 +1572,15 @@ function isGhConfigured() {
 // Call this whenever data changes — debounces to avoid hammering GitHub API
 let ghAppReady = false; // prevents sync during initial load
 function scheduleGhSync() {
-  if (!isGhConfigured() || !ghAppReady) return;
+  const cfg = getGhConfig();
+  if (!ghAppReady) { console.log('GH sync skipped: app not ready'); return; }
+  if (!cfg.token)  { console.log('GH sync skipped: no token'); showToast('GitHub token missing — check Settings', '⚠️'); return; }
+  if (!cfg.user)   { console.log('GH sync skipped: no user'); return; }
+  if (!cfg.repo)   { console.log('GH sync skipped: no repo'); return; }
   if (ghSyncTimer) clearTimeout(ghSyncTimer);
   setGhSyncStatus('pending');
-  ghSyncTimer = setTimeout(() => syncToGitHub(), 3000); // 3s debounce
+  console.log('GH sync scheduled — jobs:', jobs.length, 'token:', cfg.token.slice(0,8)+'...');
+  ghSyncTimer = setTimeout(() => syncToGitHub(), 3000);
 }
 
 function setGhSyncStatus(state) {
