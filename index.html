@@ -722,7 +722,7 @@ function showTab(name, btn) {
   btn.classList.add('active');
   updateNavStats();
   if (name === 'tracker') renderTracker();
-  if (name === 'analysis') renderAnalysis();
+  if (name === 'analysis') renderSearchAnalysis();
 }
 function updateNavStats() {
   const nsTracked = document.getElementById('ns-tracked');
@@ -1159,7 +1159,7 @@ function exportCSV() {
 // ─────────────────────────────────────────────────────────────
 //  ANALYSIS
 // ─────────────────────────────────────────────────────────────
-function renderAnalysis() {
+function renderSearchAnalysis() {
   const total   = jobs.length;
   const applied = jobs.filter(j=>j.applied===true).length;
   // B2x breakdown
@@ -2249,7 +2249,7 @@ Return ONLY valid JSON, no markdown:
 
     lastAnalysis = result;
     log('Analysis complete — score: ' + result.score + '/100', 'success');
-    renderAnalysis(result);
+    renderAnalysisResult(result);
 
   } catch(e) {
     const msg = e.name === 'AbortError' ? 'Request timed out (55s) — try again' : e.message;
@@ -2262,7 +2262,7 @@ Return ONLY valid JSON, no markdown:
   }
 }
 
-function renderAnalysis(r) {
+function renderAnalysisResult(r) {
   const scoreColor = r.score >= 80 ? '#1a7a4a' : r.score >= 65 ? '#b07800' : '#cc2222';
   const scoreBg = r.score >= 80 ? '#e6f9f0' : r.score >= 65 ? '#fff8e6' : '#fef0f0';
   const verdictColor = r.verdict.includes('✅') ? '#1a7a4a' : r.verdict.includes('⚠️') ? '#b07800' : '#cc2222';
@@ -2813,6 +2813,7 @@ async function initApp() {
   try { renderTracker(); } catch(e) { console.error('renderTracker failed:', e); }
   try { renderFinderJobs(); } catch(e) { console.error('renderFinderJobs failed:', e); }
   try { updateNavStats(); } catch(e) { console.error('updateNavStats failed:', e); }
+  try { renderSearchAnalysis(); } catch(e) { console.error('renderSearchAnalysis failed:', e); }
   ghAppReady = true; // MUST always be reached — wrap above in try/catch
   console.log('App ready — ghAppReady=true, jobs:', jobs.length);
 }
