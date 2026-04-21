@@ -692,7 +692,8 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
 //  localStorage = your live edits, always wins over data.json on load
 //  index.html = app only, I (Claude) update this freely without touching data.json
 // ─────────────────────────────────────────────────────────────
-const DATA_URL    = 'data.json';
+// Try GitHub raw URL first (works on any domain incl Vercel), fall back to relative
+const DATA_URL = 'https://raw.githubusercontent.com/niv-ilany/Job_hub/main/data.json';
 const LS_JOBS     = 'niv_jobs_v4';
 const LS_FINDER   = 'niv_finder_v1';
 const LS_SETTINGS = 'niv_settings';
@@ -1845,8 +1846,17 @@ async function extractWithClaude(pageText, url, apiKey) {
   });
   const d = await response.json();
   const text = d.content?.[0]?.text || '{}';
-  const clean = text.replace(/```json|```/g,'').trim();
-  return JSON.parse(clean);
+  // Strip markdown fences and any leading/trailing non-JSON text
+  let clean = text.replace(/```json|```/g,'').trim();
+  // Extract just the JSON object if there's surrounding text
+  const objMatch = clean.match(/\{[\s\S]*\}/);
+  if (objMatch) clean = objMatch[0];
+  try {
+    return JSON.parse(clean);
+  } catch(e) {
+    console.warn('Auto-fill parse failed, raw text:', text.slice(0,300));
+    return {};
+  }
 }
 
 function fillModalFields(data) {
@@ -2184,8 +2194,11 @@ Return ONLY valid JSON, no markdown:
 }`;
 
   try {
+    const controller = new AbortController();
+    const apiTimeout = setTimeout(() => controller.abort(), 55000); // 55s timeout
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         'Content-Type': 'application/json',
         'x-api-key': apiKey,
@@ -2199,6 +2212,7 @@ Return ONLY valid JSON, no markdown:
         messages: [{ role: 'user', content: 'Analyze my fit for this job:\n\n' + jd }]
       })
     });
+    clearTimeout(apiTimeout);
 
     if (!response.ok) {
       const err = await response.json();
