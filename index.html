@@ -1630,7 +1630,11 @@ async function syncToGitHub(silent = false) {
       }
     };
 
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(dataObj, null, 2))));
+    // btoa() fails on Hebrew/Unicode — use TextEncoder for safe base64 encoding
+    const jsonStr = JSON.stringify(dataObj, null, 2);
+    const bytes = new TextEncoder().encode(jsonStr);
+    const binStr = Array.from(bytes).map(b => String.fromCharCode(b)).join('');
+    const content = btoa(binStr);
 
     const body = {
       message: `Auto-save: ${jobs.length} jobs — ${new Date().toLocaleString('he-IL')}`,
@@ -1668,7 +1672,7 @@ async function syncToGitHub(silent = false) {
   } catch(e) {
     setGhSyncStatus('error');
     console.error('GitHub sync failed:', e.message);
-    if (!silent) showToast('GitHub sync failed: ' + e.message, '⚠️');
+    showToast('GitHub sync failed: ' + e.message.slice(0,80), '⚠️'); // always show — silent only skips success toast
   }
 }
 
