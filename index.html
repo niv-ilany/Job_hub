@@ -1414,10 +1414,11 @@ function loadSettings() {
     if (s.ghUser)  document.getElementById('gh-user').value  = s.ghUser;
     if (s.ghRepo)  document.getElementById('gh-repo').value  = s.ghRepo;
   } catch(e) {}
-  updateStatus();
+  updateStatus(); // update status badge only — does NOT overwrite localStorage
 }
 function updateStatus() {
-  saveSettings();
+  // Read directly from DOM to check what's filled — do NOT call saveSettings here
+  // saveSettings is called by oninput on each field, so it only runs when user types
   const hasApi = !!document.getElementById('api-key').value.trim();
   const hasTg = !!(document.getElementById('tg-token').value.trim()&&document.getElementById('tg-chat-id').value.trim());
   const hasGh = !!(document.getElementById('gh-token').value.trim()&&document.getElementById('gh-user').value.trim()&&document.getElementById('gh-repo').value.trim());
