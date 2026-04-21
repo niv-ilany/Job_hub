@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-21T13:39:37.256Z",
+    "lastUpdated": "2026-04-21T13:42:17.832Z",
     "jobCount": 272
   },
   "trackerJobs": [
@@ -5835,7 +5835,7 @@
       "company": "gotfriends",
       "url": "https://www.linkedin.com/jobs/search/?currentJobId=4295562819&f_C=498675&geoId=92000000&origin=COMPANY_PAGE_JOBS_CLUSTER_EXPANSION&originToLandingJobPostings=4295562819%2C4294572667%2C4259381166%2C4293185717%2C4295559486%2C4295561727%2C4295557387%2C4293193496%2C4295562802&trk=d_flagship3_company",
       "applicationMethod": "הוספתי את  Linoy Mechaber ומרינה בריאל",
-      "status": "התקשרו אלי ושחחנו לגבי העדפות שלי וכתע מחפשים לי שם משרות פוטנציאליות ",
+      "status": "התקשרו אלי ושחחנו לגבי העדפות שלי וכתע מחפשים לי שם משרות פוטנציאליות",
       "lastUpdate": "",
       "interviewNotes": "",
       "companySize": null,
@@ -5843,14 +5843,16 @@
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "choseNotToApply": null,
       "interviewed": null,
       "numInterviews": null,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2B"
+      "companyType": "B2B",
+      "processOverride": null,
+      "fitScore": null
     },
     {
       "id": "hist-209",
