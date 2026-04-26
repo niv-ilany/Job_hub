@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T11:10:12.811Z",
+    "lastUpdated": "2026-04-26T11:10:29.740Z",
     "jobCount": 272
   },
   "trackerJobs": [
@@ -636,7 +636,7 @@
       "url": "https://www.linkedin.com/jobs/view/4375521524/",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 90/100) — Excellent fit - this role perfectly aligns with Niv's SQL expertise, marketing analytics background from Checkmarx, and statistical analysis skills. The company focuses on marketing incrementality measurement, directly matching Niv's attribution and efficiency analysis experience.",
-      "interviewNotes": "",
+      "interviewNotes": "שלחתי הודעה שוב",
       "companySize": "11-50",
       "companyType": null,
       "processOverride": null,
@@ -651,7 +651,8 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "id": "job-1773179699841"
+      "id": "job-1773179699841",
+      "fitScore": null
     },
     {
       "month": "2026-03",
