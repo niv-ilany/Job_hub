@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T11:03:03.871Z",
+    "lastUpdated": "2026-04-26T11:05:13.938Z",
     "jobCount": 272
   },
   "trackerJobs": [
@@ -378,14 +378,14 @@
       "applicationMethod": "",
       "status": "✅ Apply (Score: 81/100) — Strong match for your experience level and core skills. SQL + BI tools + business stakeholder work aligns perfectly. The telecom industry and business-focused analytics fit your profile well, though they may prefer someone with more traditional finance/ops background over gaming.",
       "interviewNotes": "",
-      "companySize": null,
+      "companySize": "1-10",
       "companyType": null,
       "processOverride": null,
       "fitScore": 81,
       "numInterviews": null,
-      "applied": null,
+      "applied": true,
       "viaEmployee": null,
-      "viaLinkedin": null,
+      "viaLinkedin": true,
       "gotResponse": null,
       "thankYouEmail": null,
       "interviewed": null,
