@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T11:13:15.542Z",
-    "jobCount": 272
+    "lastUpdated": "2026-04-26T12:10:17.317Z",
+    "jobCount": 273
   },
   "trackerJobs": [
+    {
+      "month": "2026-04",
+      "lastUpdate": "2026-04-26",
+      "company": "Lightricks",
+      "title": "Product Analyst, Facetune",
+      "url": "https://www.linkedin.com/company/lightricks/life/7779d8fe-2842-4191-b860-c18d41055aea/",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 92/100) — Excellent match - B2C product role at a major Israeli company requiring SQL, A/B testing, and cross-functional collaboration. Your BeachBum gaming experience translates perfectly to Facetune's consumer app analytics needs.",
+      "interviewNotes": "",
+      "companySize": "500-1000",
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 92,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1777205413328"
+    },
     {
       "month": "2026-04",
       "lastUpdate": "2026-04-21",
