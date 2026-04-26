@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T11:10:01.530Z",
+    "lastUpdated": "2026-04-26T11:10:12.811Z",
     "jobCount": 272
   },
   "trackerJobs": [
@@ -423,13 +423,13 @@
     },
     {
       "month": "2026-04",
-      "lastUpdate": "",
+      "lastUpdate": "2026-04-26",
       "company": "8fig",
       "title": "Senior Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4394919081/",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 85/100) — Excellent match for Niv's profile. This cross-functional senior analyst role at a fintech company perfectly aligns with his SQL/BI expertise, business stakeholder focus, and mixed B2B/B2C background. The fintech domain bridges his cybersecurity B2B and gaming B2C experience.",
-      "interviewNotes": "",
+      "interviewNotes": "שלחתי הודעה",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
