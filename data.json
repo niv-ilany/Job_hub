@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T12:34:05.352Z",
-    "jobCount": 278
+    "lastUpdated": "2026-04-26T12:36:53.791Z",
+    "jobCount": 279
   },
   "trackerJobs": [
+    {
+      "month": "2026-04",
+      "lastUpdate": "2026-04-26",
+      "company": "Ingenio",
+      "title": "Senior Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4389594010/",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 89/100) — Excellent match - this role perfectly aligns with your B2C analytics experience at BeachBum. They want CAC/CLV/ROAS expertise, A/B testing, retention/CRM analysis, and Tableau dashboards - all your core strengths. The spiritual/wellness marketplace industry is very similar to gaming in terms of user engagement patterns.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 89,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1777207010376"
+    },
     {
       "month": "2026-04",
       "lastUpdate": "2026-04-26",
