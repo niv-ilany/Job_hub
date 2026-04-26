@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T12:39:16.666Z",
-    "jobCount": 280
+    "lastUpdated": "2026-04-26T12:40:42.496Z",
+    "jobCount": 281
   },
   "trackerJobs": [
+    {
+      "month": "2026-04",
+      "lastUpdate": "2026-04-26",
+      "company": "Tavily",
+      "title": "Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4398584577/",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 62/100) — Mixed fit - matches on stakeholder collaboration and business insights, but has significant technical gaps. Required Snowflake/Databricks experience and strong Python focus are major concerns for Niv's profile.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 62,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1777207239071"
+    },
     {
       "month": "2026-04",
       "lastUpdate": "2026-04-26",
