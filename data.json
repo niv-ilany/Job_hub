@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T12:46:05.275Z",
+    "lastUpdated": "2026-04-26T12:49:35.433Z",
     "jobCount": 284
   },
   "trackerJobs": [
@@ -62,7 +62,7 @@
       "lastUpdate": "2026-04-26",
       "company": "Clover Security",
       "title": "Data Analyst",
-      "url": "https://www.linkedin.com/jobs/view/4397784874https://www.linkedin.com/jobs/view/4397784874",
+      "url": "https://www.linkedin.com/jobs/view/4397784874",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 65/100) — Decent match on SQL and insights work, but concerning gaps in Python automation and AI/ML experience. Role emphasizes building automations and working with AI systems - areas where Niv has limited experience.",
       "interviewNotes": "",
