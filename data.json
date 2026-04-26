@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T11:11:55.523Z",
+    "lastUpdated": "2026-04-26T11:12:05.387Z",
     "jobCount": 272
   },
   "trackerJobs": [
@@ -1862,18 +1862,20 @@
       "lastUpdate": "2025-11-24",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
-      "choseNotToApply": null,
+      "choseNotToApply": true,
       "interviewed": null,
       "numInterviews": null,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2C"
+      "companyType": "B2C",
+      "processOverride": null,
+      "fitScore": null
     },
     {
       "id": "hist-47",
@@ -3590,18 +3592,20 @@
       "lastUpdate": "2025-12-26",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
-      "choseNotToApply": null,
+      "choseNotToApply": true,
       "interviewed": null,
       "numInterviews": null,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2C"
+      "companyType": "B2C",
+      "processOverride": null,
+      "fitScore": null
     },
     {
       "id": "hist-118",
@@ -3614,18 +3618,20 @@
       "lastUpdate": "2025-12-26",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
-      "choseNotToApply": null,
+      "choseNotToApply": true,
       "interviewed": null,
       "numInterviews": null,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2B"
+      "companyType": "B2B",
+      "processOverride": null,
+      "fitScore": null
     },
     {
       "id": "hist-119",
@@ -3638,18 +3644,20 @@
       "lastUpdate": "",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
-      "choseNotToApply": null,
+      "choseNotToApply": true,
       "interviewed": null,
       "numInterviews": null,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2C"
+      "companyType": "B2C",
+      "processOverride": null,
+      "fitScore": null
     },
     {
       "id": "hist-120",
