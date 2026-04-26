@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T12:30:52.261Z",
-    "jobCount": 277
+    "lastUpdated": "2026-04-26T12:34:05.352Z",
+    "jobCount": 278
   },
   "trackerJobs": [
+    {
+      "month": "2026-04",
+      "lastUpdate": "2026-04-26",
+      "company": "iRESTORE",
+      "title": "Sr. Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4376476477/",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 92/100) — Excellent match - this is exactly Niv's wheelhouse. Direct-to-consumer wellness brand needing advanced SQL + BI + cohort/LTV analysis with marketing analytics focus. Strong emphasis on contribution margin, CAC, LTV, and refund analysis aligns perfectly with Niv's B2C gaming experience.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": "B2C",
+      "processOverride": null,
+      "fitScore": 92,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1777206841681"
+    },
     {
       "month": "2026-04",
       "lastUpdate": "2026-04-26",
