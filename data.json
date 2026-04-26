@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T11:05:13.938Z",
+    "lastUpdated": "2026-04-26T11:09:05.686Z",
     "jobCount": 272
   },
   "trackerJobs": [
@@ -111,13 +111,13 @@
     },
     {
       "month": "2026-04",
-      "lastUpdate": "",
+      "lastUpdate": "2026-04-26",
       "company": "Lusha",
       "title": "Senior Business Analyst",
       "url": "https://www.linkedin.com/jobs/view/4400984451/",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 87/100) — Strong match for Niv's profile with B2B SaaS experience, SQL skills, and stakeholder alignment. The role focuses on business insights and Go-To-Market optimization rather than data engineering. Main concern is the GenAI requirement, which isn't explicitly in Niv's background.",
-      "interviewNotes": "",
+      "interviewNotes": "שלחתי שוב הודעה",
       "companySize": null,
       "companyType": "B2B",
       "processOverride": null,
