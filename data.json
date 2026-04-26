@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-26T11:09:05.686Z",
+    "lastUpdated": "2026-04-26T11:10:01.530Z",
     "jobCount": 272
   },
   "trackerJobs": [
@@ -397,13 +397,13 @@
     },
     {
       "month": "2026-04",
-      "lastUpdate": "",
+      "lastUpdate": "2026-04-26",
       "company": "Glassbox",
       "title": "Data and BI Analyst",
       "url": "https://www.linkedin.com/jobs/view/4384859850/",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 85/100) — Strong match for this B2B SaaS analytics role. Your Checkmarx experience directly aligns with their SaaS metrics needs, and current BeachBum SQL/Tableau skills fit their core requirements. Only gap is dbt collaboration expectation.",
-      "interviewNotes": "",
+      "interviewNotes": "שלחתי הודעה",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
