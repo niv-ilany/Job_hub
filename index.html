@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Niv — Job Hub</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
@@ -374,6 +374,86 @@ table.t-table tr:hover td { background: #fdfcfa; }
 details summary { list-style: none; cursor: pointer; }
 details summary::-webkit-details-marker { display: none; }
 pre { white-space: pre-wrap; word-break: break-all; }
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE / IPHONE RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Nav */
+  .nav { padding: 0 12px; gap: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .nav-tab { font-size: 11px; padding: 0 10px; white-space: nowrap; flex-shrink: 0; }
+  .nav-stats { display: none; }
+
+  /* Pages */
+  .finder-wrap { padding: 14px 12px; }
+  .analysis-wrap { padding: 14px 12px; }
+
+  /* Settings grid */
+  .settings-grid { grid-template-columns: 1fr !important; }
+  .settings-grid .field[style*="grid-column"] { grid-column: 1 !important; }
+  .settings-grid .field > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+
+  /* Analyzer — stack vertically */
+  #tab-finder .finder-wrap > div[style*="grid-template-columns:1fr 1fr"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  #analysis-result { height: 280px !important; }
+  #jd-input { height: 200px !important; }
+
+  /* Tracker toolbar */
+  .tracker-toolbar { flex-wrap: wrap; gap: 6px; padding: 8px 10px; }
+  .t-search { min-width: 0 !important; max-width: 100% !important; flex: 1 1 120px; }
+  .t-select { font-size: 11px; padding: 5px 6px; }
+  .t-tabs { overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; padding: 0 10px; }
+  .t-tab { font-size: 11px; padding: 6px 10px; white-space: nowrap; flex-shrink: 0; }
+
+  /* Table — horizontal scroll */
+  .tracker-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .tracker-table { min-width: 600px; }
+  .t-notes { max-width: 100px !important; }
+
+  /* Hide less important columns on mobile */
+  .tracker-table th:nth-child(n+8),
+  .tracker-table td:nth-child(n+8) { display: none; }
+
+  /* Modal — full screen on mobile */
+  .modal-overlay { align-items: flex-end; padding: 0; }
+  .modal {
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: 92vh !important;
+    border-radius: 18px 18px 0 0 !important;
+    padding: 20px 16px !important;
+  }
+  .form-grid { grid-template-columns: 1fr !important; }
+  .form-group.full { grid-column: 1 !important; }
+  .checkbox-row { gap: 8px; }
+  .checkbox-item { font-size: 12px; }
+
+  /* Analysis tab */
+  .analysis-wrap .kpi-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  .analysis-wrap .insight-grid { grid-template-columns: 1fr !important; }
+  .bar-label { min-width: 80px !important; font-size: 11px !important; }
+
+  /* Buttons */
+  .search-btn { width: 100%; margin-top: 8px; }
+  .modal-actions { flex-wrap: wrap; gap: 8px; }
+  .modal-actions .t-btn { flex: 1; min-width: 100px; text-align: center; }
+
+  /* QR code */
+  #qr-container img { width: 180px !important; height: 180px !important; border-radius: 8px; }
+
+  /* Toast */
+  .toast { bottom: 80px; left: 12px; right: 12px; width: auto; }
+}
+
+@media (max-width: 400px) {
+  .nav-tab { font-size: 10px; padding: 0 7px; }
+  .kpi-grid { grid-template-columns: 1fr 1fr !important; }
+}
 </style>
 </head>
 <body>
@@ -454,8 +534,8 @@ pre { white-space: pre-wrap; word-break: break-all; }
             <span style="font-size:11px;color:var(--text-dim);">Scan with your phone to auto-load all settings</span>
           </div>
           <div id="qr-container" style="display:none;margin-top:12px;text-align:center;">
-            <canvas id="qr-canvas" style="border-radius:8px;border:1px solid var(--border);"></canvas>
-            <div style="font-size:11px;color:var(--text-muted);margin-top:6px;">Scan with iPhone camera — link auto-fills all settings</div>
+            <div id="qr-canvas" style="display:inline-block;padding:10px;background:#fff;border-radius:10px;border:1px solid var(--border);"></div>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:8px;">Scan with iPhone camera — link auto-fills all settings</div>
             <div style="font-size:10px;color:var(--text-dim);margin-top:4px;">Link expires when you close this tab</div>
           </div>
         </div>
@@ -2091,16 +2171,22 @@ async function exportSettingsQR() {
   }
 
   canvas.innerHTML = '';
-  new QRCode(canvas, {
-    text: url,
-    width: 200,
-    height: 200,
-    colorDark: '#1a1a2e',
-    colorLight: '#ffffff',
-    correctLevel: QRCode.CorrectLevel.M
-  });
-
-  showToast('QR code generated — scan with your iPhone', '📱');
+  try {
+    new QRCode(canvas, {
+      text: url,
+      width: 200,
+      height: 200,
+      colorDark: '#000000',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+    showToast('QR code generated — scan with your iPhone', '📱');
+  } catch(e) {
+    // Fallback: show clickable link if QR fails
+    canvas.innerHTML = '<a href="' + url + '" style="font-size:11px;word-break:break-all;color:var(--accent);">' + url.slice(0, 80) + '...</a>';
+    showToast('QR failed — tap the link instead', '⚠️');
+    console.error('QR error:', e);
+  }
 }
 
 // On load: check if URL hash contains settings and auto-import
