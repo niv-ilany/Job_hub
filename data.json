@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-27T12:33:07.403Z",
+    "lastUpdated": "2026-04-27T12:33:31.039Z",
     "jobCount": 284
   },
   "trackerJobs": [
@@ -819,7 +819,7 @@
       "url": "",
       "applicationMethod": "Zack Bentolila",
       "status": "היה לי ראיון ראשון ישירות עם המנכל\nציין 5 ימים מהמהשרד (ציינתי גמשיות )\nשכר ביקשתי 35 ואז טווח 30-35\nציין שהמשרה כוללת להביא אינסייטים שיביאו לקידום כל המערכות \nלייצר אוטומציות לתהליכים ולהנגיש את המידע מהמערכת.\nציין שיכול לשמוך לי את כל המידע לענן לצורך תחקיר SQL אבל אין כנראה תקציב לכלי ויזואליזציה\nאמרתי שנפתור באמצעות AI \nציין שיש הרבה עבודה שחורה",
-      "interviewNotes": "שלב הבא אמורה ליצור איתי קשר HR\nדיברה איתי - ממתין עכשיו למבחן בית שהם יוצרים לי",
+      "interviewNotes": "שלב הבא אמורה ליצור איתי קשר HR\nדיברה איתי - ממתין עכשיו למבחן בית שהם יוצרים לי\nהקפיאו את המשרה אחרי תרגיל מאוד מוצלח שהעריכו מאוד",
       "companySize": "11-50",
       "companyType": "B2B",
       "processOverride": null,
@@ -829,7 +829,7 @@
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
