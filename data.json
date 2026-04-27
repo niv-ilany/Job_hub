@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-27T12:35:04.128Z",
-    "jobCount": 284
+    "lastUpdated": "2026-04-27T12:35:48.519Z",
+    "jobCount": 285
   },
   "trackerJobs": [
+    {
+      "month": "2026-04",
+      "lastUpdate": "2026-04-27",
+      "company": "עדו תלמון",
+      "title": "אנליסט גיימינג - לא בארץ",
+      "url": "",
+      "applicationMethod": "",
+      "status": "",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": null,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": true,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1777293345101"
+    },
     {
       "month": "2026-04",
       "lastUpdate": "2026-04-26",
