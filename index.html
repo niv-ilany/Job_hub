@@ -448,6 +448,16 @@ pre { white-space: pre-wrap; word-break: break-all; }
             <button class="inline-btn" id="gh-test-btn" onclick="testGitHubConnection()" style="height:26px;font-size:11px;">🔌 Test connection</button>
             <span id="gh-status" style="font-size:11px;font-family:'JetBrains Mono',monospace;"></span>
           </div>
+          <div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <span style="font-size:12px;font-weight:600;color:var(--text-muted);">📱 Transfer to another device:</span>
+            <button class="inline-btn" onclick="exportSettingsQR()" style="height:28px;font-size:12px;">📤 Generate QR Code</button>
+            <span style="font-size:11px;color:var(--text-dim);">Scan with your phone to auto-load all settings</span>
+          </div>
+          <div id="qr-container" style="display:none;margin-top:12px;text-align:center;">
+            <canvas id="qr-canvas" style="border-radius:8px;border:1px solid var(--border);"></canvas>
+            <div style="font-size:11px;color:var(--text-muted);margin-top:6px;">Scan with iPhone camera — link auto-fills all settings</div>
+            <div style="font-size:10px;color:var(--text-dim);margin-top:4px;">Link expires when you close this tab</div>
+          </div>
         </div>
         <div class="field">
           <label>📢 Alert threshold</label>
@@ -2050,6 +2060,76 @@ async function syncFromTelegram() {
 }
 
 
+
+// ═══════════════════════════════════════════════════════
+//  SETTINGS EXPORT VIA URL HASH + QR CODE
+// ═══════════════════════════════════════════════════════
+
+async function exportSettingsQR() {
+  const s = JSON.parse(localStorage.getItem(LS_SETTINGS) || '{}');
+  if (!s.apiKey && !s.ghToken) {
+    showToast('No settings to export — fill in your keys first', '⚠️');
+    return;
+  }
+
+  // Encode settings as base64 in URL hash — never sent to any server
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(s))));
+  const url = window.location.origin + window.location.pathname + '#settings=' + encoded;
+
+  const container = document.getElementById('qr-container');
+  const canvas = document.getElementById('qr-canvas');
+  container.style.display = 'block';
+
+  // Load QR library dynamically
+  if (!window.QRCode) {
+    await new Promise((res, rej) => {
+      const s = document.createElement('script');
+      s.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+      s.onload = res; s.onerror = rej;
+      document.head.appendChild(s);
+    });
+  }
+
+  canvas.innerHTML = '';
+  new QRCode(canvas, {
+    text: url,
+    width: 200,
+    height: 200,
+    colorDark: '#1a1a2e',
+    colorLight: '#ffffff',
+    correctLevel: QRCode.CorrectLevel.M
+  });
+
+  showToast('QR code generated — scan with your iPhone', '📱');
+}
+
+// On load: check if URL hash contains settings and auto-import
+function checkHashSettings() {
+  const hash = window.location.hash;
+  if (!hash.startsWith('#settings=')) return;
+
+  try {
+    const encoded = hash.slice('#settings='.length);
+    const s = JSON.parse(decodeURIComponent(escape(atob(encoded))));
+
+    // Don't overwrite existing settings silently — ask first
+    const existing = JSON.parse(localStorage.getItem(LS_SETTINGS) || '{}');
+    const hasExisting = !!(existing.apiKey || existing.ghToken);
+
+    if (hasExisting) {
+      if (!confirm('Import settings from QR code? This will overwrite your current settings.')) return;
+    }
+
+    localStorage.setItem(LS_SETTINGS, JSON.stringify(s));
+    loadSettings();
+    // Clean URL
+    history.replaceState(null, '', window.location.pathname);
+    showToast('✓ Settings imported from QR code', '📱');
+  } catch(e) {
+    console.warn('Failed to parse hash settings:', e);
+  }
+}
+
 // ═══════════════════════════════════════════════════════
 //  AIAPPLY IMPORTER
 // ═══════════════════════════════════════════════════════
@@ -2954,6 +3034,7 @@ async function initApp() {
   try { renderFinderJobs(); } catch(e) { console.error('renderFinderJobs failed:', e); }
   try { updateNavStats(); } catch(e) { console.error('updateNavStats failed:', e); }
   try { renderSearchAnalysis(); } catch(e) { console.error('renderSearchAnalysis failed:', e); }
+  checkHashSettings(); // auto-import settings from QR hash if present
   ghAppReady = true; // MUST always be reached — wrap above in try/catch
   console.log('App ready — ghAppReady=true, jobs:', jobs.length);
 }
