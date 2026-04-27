@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-04-27T12:33:31.039Z",
+    "lastUpdated": "2026-04-27T12:33:50.352Z",
     "jobCount": 284
   },
   "trackerJobs": [
@@ -221,17 +221,17 @@
       "url": "https://www.linkedin.com/jobs/view/4405914528/",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 78/100) — Solid match for Niv's profile - requires SQL (bonus), Tableau, and business analytics experience with operations stakeholders. The 5+ years requirement and lack of specific B2C/gaming experience may be concerns, but his cross-industry analytics background and stakeholder management skills align well.",
-      "interviewNotes": "",
+      "interviewNotes": "דדה הגיש ויש קיבלתי לא",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 78,
       "numInterviews": null,
-      "applied": null,
-      "viaEmployee": null,
+      "applied": true,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
