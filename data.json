@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-05T11:26:36.618Z",
+    "lastUpdated": "2026-05-05T13:03:02.649Z",
     "jobCount": 285
   },
   "trackerJobs": [
@@ -351,12 +351,12 @@
       "url": "",
       "applicationMethod": "AIAPPLY",
       "status": "ראיון AI מול  בוט ששאלה הרבה שאלות טובות \nהתרכזה בעיקר במשרה האחרונה \nאני פיתחתי את השאר\nסיפתי לה על LTC היא למדה אחרת והיא סיכמה גם את האטסטרטגי שאני מביא.\nהכל היה באנגלית?\nשבלים הבאים - ראיון של מנהל מגייס, ועוד 2 שלבים בערך בתהליך",
-      "interviewNotes": "",
+      "interviewNotes": "ראיון עם סהר היה מוצלח \nאנליטס בחברה 4 חודשים\nציין איכות דאטה טובה\nמערכות dbt, fireblocks tableau\nעברנו יחד עם דאשבורד וניתחנו סיבה לירידה בCR",
       "companySize": null,
       "companyType": "B2B",
       "processOverride": null,
       "fitScore": null,
-      "numInterviews": 2,
+      "numInterviews": 3,
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
@@ -365,7 +365,7 @@
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
-      "analyticsTest": null,
+      "analyticsTest": true,
       "caseStudy": null,
       "id": "job-1776688037099"
     },
