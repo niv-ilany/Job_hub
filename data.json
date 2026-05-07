@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-07T12:11:39.664Z",
+    "lastUpdated": "2026-05-07T12:15:04.171Z",
     "jobCount": 286
   },
   "trackerJobs": [
@@ -351,18 +351,18 @@
       "url": "https://www.linkedin.com/jobs/view/4361708399/",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 92/100) — Excellent match - B2C product role at a major Israeli company requiring SQL, A/B testing, and cross-functional collaboration. Your BeachBum gaming experience translates perfectly to Facetune's consumer app analytics needs.",
-      "interviewNotes": "שלחתי הודעה לאבישי\n13 שנים, מובייל - עריכה- צוכן \nירושלים ???",
+      "interviewNotes": "שלחתי הודעה לאבישי\n13 שנים, מובייל - עריכה- צוכן \nירושלים ???\nאנליזה על פיצרים, לצוות פרודקט\nסגמנטציה \nab testing\nשימוש גבוה בAI - מגוון כולם \nמערכת פנימית BI\nרוב שימוש בSQL + PYTHON\nהכנסות 250M$ בשנה",
       "companySize": "500-1000",
-      "companyType": null,
+      "companyType": "B2C",
       "processOverride": null,
       "fitScore": 92,
-      "numInterviews": null,
+      "numInterviews": 1,
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
+      "gotResponse": true,
       "thankYouEmail": null,
-      "interviewed": null,
+      "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
       "analyticsTest": null,
