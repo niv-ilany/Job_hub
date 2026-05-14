@@ -1,24 +1,24 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-07T12:15:04.171Z",
+    "lastUpdated": "2026-05-14T05:53:25.457Z",
     "jobCount": 286
   },
   "trackerJobs": [
     {
       "month": "2026-05",
-      "lastUpdate": "",
+      "lastUpdate": "2026-05-10",
       "company": "siit",
       "title": "Revops analyst",
       "url": "",
       "applicationMethod": "אביעד חברת satge1",
       "status": "משרת אופרציה?\nאיחרתי ב10 דק\nהכל מנוהל על האבספוט, משתמשים גם ב clay, stich ,topo,aircall\nBI יש מישו בפרודקט שעושה על בסיס מטהבייס\nיש מטלת בית לעשות בראשון שינ הקרובים\n\nסיפר על הפתרון נשמע מעניין \nיושב בנקודת חיבור בין מרקטיינג סיילס ועוד\nעוסקים בפתרון AI שאם הבנתי נכון מחליף תוכנותו כמו jira\nלא נשמעתי מספיק רציני כי שאל ולא חקרתי על החברה לפני הראיון.",
-      "interviewNotes": "",
+      "interviewNotes": "הגשתי תרגיל וקיבלתי מנעה מרוצה ונקעבה פגישה להתקדם ולהציג בפניו ומנהל נוסף",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": null,
-      "numInterviews": null,
+      "numInterviews": 2,
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
@@ -27,7 +27,7 @@
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
-      "analyticsTest": null,
+      "analyticsTest": true,
       "caseStudy": null,
       "id": "job-1777986522022"
     },
