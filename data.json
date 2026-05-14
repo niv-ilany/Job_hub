@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-14T06:25:26.341Z",
-    "jobCount": 287
+    "lastUpdated": "2026-05-14T06:27:10.546Z",
+    "jobCount": 288
   },
   "trackerJobs": [
+    {
+      "month": "2026-05",
+      "lastUpdate": "",
+      "company": "Faye",
+      "title": "Marketing & growth data analyst",
+      "url": "",
+      "applicationMethod": "דדה מכיר את המנכל",
+      "status": "",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": "B2B",
+      "processOverride": null,
+      "fitScore": null,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1778740027147"
+    },
     {
       "month": "2026-05",
       "lastUpdate": "2026-05-07",
