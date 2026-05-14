@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-14T05:55:26.284Z",
+    "lastUpdated": "2026-05-14T05:56:17.980Z",
     "jobCount": 286
   },
   "trackerJobs": [
@@ -33,24 +33,24 @@
     },
     {
       "month": "2026-04",
-      "lastUpdate": "2026-04-27",
+      "lastUpdate": "2026-05-14",
       "company": "עדו תלמון -sixvalues - magda",
       "title": "אנליסט גיימינג - לא בארץ",
       "url": "",
       "applicationMethod": "",
-      "status": "",
+      "status": "מדובר להיות freelancer\nלעבוד כחלק ממחלקה\n\nהתקדמתי לראיון שני",
       "interviewNotes": "",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": null,
-      "numInterviews": null,
+      "numInterviews": 1,
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
+      "gotResponse": true,
       "thankYouEmail": null,
-      "interviewed": null,
+      "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
       "analyticsTest": null,
