@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-14T05:54:04.992Z",
+    "lastUpdated": "2026-05-14T05:54:33.141Z",
     "jobCount": 286
   },
   "trackerJobs": [
@@ -507,7 +507,7 @@
       "url": "https://www.linkedin.com/jobs/view/4398793347/",
       "applicationMethod": "רוסיו",
       "status": "⚠️ Apply with caution (Score: 78/100) — Good match for analytics skills and stakeholder interface role, but the heavy emphasis on data engineering collaboration and DWH architecture may expose gaps in technical depth. The role requires more data warehouse/pipeline experience than Niv has demonstrated.",
-      "interviewNotes": "הוגש על ידי רוסיו ונקבע ראיון טלפוני\nהיה ראיון וידיאו מוצלח עם היועץ החיצוני לחברה בנושא דאטנ\nהוא ציין שהתפקיד הוא תפקיד פיבוט שדורש\n1. להיות הפרודקט של קבוצת הדאטנ אנגניירס\n2ץ לעבוד מול כל מובילי המחקלות השונות והאנלסיטים שלהם וליישר תמדי את הקו מבחינה אנליטית\n3. להיות אחראי על גילדת האנליסטים\n4ץ להיות אחראי על כל הדשברודים הראשיים שנבחנים על ידי המנכל\nאין להם עדיין דאטה כל כך ולא כלי ויזאוליזציה ולכן מחפשים מי שיעשה כאן אורקסטרציה\n\nהיה ראיון נוסף עם מנהל מגייס שנכנס לתפקיד ובכיר בפיננס.\nדיי סטנדרטילהכיר בלי שאלות מי יודע מה",
+      "interviewNotes": "הוגש על ידי רוסיו ונקבע ראיון טלפוני\nהיה ראיון וידיאו מוצלח עם היועץ החיצוני לחברה בנושא דאטנ\nהוא ציין שהתפקיד הוא תפקיד פיבוט שדורש\n1. להיות הפרודקט של קבוצת הדאטנ אנגניירס\n2ץ לעבוד מול כל מובילי המחקלות השונות והאנלסיטים שלהם וליישר תמדי את הקו מבחינה אנליטית\n3. להיות אחראי על גילדת האנליסטים\n4ץ להיות אחראי על כל הדשברודים הראשיים שנבחנים על ידי המנכל\nאין להם עדיין דאטה כל כך ולא כלי ויזאוליזציה ולכן מחפשים מי שיעשה כאן אורקסטרציה\n\nהיה ראיון נוסף עם מנהל מגייס שנכנס לתפקיד ובכיר בפיננס.\nדיי סטנדרטילהכיר בלי שאלות מי יודע מה\n\nקיבלתי תשובה שלילית שהרקע שלי לא מספיק מתאים",
       "companySize": null,
       "companyType": "B2B",
       "processOverride": null,
@@ -517,7 +517,7 @@
       "viaEmployee": true,
       "viaLinkedin": true,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
