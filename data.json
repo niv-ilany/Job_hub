@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-14T06:27:10.546Z",
-    "jobCount": 288
+    "lastUpdated": "2026-05-18T11:42:48.771Z",
+    "jobCount": 289
   },
   "trackerJobs": [
+    {
+      "month": "2026-05",
+      "lastUpdate": "",
+      "company": "NIQ",
+      "title": "Retail Consultant",
+      "url": "https://jobs.smartrecruiters.com/NielsenIQ/744000122700960-retail-consultant",
+      "applicationMethod": "",
+      "status": "",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": null,
+      "numInterviews": 1,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": true,
+      "thankYouEmail": null,
+      "interviewed": true,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1779104565060"
+    },
     {
       "month": "2026-05",
       "lastUpdate": "",
