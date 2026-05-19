@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-19T06:51:39.632Z",
+    "lastUpdated": "2026-05-19T06:52:15.710Z",
     "jobCount": 289
   },
   "trackerJobs": [
@@ -64,22 +64,22 @@
       "title": "Business & Marketing Analyst",
       "url": "",
       "applicationMethod": "עמית דניאל",
-      "status": "",
+      "status": "עשיתי שלב ראשון של מבחן בית ששלחו אלי \nללא יצירת קשר מוקדמת",
       "interviewNotes": "",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": null,
-      "numInterviews": null,
+      "numInterviews": 1,
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
-      "gotResponse": null,
+      "gotResponse": true,
       "thankYouEmail": null,
-      "interviewed": null,
+      "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
-      "analyticsTest": null,
+      "analyticsTest": true,
       "caseStudy": null,
       "id": "job-1778739922869"
     },
