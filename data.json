@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-18T11:42:48.771Z",
+    "lastUpdated": "2026-05-19T06:50:47.790Z",
     "jobCount": 289
   },
   "trackerJobs": [
@@ -455,12 +455,12 @@
       "url": "",
       "applicationMethod": "AIAPPLY",
       "status": "ראיון AI מול  בוט ששאלה הרבה שאלות טובות \nהתרכזה בעיקר במשרה האחרונה \nאני פיתחתי את השאר\nסיפתי לה על LTC היא למדה אחרת והיא סיכמה גם את האטסטרטגי שאני מביא.\nהכל היה באנגלית?\nשבלים הבאים - ראיון של מנהל מגייס, ועוד 2 שלבים בערך בתהליך",
-      "interviewNotes": "ראיון עם סהר היה מוצלח \nאנליטס בחברה 4 חודשים\nציין איכות דאטה טובה\nמערכות dbt, fireblocks tableau\nעברנו יחד עם דאשבורד וניתחנו סיבה לירידה בCR",
+      "interviewNotes": "ראיון עם סהר היה מוצלח \nאנליטס בחברה 4 חודשים\nציין איכות דאטה טובה\nמערכות dbt, fireblocks tableau\nעברנו יחד עם דאשבורד וניתחנו סיבה לירידה בCR\n\nבראיון האחרון עברנו על התרגיל בית מצגת שעשיתי\nחוסר מרכזי סביב נרמול הדאטה כדי לדעת אם אנחנו על המסלול ולא נתתי בהכרח תשובה מספיק מדויקת, יתר המצגת והשאלות היו בסדר, מניח שלא נתקדם.",
       "companySize": null,
       "companyType": "B2B",
       "processOverride": null,
       "fitScore": null,
-      "numInterviews": 3,
+      "numInterviews": 4,
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
@@ -470,7 +470,7 @@
       "choseNotToApply": null,
       "sqlTest": null,
       "analyticsTest": true,
-      "caseStudy": null,
+      "caseStudy": true,
       "id": "job-1776688037099"
     },
     {
