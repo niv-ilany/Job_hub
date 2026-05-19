@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-19T06:50:47.790Z",
+    "lastUpdated": "2026-05-19T06:51:39.632Z",
     "jobCount": 289
   },
   "trackerJobs": [
@@ -117,17 +117,17 @@
       "url": "",
       "applicationMethod": "עדו תלמון Linkedin",
       "status": "- magda\nמדובר להיות freelancer\nלעבוד כחלק ממחלקה\n\nהתקדמתי לראיון שני",
-      "interviewNotes": "",
+      "interviewNotes": "היה ראיון שני עם מנהלת מגייסת \nהיה ראיון ממש חלש\nנדמה שהם מחפשים מישהו שכל מה שהוא עשה זה ניתוח קמפיינים  PPC או BI ולכן לא באמת מאתים ובכלל לעבוד ככה פחות מסתדר",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": null,
-      "numInterviews": 1,
+      "numInterviews": 2,
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
