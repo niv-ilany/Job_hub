@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-19T07:05:54.272Z",
+    "lastUpdated": "2026-05-20T12:05:26.177Z",
     "jobCount": 289
   },
   "trackerJobs": [
@@ -23,7 +23,7 @@
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
