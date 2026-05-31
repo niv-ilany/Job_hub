@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-31T14:48:10.644Z",
-    "jobCount": 302
+    "lastUpdated": "2026-05-31T14:51:31.279Z",
+    "jobCount": 303
   },
   "trackerJobs": [
+    {
+      "month": "2026-05",
+      "lastUpdate": "2026-05-31",
+      "company": "Clover Security",
+      "title": "Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4414599354",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 72/100) — Decent match for cybersecurity background and SQL skills, but the Python requirement and AI/ML focus create meaningful gaps. The role emphasizes building tools/automations rather than business insights.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 72,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1780239087691"
+    },
     {
       "month": "2026-05",
       "lastUpdate": "2026-05-31",
