@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-31T13:54:23.594Z",
-    "jobCount": 292
+    "lastUpdated": "2026-05-31T13:57:08.548Z",
+    "jobCount": 293
   },
   "trackerJobs": [
+    {
+      "month": "2026-05",
+      "lastUpdate": "2026-05-31",
+      "company": "Just Eat Takeaway.com",
+      "title": "Business Intelligence Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4417216505",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 85/100) — Strong match for this role. Your SQL + Tableau skills perfectly align with core requirements, and your B2C gaming experience at BeachBum translates well to food delivery marketplace. The focus on stakeholder partnership and actionable insights matches your proven track record.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 85,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1780235823126"
+    },
     {
       "month": "2026-05",
       "lastUpdate": "2026-05-31",
