@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-31T14:04:54.106Z",
-    "jobCount": 294
+    "lastUpdated": "2026-05-31T14:07:17.486Z",
+    "jobCount": 295
   },
   "trackerJobs": [
+    {
+      "month": "2026-05",
+      "lastUpdate": "2026-05-31",
+      "company": "Artlist",
+      "title": "Sales Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4417594685",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 85/100) — Strong match for this sales operations role. Your SQL+Tableau skills, B2B SaaS experience at Checkmarx, and business stakeholder focus align well. The retention/conversion analytics overlap with your cohort/LTV expertise at BeachBum.",
+      "interviewNotes": "שולח לעמית הודעה",
+      "companySize": null,
+      "companyType": "B2B2C",
+      "processOverride": null,
+      "fitScore": 85,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1780236433794"
+    },
     {
       "month": "2026-05",
       "lastUpdate": "2026-05-31",
