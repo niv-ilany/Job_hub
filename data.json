@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-31T13:57:08.548Z",
-    "jobCount": 293
+    "lastUpdated": "2026-05-31T14:03:34.490Z",
+    "jobCount": 294
   },
   "trackerJobs": [
+    {
+      "month": "2026-05",
+      "lastUpdate": "2026-05-31",
+      "company": "Keshet Media Group",
+      "title": "Data Analyst - Commercial Division",
+      "url": "https://www.linkedin.com/jobs/view/4406442834",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 85/100) — Strong match for this senior analyst role. Your B2C experience at BeachBum directly translates to digital commercial analytics, and the SQL + BI + business insight requirements align perfectly. The 'minimum 3 years' requirement works in your favor despite your 9 years of experience.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 85,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1780236210185"
+    },
     {
       "month": "2026-05",
       "lastUpdate": "2026-05-31",
