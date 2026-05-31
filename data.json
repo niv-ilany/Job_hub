@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-31T13:50:47.892Z",
+    "lastUpdated": "2026-05-31T13:53:54.880Z",
     "jobCount": 292
   },
   "trackerJobs": [
@@ -33,7 +33,7 @@
     },
     {
       "month": "2026-05",
-      "lastUpdate": "",
+      "lastUpdate": "2026-05-31",
       "company": "Waltz",
       "title": "Business Analyst",
       "url": "https://www.linkedin.com/jobs/view/4415782434",
@@ -45,9 +45,9 @@
       "processOverride": null,
       "fitScore": 65,
       "numInterviews": null,
-      "applied": null,
+      "applied": true,
       "viaEmployee": null,
-      "viaLinkedin": null,
+      "viaLinkedin": true,
       "gotResponse": null,
       "thankYouEmail": null,
       "interviewed": null,
