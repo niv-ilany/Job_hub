@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-31T14:16:24.817Z",
+    "lastUpdated": "2026-05-31T14:17:49.019Z",
     "jobCount": 298
   },
   "trackerJobs": [
@@ -13,14 +13,14 @@
       "url": "https://www.linkedin.com/jobs/view/4418917736",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 78/100) — Good fit for media analytics role. Niv's SQL/Tableau/stakeholder experience aligns well with dashboard building and insight generation requirements. The role emphasizes business insights over engineering, which matches his profile perfectly.",
-      "interviewNotes": "",
+      "interviewNotes": "שלחתי הודעה",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 78,
       "numInterviews": null,
       "applied": null,
-      "viaEmployee": null,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
