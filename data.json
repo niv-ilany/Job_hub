@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-31T13:44:03.566Z",
-    "jobCount": 291
+    "lastUpdated": "2026-05-31T13:50:47.892Z",
+    "jobCount": 292
   },
   "trackerJobs": [
+    {
+      "month": "2026-05",
+      "lastUpdate": "",
+      "company": "RoseBerry",
+      "title": "Business Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4400818810",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 85/100) — Strong match for this mobile-first entertainment startup. Your B2C gaming experience at BeachBum directly translates to their needs for user behavior analysis and content performance optimization. The SQL + BI tools requirement aligns perfectly with your skillset.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 85,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": true,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1780235444447"
+    },
     {
       "month": "2026-05",
       "lastUpdate": "",
