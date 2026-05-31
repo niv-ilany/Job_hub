@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-31T14:11:56.272Z",
-    "jobCount": 296
+    "lastUpdated": "2026-05-31T14:14:32.524Z",
+    "jobCount": 297
   },
   "trackerJobs": [
+    {
+      "month": "2026-05",
+      "lastUpdate": "2026-05-31",
+      "company": "shavit software",
+      "title": "Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4421393404",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 78/100) — Good fit with strong SQL skills and dashboard experience, though Qlik Sense is new to you. The role focuses on business insights and stakeholder collaboration, which matches your background. The 3+ years requirement is well below your 9 years experience.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": "B2B",
+      "processOverride": null,
+      "fitScore": 78,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1780236868439"
+    },
     {
       "month": "2026-05",
       "lastUpdate": "2026-05-31",
