@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-31T14:03:34.490Z",
+    "lastUpdated": "2026-05-31T14:04:54.106Z",
     "jobCount": 294
   },
   "trackerJobs": [
@@ -13,13 +13,13 @@
       "url": "https://www.linkedin.com/jobs/view/4406442834",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 85/100) — Strong match for this senior analyst role. Your B2C experience at BeachBum directly translates to digital commercial analytics, and the SQL + BI + business insight requirements align perfectly. The 'minimum 3 years' requirement works in your favor despite your 9 years of experience.",
-      "interviewNotes": "",
+      "interviewNotes": "הוספתי מספר אנשים לבדוק אם אישרו",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 85,
       "numInterviews": null,
-      "applied": true,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
