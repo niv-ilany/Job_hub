@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-05-31T14:07:17.486Z",
-    "jobCount": 295
+    "lastUpdated": "2026-05-31T14:08:48.901Z",
+    "jobCount": 296
   },
   "trackerJobs": [
+    {
+      "month": "2026-05",
+      "lastUpdate": "2026-05-31",
+      "company": "Helfy (DoktorABC)",
+      "title": "Product Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4413457838",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 85/100) — Strong match for Niv's profile. B2C marketplace analytics with SQL/BI tools requirement aligns well with his BeachBum gaming experience. The role emphasizes product funnel analysis, A/B testing, and business stakeholder collaboration - all areas where Niv has proven experience.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 85,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1780236524651"
+    },
     {
       "month": "2026-05",
       "lastUpdate": "2026-05-31",
