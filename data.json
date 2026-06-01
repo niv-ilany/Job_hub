@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T07:52:27.220Z",
+    "lastUpdated": "2026-06-01T07:58:30.502Z",
     "jobCount": 304
   },
   "trackerJobs": [
@@ -13,14 +13,14 @@
       "url": "https://www.linkedin.com/jobs/view/4420254510",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 78/100) — Good match for a senior analyst role at Israel's leading fuel retail chain. Strong alignment with BI tools, business insights focus, and working with senior management. However, the role seems more strategic/consulting-focused rather than hands-on analytics.",
-      "interviewNotes": "",
+      "interviewNotes": "שלחתי לו במייל ואמר שיגיש אותי",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 78,
       "numInterviews": null,
-      "applied": null,
-      "viaEmployee": null,
+      "applied": true,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
