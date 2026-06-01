@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T11:53:00.502Z",
-    "jobCount": 306
+    "lastUpdated": "2026-06-01T11:56:34.879Z",
+    "jobCount": 307
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "",
+      "company": "Chargeflow",
+      "title": "AI Business Analyst, GTM",
+      "url": "https://www.linkedin.com/jobs/view/4418682135",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 78/100) — Strong match for Niv's GTM analytics background with good SQL skills and business impact focus. The AI-native requirement is a stretch, but his Checkmarx B2B and BeachBum experience aligns well with supporting sales and customer teams.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": "B2B",
+      "processOverride": null,
+      "fitScore": 78,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1780314990488"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-01",
