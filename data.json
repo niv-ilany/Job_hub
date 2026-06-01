@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T07:47:44.516Z",
+    "lastUpdated": "2026-06-01T07:50:05.772Z",
     "jobCount": 304
   },
   "trackerJobs": [
@@ -63,7 +63,7 @@
       "company": "Movement Group",
       "title": "Data & Financial Analyst",
       "url": "https://www.drushim.co.il/job/37186100/6da1a67c/",
-      "applicationMethod": "",
+      "applicationMethod": "דרושים",
       "status": "🚫 Skip (Score: 45/100) — Poor fit despite being in Herzliya. Role requires 2-3 years experience in import/distribution/retail (Niv has gaming/cybersecurity), Priority ERP system experience (which Niv lacks), and focuses heavily on financial analysis, supply chain, and inventory management rather than product/marketing analytics where Niv excels.",
       "interviewNotes": "",
       "companySize": null,
