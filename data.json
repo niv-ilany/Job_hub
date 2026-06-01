@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T07:50:05.772Z",
+    "lastUpdated": "2026-06-01T07:50:13.249Z",
     "jobCount": 304
   },
   "trackerJobs": [
@@ -89,7 +89,7 @@
       "company": "מנורה מבטחים",
       "title": "אנליסט.ית עסקי.ת",
       "url": "https://www.drushim.co.il/job/37003434/0411f1bd/",
-      "applicationMethod": "",
+      "applicationMethod": "דרושים",
       "status": "🚫 Skip (Score: 45/100) — This insurance industry role has significant barriers: requires 3+ years specific insurance/savings experience that Niv lacks, plus Python as a listed requirement. The traditional financial services environment is far from Niv's B2C gaming/cybersecurity background.",
       "interviewNotes": "",
       "companySize": null,
