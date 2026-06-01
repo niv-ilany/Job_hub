@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T07:52:10.175Z",
+    "lastUpdated": "2026-06-01T07:52:27.220Z",
     "jobCount": 304
   },
   "trackerJobs": [
@@ -143,7 +143,7 @@
       "url": "https://www.linkedin.com/jobs/view/4414477602",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 78/100) — Good match - requires SQL + BI tools (Metabase/Redash) + SaaS metrics in product context. Your BeachBum B2C gaming maps well to B2B SaaS analytics. Main risk is Python requirement and data ops responsibilities.",
-      "interviewNotes": "",
+      "interviewNotes": "שלחתי הודעה",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
