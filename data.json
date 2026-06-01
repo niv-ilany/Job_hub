@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T07:50:29.845Z",
+    "lastUpdated": "2026-06-01T07:52:10.175Z",
     "jobCount": 304
   },
   "trackerJobs": [
@@ -195,14 +195,14 @@
       "url": "https://www.linkedin.com/jobs/view/4421393404",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 78/100) — Good fit with strong SQL skills and dashboard experience, though Qlik Sense is new to you. The role focuses on business insights and stakeholder collaboration, which matches your background. The 3+ years requirement is well below your 9 years experience.",
-      "interviewNotes": "שלחתי הודעה",
+      "interviewNotes": "שלחתי הודעה\nטוענת שהגישה אותי",
       "companySize": null,
       "companyType": "B2B",
       "processOverride": null,
       "fitScore": 78,
       "numInterviews": null,
-      "applied": null,
-      "viaEmployee": null,
+      "applied": true,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
