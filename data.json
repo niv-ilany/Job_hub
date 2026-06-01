@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T08:00:46.968Z",
+    "lastUpdated": "2026-06-01T08:02:37.869Z",
     "jobCount": 304
   },
   "trackerJobs": [
@@ -39,7 +39,7 @@
       "url": "https://www.linkedin.com/jobs/view/4414599354",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 72/100) — Decent match for cybersecurity background and SQL skills, but the Python requirement and AI/ML focus create meaningful gaps. The role emphasizes building tools/automations rather than business insights.",
-      "interviewNotes": "",
+      "interviewNotes": "שלחתי למיכאל הודעה",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
