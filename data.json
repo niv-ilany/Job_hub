@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T07:46:13.501Z",
+    "lastUpdated": "2026-06-01T07:47:44.516Z",
     "jobCount": 304
   },
   "trackerJobs": [
@@ -481,17 +481,17 @@
       "url": "",
       "applicationMethod": "אביעד חברת satge1",
       "status": "משרת אופרציה?\nאיחרתי ב10 דק\nהכל מנוהל על האבספוט, משתמשים גם ב clay, stich ,topo,aircall\nBI יש מישו בפרודקט שעושה על בסיס מטהבייס\nיש מטלת בית לעשות בראשון שינ הקרובים\n\nסיפר על הפתרון נשמע מעניין \nיושב בנקודת חיבור בין מרקטיינג סיילס ועוד\nעוסקים בפתרון AI שאם הבנתי נכון מחליף תוכנותו כמו jira\nלא נשמעתי מספיק רציני כי שאל ולא חקרתי על החברה לפני הראיון.",
-      "interviewNotes": "הגשתי תרגיל וקיבלתי מנעה מרוצה ונקעבה פגישה להתקדם ולהציג בפניו ומנהל נוסף",
+      "interviewNotes": "הייתה פגישה על המצגת שעשיתי והם לא היו מרוצים לחלוטין מהKPI וההבנה שלי לגביהם כי זה revops משהו שלא בדיוק הייתי בעבר. מעניין שזה לא היה מספיק כדי להתקדןם. את היכולות יש אבל ידע ספציפי לומדים, ממש מוזר.\nהגשתי תרגיל וקיבלתי מנעה מרוצה ונקעבה פגישה להתקדם ולהציג בפניו ומנהל נוסף",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": null,
-      "numInterviews": 2,
+      "numInterviews": 3,
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
