@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T08:26:54.363Z",
-    "jobCount": 304
+    "lastUpdated": "2026-06-01T11:50:53.050Z",
+    "jobCount": 305
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-01",
+      "company": "The5ers",
+      "title": "Business Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4403630396",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 78/100) — Strong match for core analytics skills (SQL, BI, stakeholder partnership) but two notable gaps: no AI collaboration experience and no trading domain knowledge. B2C gaming experience at BeachBum translates well to B2C trading platform.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 78,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1780314647997"
+    },
     {
       "month": "2026-05",
       "lastUpdate": "2026-05-31",
