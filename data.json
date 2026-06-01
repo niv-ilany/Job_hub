@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T08:25:43.979Z",
+    "lastUpdated": "2026-06-01T08:26:54.363Z",
     "jobCount": 304
   },
   "trackerJobs": [
@@ -611,14 +611,14 @@
       "url": "https://www.linkedin.com/jobs/view/4398584577/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 62/100) — Mixed fit - matches on stakeholder collaboration and business insights, but has significant technical gaps. Required Snowflake/Databricks experience and strong Python focus are major concerns for Niv's profile.",
-      "interviewNotes": "",
+      "interviewNotes": "אחות של אמא של השכנה מ2 הגישה אותי ללא מענה",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 62,
       "numInterviews": null,
-      "applied": null,
-      "viaEmployee": null,
+      "applied": true,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
