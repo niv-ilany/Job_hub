@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T07:58:30.502Z",
+    "lastUpdated": "2026-06-01T08:00:46.968Z",
     "jobCount": 304
   },
   "trackerJobs": [
@@ -114,7 +114,7 @@
       "lastUpdate": "2026-05-31",
       "company": "כלמוביל",
       "title": "HR Data Analyst",
-      "url": "",
+      "url": "https://www.drushim.co.il/job/37072214/678acdf1/",
       "applicationMethod": "דרושים",
       "status": "⚠️ Apply with caution (Score: 68/100) — Decent technical match (SQL, Power BI, analytics) but lacks HR domain experience. 3+ years requirement is borderline acceptable given Niv's 9 years total experience. Main concern is the specialized HR/compensation focus without relevant background.",
       "interviewNotes": "",
