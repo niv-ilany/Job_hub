@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-01T12:31:31.512Z",
+    "lastUpdated": "2026-06-02T11:25:57.717Z",
     "jobCount": 308
   },
   "trackerJobs": [
@@ -481,18 +481,18 @@
       "url": "https://www.linkedin.com/jobs/view/4390826578",
       "applicationMethod": "דובי לפלר",
       "status": "✅ Apply (Score: 78/100) — Good fit for Niv's profile with strong SQL/Excel requirements and business analysis focus. The insurance domain is new but the analytical skills transfer well. Main concern is the 2-4 years experience requirement versus Niv's 9 years - he may be overqualified.",
-      "interviewNotes": "",
+      "interviewNotes": "ראיון ראשון מול מגייסת \nציפיות שכר אמרתי 24 אלף\nאמרה שיום עבודה מהבית מגיע עם חצי שנה של וותק",
       "companySize": "1001-5000",
       "companyType": null,
       "processOverride": null,
       "fitScore": 78,
-      "numInterviews": null,
-      "applied": null,
+      "numInterviews": 1,
+      "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
+      "gotResponse": true,
       "thankYouEmail": null,
-      "interviewed": null,
+      "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
       "analyticsTest": null,
