@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-03T11:41:41.396Z",
+    "lastUpdated": "2026-06-03T11:42:04.337Z",
     "jobCount": 308
   },
   "trackerJobs": [
@@ -221,13 +221,13 @@
       "url": "https://www.drushim.co.il/job/37072214/678acdf1/",
       "applicationMethod": "דרושים",
       "status": "⚠️ Apply with caution (Score: 68/100) — Decent technical match (SQL, Power BI, analytics) but lacks HR domain experience. 3+ years requirement is borderline acceptable given Niv's 9 years total experience. Main concern is the specialized HR/compensation focus without relevant background.",
-      "interviewNotes": "",
+      "interviewNotes": "הגש דרך מכר של רועי (זה אחד הלקוחות שלו בסיילספורס)",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 68,
       "numInterviews": null,
-      "applied": null,
+      "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
