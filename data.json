@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-04T11:52:51.436Z",
+    "lastUpdated": "2026-06-04T11:53:04.997Z",
     "jobCount": 310
   },
   "trackerJobs": [
@@ -117,14 +117,14 @@
       "url": "https://www.linkedin.com/jobs/view/4389581749",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 83/100) — Strong match for this B2B sales analyst role. Perfect alignment with SQL + BI tools + business stakeholder focus. The 2+ years requirement fits well with Niv's 9 years experience, though the B2B sales domain is slightly different from his B2C gaming background.",
-      "interviewNotes": "",
+      "interviewNotes": "גד קרפ",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 83,
       "numInterviews": null,
-      "applied": null,
-      "viaEmployee": null,
+      "applied": true,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
