@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-04T11:59:48.725Z",
-    "jobCount": 311
+    "lastUpdated": "2026-06-04T12:01:40.354Z",
+    "jobCount": 312
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-04",
+      "company": "Penlink",
+      "title": "Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4422392141/",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 65/100) — Mixed fit. Strong on SQL, large datasets, and dashboards/reporting, but Python requirement and B2B digital intelligence focus are concerns. Role emphasizes technical investigations over traditional business analytics.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 65,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1780574496086"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-04",
