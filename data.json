@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-09T12:32:51.858Z",
-    "jobCount": 312
+    "lastUpdated": "2026-06-09T12:34:37.461Z",
+    "jobCount": 313
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-09",
+      "company": "DigitalHunters",
+      "title": "Data Analyst",
+      "url": "https://app.civi.co.il/promo/id=946357&hid=26MRTR77T9",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 72/100) — Mixed fit - your SQL skills and analytics experience align, but they want Python/R for predictive algorithms which isn't your strength. Sports analytics could be exciting transition from gaming analytics.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": "B2B",
+      "processOverride": null,
+      "fitScore": 72,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1781008473843"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-04",
