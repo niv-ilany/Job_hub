@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-04T12:01:40.354Z",
+    "lastUpdated": "2026-06-09T12:20:41.047Z",
     "jobCount": 312
   },
   "trackerJobs": [
@@ -429,18 +429,18 @@
       "url": "https://www.linkedin.com/jobs/view/4413457838",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 85/100) — Strong match for Niv's profile. B2C marketplace analytics with SQL/BI tools requirement aligns well with his BeachBum gaming experience. The role emphasizes product funnel analysis, A/B testing, and business stakeholder collaboration - all areas where Niv has proven experience.",
-      "interviewNotes": "שלחתי מספר אנשים",
+      "interviewNotes": "שלחתי מספר אנשים\nתפקיד שיוצרים עם ראשונה\nהתרחבות לשוק בריטניה ונדרשת הפונקציה \nיושב בפרודקט ועובד עם head of analytics\n\nדנה\n\n5 ימים מהמשרד\nגלעד מנהל פרודקט -> מטלת בית 3 ימים ( כל מיני פאנלים מנד אוף פרטדק ומבקש ניתוח ) -> ראיון פרונטי עם ערן להצגת מטלה, HR+ מנכ\"ל\n\nדיברה על 26K למרות שביקשתי 28K",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
       "fitScore": 85,
-      "numInterviews": null,
+      "numInterviews": 1,
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
-      "interviewed": null,
+      "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
       "analyticsTest": null,
