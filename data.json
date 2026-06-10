@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-10T08:32:49.311Z",
-    "jobCount": 314
+    "lastUpdated": "2026-06-10T12:01:03.921Z",
+    "jobCount": 315
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-10",
+      "company": "marriot",
+      "title": "Business Analyst",
+      "url": "https://www.jobnet.co.il/jobs?returned=true&positionid=13010997",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 78/100) — Good match for this Hebrew data analyst role requiring 3-5 years experience. Strong alignment with SQL, BI tools, and business stakeholder work. Python is listed as advantage (not requirement), which works for Niv's basic level.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 78,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1781092859585"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-10",
