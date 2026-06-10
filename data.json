@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-10T08:19:57.267Z",
-    "jobCount": 313
+    "lastUpdated": "2026-06-10T08:31:39.924Z",
+    "jobCount": 314
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-10",
+      "company": "Medulla",
+      "title": "Product Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4425468394",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 68/100) — Solid product analyst role at B2B SaaS startup, but the BigQuery requirement and software development experience suggest more technical depth than Niv has. The core skills match but experience gaps may be problematic.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 68,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1781080295501"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-09",
