@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-09T12:36:18.684Z",
+    "lastUpdated": "2026-06-10T08:19:57.267Z",
     "jobCount": 313
   },
   "trackerJobs": [
@@ -371,7 +371,7 @@
     },
     {
       "month": "2026-05",
-      "lastUpdate": "",
+      "lastUpdate": "2026-06-10",
       "company": "Trullion",
       "title": "Product Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4414477602",
@@ -386,8 +386,8 @@
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
