@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-14T11:12:40.882Z",
-    "jobCount": 317
+    "lastUpdated": "2026-06-14T11:16:31.806Z",
+    "jobCount": 318
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-14",
+      "company": "Aidoc",
+      "title": "Data Analyst",
+      "url": "",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 70/100) — Mixed fit - healthcare tech with SQL/analytics focus aligns well, but heavy emphasis on Six Sigma process improvement and 'delivery department' operational role may not match Niv's growth/marketing analytics background. Role seems more ops-focused than insight-driven.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": "B2B",
+      "processOverride": null,
+      "fitScore": 70,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1781435787986"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-14",
