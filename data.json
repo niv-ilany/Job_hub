@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-16T12:11:41.537Z",
+    "lastUpdated": "2026-06-16T12:11:46.049Z",
     "jobCount": 320
   },
   "trackerJobs": [
@@ -5310,7 +5310,7 @@
     {
       "id": "hist-134",
       "month": "2026-01",
-      "title": "Data & operations specialist ",
+      "title": "Data & operations specialist",
       "company": "Unilever",
       "url": "https://www.linkedin.com/jobs/view/4352071258/",
       "applicationMethod": "",
@@ -5329,7 +5329,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2C"
+      "companyType": "B2C",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-135",
