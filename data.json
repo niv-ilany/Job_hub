@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-16T12:46:01.759Z",
+    "lastUpdated": "2026-06-16T12:46:05.217Z",
     "jobCount": 320
   },
   "trackerJobs": [
@@ -7741,12 +7741,12 @@
       "title": "Senior Data Analyst - ISRAEL",
       "company": "Holisto",
       "url": "https://www.linkedin.com/jobs/view/4334402161/",
-      "applicationMethod": "שלחתי לטל הודעה ",
+      "applicationMethod": "שלחתי לטל הודעה",
       "status": "הוספתי עוד אנשים כי הם לא מגיבים",
       "lastUpdate": "2026-02-15",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -7757,7 +7757,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2C"
+      "companyType": "B2C",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-229",
