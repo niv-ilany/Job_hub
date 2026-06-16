@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-16T12:46:05.217Z",
-    "jobCount": 320
+    "lastUpdated": "2026-06-16T12:55:58.106Z",
+    "jobCount": 321
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-16",
+      "company": "plarium",
+      "title": "Product Data Analyst",
+      "url": "",
+      "applicationMethod": "",
+      "status": "Plarium\n\n\nData Product Manager \n\nHerzliya, Tel Aviv District, Israel · 1 month ago · Over 100 people clicked apply\n\nPromoted by hirer · Responses managed off LinkedIn\n\nHybrid\nFull-time\nApply\n\nSave\nYour profile and resume are missing some required qualifications\n\n\n\nShow match details\n\nBETA • Is this information helpful?\n\n\nPeople you can reach out to\n\n\nMichal and others in your network\n\nShow all\nMeet the hiring team\n\n\nYuval Shalit \n\n• 2nd\n\nTalent Lead | HR | Ops\n\nJob poster\n\nMessage\nAbout the job\nPDP is Plarium’s unified internal data platform - the backbone for analytics, AI products, and data-driven decisions across all studios. As Data PM, you’ll own the integration lifecycle: scoping new studio onboardings, managing external data provider relationships, defining requirements, unblocking technical issues, and keeping engineering, data, and business stakeholders aligned.\n\n\n\nResponsibilities\n\nLead end-to-end integrations with 1–2 game studios, including coordination with external data providers and internal engineering teams.\nDefine event schemas, pipeline requirements, and acceptance criteria.\nMonitor integration health post-launch and drive issue resolution.\nActively use AI tools for research, documentation, communication, and analysis, while contributing to shared AI workflows and best practices.\nServe as the main PM point of contact for studio tech leads and engineering managers, while providing clear updates to business stakeholders.\nIdentify integration friction points and contribute to tooling, process, and roadmap improvements.\nWrite clear specs, requirement documents, and integration playbooks.\n\n\nWhat we expect\n\n2+ years of PM experience - ideally technical or data-adjacent.\nHands-on experience with data integration, APIs, event pipelines, or data platform products.\nYou regularly use AI tools in your work, and you’re excited to go deeper.\nStrong written and verbal communication - clear specs and leading a tense alignment call with equal ease.\nSolid stakeholder management across engineering, business, and external partners.\nHigh ownership - you close loops, track follow-ups, and deliver without constant reminders.\nHungry to learn - you don’t wait for things to be handed to you.\n\n\nDesired\n\nExperience in multi-studio or multi-customer environments.\nBackground in gaming, SaaS, or data platform companies.\nFamiliarity with BigQuery, Kafka, Airflow, Tableau or similar tools.\nExperience with geographically distributed teams.\n\n\nWhat we offer\n\nA Workplace Designed for Your Well-Being - Comfortable Environment: Ergonomic chairs and desks to support your health. Beautifully designed spaces that inspire creativity. - On-Site Amenities: Gym, yoga room, and music room for relaxation and rejuvenation. - Delicious Perks: 5-star breakfast to kickstart your day. Freshly made coffee, shakes, and afternoon salads by our in-house barista. - Health & Wellness: Full health insurance coverage for your peace of mind. - Growth Opportunities: Learning and training programs to enhance your personal and professional skills. - Vibrant Culture: Happy hours, team events, and plenty of opportunities to connect with colleagues.\n\nJoin us and experience a workplace where your well-being, growth, and enjoyment come first!",
+      "interviewNotes": "ראיון עם מגייסת שפנתה אלי",
+      "companySize": null,
+      "companyType": "B2C",
+      "processOverride": null,
+      "fitScore": null,
+      "numInterviews": 1,
+      "applied": true,
+      "viaEmployee": true,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": true,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1781614554264"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-14",
