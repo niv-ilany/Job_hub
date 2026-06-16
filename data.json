@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-16T12:11:02.685Z",
+    "lastUpdated": "2026-06-16T12:11:07.387Z",
     "jobCount": 320
   },
   "trackerJobs": [
@@ -2115,12 +2115,12 @@
       "title": "Data Analyst",
       "company": "Mertens – מקבוצת מלם תים",
       "url": "https://www.linkedin.com/jobs/view/4358356143/",
-      "applicationMethod": "עדי שפירא ועוד אחד. נסגרה המשרה וכעת מחפשים רק סניור לא מגיש כעת ",
+      "applicationMethod": "עדי שפירא ועוד אחד. נסגרה המשרה וכעת מחפשים רק סניור לא מגיש כעת",
       "status": "",
       "lastUpdate": "",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -2131,7 +2131,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2B"
+      "companyType": "B2B",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-7",
