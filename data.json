@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-15T08:16:07.302Z",
+    "lastUpdated": "2026-06-16T12:01:59.488Z",
     "jobCount": 320
   },
   "trackerJobs": [
@@ -85,7 +85,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-14",
+      "lastUpdate": "2026-06-16",
       "company": "Honeycomb Insurance",
       "title": "Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4426609646/",
@@ -97,8 +97,8 @@
       "processOverride": null,
       "fitScore": 85,
       "numInterviews": null,
-      "applied": null,
-      "viaEmployee": null,
+      "applied": true,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
