@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-16T12:08:08.291Z",
+    "lastUpdated": "2026-06-16T12:08:20.516Z",
     "jobCount": 320
   },
   "trackerJobs": [
@@ -1680,7 +1680,7 @@
       "interviewNotes": "שלחתי הודעה",
       "companySize": null,
       "companyType": null,
-      "processOverride": null,
+      "processOverride": "closed_filled",
       "fitScore": 85,
       "numInterviews": null,
       "applied": null,
