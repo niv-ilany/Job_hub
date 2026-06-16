@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-16T12:08:42.500Z",
+    "lastUpdated": "2026-06-16T12:09:09.098Z",
     "jobCount": 320
   },
   "trackerJobs": [
@@ -7637,12 +7637,12 @@
       "title": "Data Analyst",
       "company": "Aqurate Data",
       "url": "https://www.linkedin.com/jobs/view/4373268338",
-      "applicationMethod": "שלחתי לנעה הודעה ",
+      "applicationMethod": "שלחתי לנעה הודעה",
       "status": "",
       "lastUpdate": "2026-02-15",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -7653,7 +7653,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2B"
+      "companyType": "B2B",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-228",
