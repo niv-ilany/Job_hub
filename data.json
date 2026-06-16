@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-16T12:17:41.356Z",
+    "lastUpdated": "2026-06-16T12:18:45.659Z",
     "jobCount": 320
   },
   "trackerJobs": [
@@ -2442,7 +2442,7 @@
       "lastUpdate": "2025-11-16",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -2453,7 +2453,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2B2C"
+      "companyType": "B2B2C",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-20",
@@ -2466,7 +2468,7 @@
       "lastUpdate": "2025-10-19",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -2477,7 +2479,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2B"
+      "companyType": "B2B",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-21",
@@ -2636,7 +2640,7 @@
       "lastUpdate": "2025-10-19",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -2647,7 +2651,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2C"
+      "companyType": "B2C",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-28",
@@ -2656,11 +2662,11 @@
       "company": "Pagaya",
       "url": "https://www.linkedin.com/jobs/view/4312494407",
       "applicationMethod": "רותם גלילי ולי קפילוטניק",
-      "status": "שחלתי ללי הודעה ",
+      "status": "שחלתי ללי הודעה",
       "lastUpdate": "2025-10-19",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -2671,7 +2677,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2B"
+      "companyType": "B2B",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-29",
@@ -3577,12 +3585,12 @@
       "title": "data analyst",
       "company": "AppsFlyer",
       "url": "https://careers.appsflyer.com/jobs/position/8190886002/data-analyst/?gh_jid=&rd=1",
-      "applicationMethod": "שלחתי הודעה ליובל שוקרון ",
+      "applicationMethod": "שלחתי הודעה ליובל שוקרון",
       "status": "התכתבי איתו לא נראה שיש באמת משהו רלוונטי לי כרגע",
       "lastUpdate": "2025-10-19",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -3593,7 +3601,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2B"
+      "companyType": "B2B",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-65",
@@ -3701,10 +3711,10 @@
       "url": "https://www.linkedin.com/jobs/view/4315835634",
       "applicationMethod": "הוספתי את גילי פרידלנדר ותומר תמם",
       "status": "שלחתי לגילי הודעה, הוא בא להגיש אבל המשרה כבר נסגרה (מוזר)",
-      "lastUpdate": "45949.0",
+      "lastUpdate": "",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -3715,12 +3725,14 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2C"
+      "companyType": "B2C",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-70",
       "month": "2025-09",
-      "title": "Business Data Analyst ",
+      "title": "Business Data Analyst",
       "company": "real",
       "url": "https://www.linkedin.com/jobs/view/4237349280/",
       "applicationMethod": "דניאלה מורדכי ובלה בן יונתן",
@@ -3728,7 +3740,7 @@
       "lastUpdate": "2025-11-16",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -3739,7 +3751,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2C"
+      "companyType": "B2C",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-71",
@@ -3776,7 +3790,7 @@
       "lastUpdate": "",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -3787,7 +3801,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2B"
+      "companyType": "B2B",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-73",
