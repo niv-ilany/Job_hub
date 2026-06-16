@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-16T12:40:37.447Z",
+    "lastUpdated": "2026-06-16T12:45:40.006Z",
     "jobCount": 320
   },
   "trackerJobs": [
@@ -39,14 +39,14 @@
       "url": "https://www.linkedin.com/jobs/view/4382799156/",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 88/100) — Excellent match - gaming industry role requiring SQL + Tableau + player behavior analytics. Your BeachBum experience is perfect preparation for Playtika's mobile gaming analytics needs. The focus on retention, monetization, and player insights aligns perfectly with your background.",
-      "interviewNotes": "",
+      "interviewNotes": "מרינה",
       "companySize": null,
       "companyType": "B2C",
       "processOverride": null,
       "fitScore": 88,
       "numInterviews": null,
-      "applied": null,
-      "viaEmployee": null,
+      "applied": true,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
