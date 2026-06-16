@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-16T12:21:08.692Z",
+    "lastUpdated": "2026-06-16T12:21:11.939Z",
     "jobCount": 320
   },
   "trackerJobs": [
@@ -3981,10 +3981,10 @@
       "url": "https://jobs.lever.co/controlup/5dd87728-e5df-4c45-9325-1cdd1239e24b",
       "applicationMethod": "הוספתי את שגיב מיכאל ודביר זקן",
       "status": "שלחתי לשגיב הודעה, המשרה כבר לא מופיעה",
-      "lastUpdate": "45949.0",
+      "lastUpdate": "",
       "interviewNotes": "",
       "companySize": null,
-      "applied": false,
+      "applied": null,
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": null,
@@ -3995,7 +3995,9 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "companyType": "B2B"
+      "companyType": "B2B",
+      "processOverride": "closed_filled",
+      "fitScore": null
     },
     {
       "id": "hist-80",
