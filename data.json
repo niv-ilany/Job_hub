@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-17T11:19:49.451Z",
+    "lastUpdated": "2026-06-17T11:19:59.241Z",
     "jobCount": 321
   },
   "trackerJobs": [
@@ -377,14 +377,14 @@
       "url": "https://www.linkedin.com/jobs/view/4418682135",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 78/100) — Strong match for Niv's GTM analytics background with good SQL skills and business impact focus. The AI-native requirement is a stretch, but his Checkmarx B2B and BeachBum experience aligns well with supporting sales and customer teams.",
-      "interviewNotes": "",
+      "interviewNotes": "הגישו אותי",
       "companySize": null,
       "companyType": "B2B",
       "processOverride": null,
       "fitScore": 78,
       "numInterviews": null,
-      "applied": null,
-      "viaEmployee": null,
+      "applied": true,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
