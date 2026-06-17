@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-17T11:19:01.967Z",
+    "lastUpdated": "2026-06-17T11:19:22.614Z",
     "jobCount": 321
   },
   "trackerJobs": [
@@ -689,18 +689,18 @@
       "url": "https://www.linkedin.com/jobs/view/4417594685",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 85/100) — Strong match for this sales operations role. Your SQL+Tableau skills, B2B SaaS experience at Checkmarx, and business stakeholder focus align well. The retention/conversion analytics overlap with your cohort/LTV expertise at BeachBum.",
-      "interviewNotes": "שולח לעמית הודעה",
+      "interviewNotes": "שולח לעמית הודעה\n\nשלחו מייל שלא מתקדמים איתי",
       "companySize": null,
       "companyType": "B2B2C",
       "processOverride": null,
       "fitScore": 85,
-      "numInterviews": null,
+      "numInterviews": 1,
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
-      "interviewed": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
+      "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
       "analyticsTest": null,
