@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-21T12:43:13.926Z",
-    "jobCount": 321
+    "lastUpdated": "2026-06-21T12:50:22.855Z",
+    "jobCount": 322
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-21",
+      "company": "Fiverr",
+      "title": "Product Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4370681136",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 81/100) — Strong technical alignment — SQL, Tableau, A/B testing, funnel analysis, and insight-to-stakeholder communication all match Niv's core skill set. The role is product-focused at a major B2C marketplace, which fits well. Main concern is the engineering partnership emphasis and potential expectation for tracking/events infrastructure work, which edges toward data engineering territory Niv hasn't owned.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": "Marketplace",
+      "processOverride": null,
+      "fitScore": 81,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": true,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782046219270"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-16",
