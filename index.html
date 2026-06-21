@@ -1074,6 +1074,7 @@ function openAddModal() {
   document.getElementById('modal-title').textContent = 'Add Job';
   clearForm();
   document.getElementById('f-month').value = new Date().toISOString().slice(0,7);
+  document.getElementById('f-lastUpdate').value = new Date().toISOString().slice(0,10);
   document.getElementById('modal-overlay').classList.remove('hidden');
 }
 function openEditModal(id) {
@@ -1109,9 +1110,10 @@ function saveJob() {
   const company = document.getElementById('f-company').value.trim();
   const title = document.getElementById('f-title').value.trim();
   if (!company && !title) { showToast('Enter a company or title','⚠️'); return; }
+  const today = new Date().toISOString().slice(0,10);
   const data = {
     month: document.getElementById('f-month').value.trim(),
-    lastUpdate: document.getElementById('f-lastUpdate').value,
+    lastUpdate: today,
     company, title,
     url: document.getElementById('f-url').value.trim(),
     applicationMethod: document.getElementById('f-applicationMethod').value.trim(),
@@ -2464,12 +2466,16 @@ async function runAnalysis() {
 
 NIV'S PROFILE:
 - 9 years experience: Finance → Cybersecurity (Checkmarx, Mend) → Gaming (BeachBum)
-- Current: Data Analyst @ BeachBum Gaming (B2C) — SQL/Redshift, Tableau, A/B testing, cohort/LTV
-- Previous: Senior Marketing Analyst @ Checkmarx (B2B SaaS) — Sisense, MQL funnel, attribution
-- Skills: SQL (strong), Tableau, Sisense, Excel, A/B testing, cohort analysis, LTV, funnel analysis
+- Most recent: Data Analyst @ BeachBum Gaming (B2C, 2025, ended in company-wide layoff) — SQL/Redshift, Tableau, A/B testing ('Likely to Convert' segmentation), cohort/LTV dashboards
+- Previous: Senior Marketing Analyst @ Checkmarx (B2B SaaS, 2023-2025) — Sisense, MQL funnel, attribution, marketing-to-sales handoff
+- Also: Marketing Analyst @ Mend/WhiteSource (B2B, 2021-2023); Business Analyst & Account Manager, Finance Group (2018-2021); Financial Analyst (2016-2018)
+- 2026 independent projects (self-shipped, currently building): ToyLens (iOS) — AI-powered scoring app using Claude API, Supabase/PostgreSQL schema, PostHog analytics for cohort/funnel/monetization tracking; Hebrew Learning App (iOS) — full-stack kids' education app shipped solo to the App Store, React/Expo, automated audio pipeline, CI/CD, built with Cursor
+- Skills: SQL (strong), Tableau (primary BI), Sisense, Excel, A/B testing, cohort analysis, LTV, funnel analysis
+- Emerging/secondary skills from independent projects: Claude API integration, Supabase/PostgreSQL, PostHog, React/Expo, CI/CD — light/applied, not deep engineering background
 - Python: basic/light — NOT a core skill
-- NO experience with: dbt, Airflow, Spark, PySpark, Kafka, data pipelines, data engineering
+- NO experience with: dbt, Airflow, Spark, data pipelines, data engineering at scale
 - MBA Marketing, Bar-Ilan University
+- Currently between roles, actively interviewing for Senior Data Analyst / Senior BI Analyst / Growth Analyst roles
 
 SCORING GUIDE:
 88-100: Strong match — SQL + BI tool + insight-impact language + cohort/LTV/A/B + right industry
@@ -2493,6 +2499,7 @@ GREEN FLAGS (score up):
 - Marketing attribution, incrementality, paid channel analysis
 - Working with marketing/product/growth/GM/leadership (not R&D)
 - B2C, marketplace, gaming, fintech, ad-tech industry
+- Roles that value self-starters who ship end-to-end with AI tooling (Niv independently built and shipped two apps in 2026 using Claude API, Supabase, PostHog)
 
 KNOWN REJECTION REASONS FOR NIV:
 1. "lacks B2C background" — counter: BeachBum IS B2C gaming
@@ -2640,11 +2647,13 @@ function buildSystemPrompt(clusterNames, likedTitles, dismissedTitles, uniqueExc
 
 === NIV'S PROFILE ===
 - 9 years experience: Finance, Cybersecurity (Checkmarx, Mend), Gaming (BeachBum)
-- Current: Data Analyst @ BeachBum Gaming (B2C) — SQL/Redshift, Tableau, A/B testing, cohort/LTV dashboards
+- Most recent: Data Analyst @ BeachBum Gaming (B2C, 2025, role ended in a company-wide layoff) — SQL/Redshift, Tableau, A/B testing, cohort/LTV dashboards
 - Previous: Senior Marketing Analyst @ Checkmarx (B2B SaaS) — Sisense, MQL funnel, attribution, budget
+- 2026 independent projects: ToyLens (iOS, AI scoring app — Claude API, Supabase/PostgreSQL, PostHog analytics) and a Hebrew Learning App (iOS, full-stack, React/Expo, CI/CD) shipped solo to the App Store — demonstrates end-to-end ownership and AI-tooling fluency
 - Skills: SQL, Tableau, Sisense, Excel, A/B testing, cohort analysis, KPI dev, LTV, funnel analysis
 - Location: Herzliya — open to Tel Aviv metro + Remote from Israel
 - Preference: B2C, B2B2C, marketplaces, ad-tech, fintech, gaming. Strong B2B track record too.
+- Currently between roles, actively interviewing
 - MBA Marketing, Bar-Ilan.
 
 === PREVIOUSLY INTERVIEWED — SKIP THESE ===
