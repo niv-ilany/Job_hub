@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-21T13:41:41.477Z",
+    "lastUpdated": "2026-06-21T13:41:58.665Z",
     "jobCount": 329
   },
   "trackerJobs": [
@@ -36,7 +36,7 @@
       "lastUpdate": "2026-06-21",
       "company": "Insait",
       "title": "Junior LLM Operations Specialist",
-      "url": "",
+      "url": "https://www.linkedin.com/jobs/view/4430319545",
       "applicationMethod": "",
       "status": "🚫 Skip (Score: 22/100) — This is a junior/entry-level role paying 12,000₪ gross — effectively an internship-tier position designed for bootcamp graduates or fresh graduates breaking into AI. Niv has 9 years of experience and a Senior Data Analyst profile; applying here would be a massive step backwards in both seniority and compensation. The role is also fundamentally about LLM QA and prompt iteration, not data analytics or business intelligence.",
       "interviewNotes": "",
