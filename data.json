@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-21T13:41:58.665Z",
-    "jobCount": 329
+    "lastUpdated": "2026-06-21T13:43:04.819Z",
+    "jobCount": 330
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-21",
+      "company": "SysAid",
+      "title": "Revenue Operations Manager (Maternity Cover)",
+      "url": "https://www.linkedin.com/jobs/view/4426402143",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 72/100) — Niv has strong analytical foundations — SQL, Tableau, funnel analysis, stakeholder-facing dashboards — that map reasonably well to the analytics and reporting side of this role. However, this is a Revenue Operations Manager title with explicit ownership of CRM platforms (Salesforce/HubSpot), pipeline/forecast management, and process ownership across Sales, CS, and Marketing at a C-suite level. That RevOps operational scope — CRM admin, sales process design, forecasting models — is a meaningful stretch beyond Niv's analyst background. The maternity cover framing also implies they need someone who can hit the ground running with minimal ramp.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": "B2B",
+      "processOverride": null,
+      "fitScore": 72,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782049381059"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-21",
