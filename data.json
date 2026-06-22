@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-22T05:58:45.943Z",
+    "lastUpdated": "2026-06-22T06:02:36.126Z",
     "jobCount": 331
   },
   "trackerJobs": [
@@ -163,10 +163,10 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-21",
+      "lastUpdate": "2026-06-22",
       "company": "Chevron",
       "title": "Cost Performance Analyst",
-      "url": "https://www.linkedin.com/jobs/view/4427348363",
+      "url": "https://www.linkedin.com/jobs/view/4407276558",
       "applicationMethod": "",
       "status": "🚫 Skip (Score: 52/100) — This is a finance/cost accounting role at an energy company, focused on budgets, forecasts, variance analysis, and JV cost reporting — not data analytics. Niv's background has some early finance roots (2016-2021), but his trajectory has moved firmly toward data/BI/marketing analytics, and this role would be a significant career regression. There is no SQL, BI tooling, A/B testing, or digital analytics involved.",
       "interviewNotes": "",
