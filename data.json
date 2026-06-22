@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-22T08:41:28.431Z",
-    "jobCount": 333
+    "lastUpdated": "2026-06-22T08:42:26.207Z",
+    "jobCount": 334
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-22",
+      "company": "Mami",
+      "title": "Product Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4430388036",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 79/100) — Strong alignment on B2C, SQL, BI dashboards, retention/conversion/funnel focus, and AI tooling — Niv's BeachBum experience and self-shipped AI projects are directly relevant. The main risk is the explicit requirement for 'at least two B2C companies' (Niv has one: BeachBum) and the Looker/BigQuery stack he hasn't used professionally. The e-commerce angle is also a gap, but the product analytics DNA is a genuine match.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 79,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782117741390"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-22",
