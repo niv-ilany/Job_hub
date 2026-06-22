@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-22T06:02:36.126Z",
-    "jobCount": 331
+    "lastUpdated": "2026-06-22T07:26:37.804Z",
+    "jobCount": 332
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-22",
+      "company": "Nespresso",
+      "title": "Marketing Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4429793936",
+      "applicationMethod": "",
+      "status": "🚫 Skip (Score: 52/100) — Nespresso is hiring a maternity-cover replacement for a junior analyst role capped at 3 years of experience — Niv has 9 years and would be screened out immediately as overqualified. The role's core BI tool is Power BI, which Niv doesn't use. Substantive work matches Niv's skillset well (customer behavior, KPIs, dashboards, campaign analytics, retention), but the seniority ceiling and tool mismatch make this a non-starter.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 52,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782113194086"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-22",
