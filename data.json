@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-22T08:42:50.275Z",
-    "jobCount": 334
+    "lastUpdated": "2026-06-22T09:09:35.738Z",
+    "jobCount": 335
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-22",
+      "company": "Buildots",
+      "title": "Business Process Manager",
+      "url": "https://www.linkedin.com/jobs/view/4426480210",
+      "applicationMethod": "",
+      "status": "🚫 Skip (Score: 52/100) — This is a Strategic PMO / Business Operations role, not a data analyst role. While Niv has strong data skills and some of the required tools appear (Tableau, Excel), the core of this job is project management, change management, cross-departmental process design, and internal consulting — none of which are Niv's primary professional identity or demonstrated track record. Niv would likely be screened out early as an analytics specialist applying to a process/operations management position.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": "B2B",
+      "processOverride": null,
+      "fitScore": 52,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782119371310"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-22",
