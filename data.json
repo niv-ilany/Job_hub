@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-21T13:43:04.819Z",
-    "jobCount": 330
+    "lastUpdated": "2026-06-22T05:58:45.943Z",
+    "jobCount": 331
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-22",
+      "company": "Celigo",
+      "title": "Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/440411973",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 76/100) — Solid core match on SQL, BI dashboards, and stakeholder-facing insight delivery in a SaaS environment — Niv's B2B SaaS experience at Checkmarx and Mend is directly relevant here. The main friction points are Snowflake (Niv has Redshift) and the 2-5 year experience bracket, which undersells Niv's 9 years and may create a compensation/leveling mismatch. The role is notably not 'Senior,' which could signal they're looking for someone earlier-career at the lower end of that salary band.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 76,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": true,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782107921893"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-21",
