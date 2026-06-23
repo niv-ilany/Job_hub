@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-22T11:54:55.939Z",
+    "lastUpdated": "2026-06-23T08:00:58.365Z",
     "jobCount": 337
   },
   "trackerJobs": [
@@ -33,7 +33,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-22",
+      "lastUpdate": "2026-06-23",
       "company": "Rapyd",
       "title": "AI Productivity & Implementation Specialist",
       "url": "https://www.linkedin.com/jobs/view/4428474154",
@@ -45,8 +45,8 @@
       "processOverride": null,
       "fitScore": 38,
       "numInterviews": null,
-      "applied": null,
-      "viaEmployee": null,
+      "applied": true,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
