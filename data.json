@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-24T07:36:26.553Z",
+    "lastUpdated": "2026-06-24T11:28:47.338Z",
     "jobCount": 341
   },
   "trackerJobs": [
@@ -449,10 +449,10 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-21",
+      "lastUpdate": "2026-06-24",
       "company": "Anecdotes",
       "title": "Product Data Analyst",
-      "url": "",
+      "url": "https://www.linkedin.com/jobs/view/4429561928/",
       "applicationMethod": "",
       "status": "⚠️ Apply with caution (Score: 62/100) — Niv's SQL strength, BI experience, and product KPI work are genuine matches, and his AI tooling fluency (Cursor, Claude API) directly answers their explicit requirement. However, the role is explicitly scoped at 1-2 years of experience — Niv has 9 years, making overqualification the primary risk. The GRC/enterprise SaaS domain is also a mismatch vs. his B2C/gaming/cybersecurity-marketing background, and the role is more junior-execution than the Senior Analyst title he's targeting.",
       "interviewNotes": "עמית דניאל  מגישה אותי אבל לא עם הקוח הכי עדכני פניתי אליה לעדכון קוח",
