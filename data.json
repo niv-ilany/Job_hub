@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-23T08:00:58.365Z",
-    "jobCount": 337
+    "lastUpdated": "2026-06-24T07:15:20.658Z",
+    "jobCount": 338
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-24",
+      "company": "Aman Group",
+      "title": "אנליסט/ית אסטרטגיה ותכנון | חטיבת טכנולוגיות",
+      "url": "",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 72/100) — This is a strategy/planning analyst role inside an IT company's technology division — heavy on cross-functional process management, presentations to senior leadership, and portfolio oversight. Niv checks the core boxes (9 years experience, data/business analysis, Excel, financial background, senior stakeholder exposure), but the role leans significantly toward PMO/project coordination and strategic planning rather than hands-on BI analytics. The insurance domain advantage and PMO experience are explicitly called out as major pluses — Niv has neither.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 72,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": true,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782285316793"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-22",
