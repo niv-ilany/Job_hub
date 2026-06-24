@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-24T07:31:00.599Z",
-    "jobCount": 340
+    "lastUpdated": "2026-06-24T07:36:26.553Z",
+    "jobCount": 341
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-24",
+      "company": "Partnerize / Konnecto",
+      "title": "Senior Product Analyst",
+      "url": "",
+      "applicationMethod": "indeed",
+      "status": "⚠️ Apply with caution (Score: 68/100) — Niv matches well on SQL depth, BI dashboarding, cohort/funnel/attribution thinking, and stakeholder communication — and the Tel Aviv location plus marketing attribution domain are genuine strengths. However, the role explicitly requires strong hands-on Python/Pandas as a day-to-day tool, not a nice-to-have, and also names dbt as a plus alongside R&D/Engineering as a core collaborator. These are Niv's documented gaps and will likely surface in technical screening.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 68,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782286583033"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-24",
