@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-25T07:09:23.681Z",
-    "jobCount": 343
+    "lastUpdated": "2026-06-25T07:11:16.624Z",
+    "jobCount": 344
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-25",
+      "company": "מטריקס (עבור חברת בריאות מובילה)",
+      "title": "Data Analyst — מחלקת דיגיטל, בריאות",
+      "url": "https://www.matrix.co.il/jobs/%D7%9E%D7%A9%D7%A8%D7%94/%d7%9c%d7%97%d7%91%d7%a8%d7%aa-%d7%91%d7%a8%d7%99%d7%90%d7%95%d7%aa-%d7%9e%d7%95%d7%91%d7%99%d7%9c%d7%94-%d7%93%d7%a8%d7%95%d7%a9%d7%94-data-analyst/",
+      "applicationMethod": "indeed - matrix",
+      "status": "✅ Apply (Score: 81/100) — Strong technical alignment: SQL at high level + Tableau are literally the two core requirements, and Niv has both as primary skills. The role is digital product analytics in a healthcare setting — no engineering pipeline work, no Python required, no red flags. The 4-year experience minimum is well below Niv's 9 years, which is a mild risk of being overqualified but not a disqualifier. Glassbox and BusinessObjects are gaps, but both listed as advantages, not requirements.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 81,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782371472402"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-25",
