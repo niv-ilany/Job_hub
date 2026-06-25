@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-25T07:03:03.704Z",
-    "jobCount": 342
+    "lastUpdated": "2026-06-25T07:09:23.681Z",
+    "jobCount": 343
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-25",
+      "company": "Bright Data",
+      "title": "Data Analyst (LLM & AI)",
+      "url": "https://brightdata.com/careers/data-analyst-llm-ai",
+      "applicationMethod": "indeed",
+      "status": "⚠️ Apply with caution (Score: 78/100) — Solid core match on SQL, Tableau, and stakeholder-facing analytics across Sales/Marketing/Product/Finance. The LLM/AI angle is a real differentiator for Niv given his 2026 independent projects using Claude API and PostHog — this is rare and directly relevant. The main risk is the 'governed semantic layer' and 'DWH design' requirements, which lean more toward data engineering than Niv's sweet spot, and the Python expectation (listed as advantage but paired with LLM tooling it likely matters more than it sounds).",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 78,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782371359298"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-25",
