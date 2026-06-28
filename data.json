@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-28T07:57:21.678Z",
+    "lastUpdated": "2026-06-28T07:58:14.923Z",
     "jobCount": 346
   },
   "trackerJobs": [
@@ -163,7 +163,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-24",
+      "lastUpdate": "2026-06-28",
       "company": "PlainID",
       "title": "Business Analyst",
       "url": "",
@@ -178,8 +178,8 @@
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
