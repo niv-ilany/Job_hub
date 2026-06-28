@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-25T07:13:00.591Z",
+    "lastUpdated": "2026-06-28T07:37:53.233Z",
     "jobCount": 345
   },
   "trackerJobs": [
@@ -2217,20 +2217,20 @@
     },
     {
       "month": "2026-04",
-      "lastUpdate": "",
+      "lastUpdate": "2026-06-28",
       "company": "Yael Group",
       "title": "Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4386615129/",
       "applicationMethod": "",
       "status": "✅ Apply (Score: 78/100) — Good match with SQL expertise and analyst experience. Role focuses on business insights and KPI development rather than engineering. However, vague JD lacks specific tools/industry context, and consultant environment may differ from product companies.",
-      "interviewNotes": "",
+      "interviewNotes": "25 גמיש\nמבחן SQL\nשעתיים קובץ וורד PDF",
       "companySize": null,
       "companyType": null,
       "processOverride": "closed_filled",
       "fitScore": 78,
-      "numInterviews": null,
-      "applied": null,
-      "viaEmployee": null,
+      "numInterviews": 1,
+      "applied": true,
+      "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": null,
       "thankYouEmail": null,
