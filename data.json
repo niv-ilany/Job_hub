@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-28T07:39:10.609Z",
-    "jobCount": 345
+    "lastUpdated": "2026-06-28T07:57:21.678Z",
+    "jobCount": 346
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-28",
+      "company": "YunoJuno",
+      "title": "Business Analyst (BORA Project - ERP/SAP)",
+      "url": "https://www.linkedin.com/jobs/view/4424411598",
+      "applicationMethod": "",
+      "status": "🚫 Skip (Score: 28/100) — This is an ERP/SAP business analyst contract role focused on requirements documentation, RFP preparation, and ERP vendor selection — essentially a project/process consulting engagement with zero data analytics component. Niv has no SAP experience, no ERP implementation background, and no RFP/vendor selection experience. The role is about documenting business processes and writing requirements, not SQL, BI, cohort analysis, or any of Niv's core strengths.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 28,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": true,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782633438186"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-25",
