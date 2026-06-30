@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-30T11:46:56.518Z",
-    "jobCount": 348
+    "lastUpdated": "2026-06-30T11:48:37.128Z",
+    "jobCount": 349
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-30",
+      "company": "Zenzap",
+      "title": "Revenue Operations Manager",
+      "url": "https://www.linkedin.com/jobs/view/4431031602",
+      "applicationMethod": "",
+      "status": "🚫 Skip (Score: 52/100) — This is a RevOps/Sales Ops role centered on HubSpot ownership, CRM administration, pipeline management, and forecasting — not a data or BI analyst role. While Niv has strong analytical skills and B2B SaaS experience from Checkmarx/Mend, he has no HubSpot experience, no CRM administration background, and no RevOps function-building track record. The core job is owning HubSpot end-to-end, which is a fundamentally different skill set than SQL-driven analytics.",
+      "interviewNotes": "שלחתי הודעה לענבל מחכה לתגובה",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 52,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782820112754"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-30",
