@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-30T11:49:18.136Z",
-    "jobCount": 350
+    "lastUpdated": "2026-06-30T11:51:42.346Z",
+    "jobCount": 351
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-30",
+      "company": "Dot Compliance",
+      "title": "Revenue Operations (RevOps) Manager",
+      "url": "https://www.linkedin.com/jobs/view/4418268382",
+      "applicationMethod": "linkedin",
+      "status": "🚫 Skip (Score: 42/100) — This is a RevOps/Sales Operations role, not a Data Analyst role. The core requirements are Salesforce administration, deal desk management, sales workflow automation, and commercial operations — none of which are Niv's strengths. While Niv has MQL funnel and marketing attribution experience from Checkmarx, that's roughly 20% of what this job requires, and the other 80% (Salesforce architecture, deal desk, SDR/AE pipeline ops, quoting/CPQ) is a hard mismatch.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 42,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782820297791"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-30",
