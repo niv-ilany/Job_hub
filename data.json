@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-30T11:48:37.128Z",
-    "jobCount": 349
+    "lastUpdated": "2026-06-30T11:49:18.136Z",
+    "jobCount": 350
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-30",
+      "company": "Classiq Technologies",
+      "title": "Sales & Marketing Operations Specialist",
+      "url": "https://www.linkedin.com/jobs/view/4414671274",
+      "applicationMethod": "",
+      "status": "🚫 Skip (Score: 52/100) — This is a CRM/RevOps admin role centered on Salesforce and HubSpot hygiene, lead routing, and GTM tooling — not a data analyst position. Niv has adjacent exposure to marketing funnels and attribution, but the core requirement is hands-on CRM administration, not SQL-driven analytics or BI work. The role is also leveled below Niv's 9 years of experience (3-5 years required) and sits in an early-stage quantum computing niche with no relevant domain fit.",
+      "interviewNotes": "הוספתי אנשים לחברה",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 52,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782820154492"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-30",
