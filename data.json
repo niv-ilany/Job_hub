@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-30T11:53:14.139Z",
-    "jobCount": 352
+    "lastUpdated": "2026-06-30T11:55:07.297Z",
+    "jobCount": 353
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-30",
+      "company": "NiCE",
+      "title": "Business Operations Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4428580563",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 68/100) — Niv has solid core skills in SQL, dashboard building, and translating data into business insights, which maps to about 60% of this role. However, the job is heavily centered on Order-to-Cash/SaaS billing operations and enterprise systems (Oracle, Salesforce, ServiceNow) — none of which appear in Niv's background. Power BI is listed as the primary BI tool vs. Niv's Tableau/Sisense experience, which is a minor gap. The real concern is the operational/systems focus rather than a pure analytics role.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 68,
+      "numInterviews": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782820503203"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-30",
