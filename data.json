@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-06-28T11:28:08.555Z",
-    "jobCount": 346
+    "lastUpdated": "2026-06-30T11:42:25.361Z",
+    "jobCount": 347
   },
   "trackerJobs": [
+    {
+      "month": "2026-06",
+      "lastUpdate": "2026-06-30",
+      "company": "מת\"ף - חברת המיחשוב של הבינלאומי",
+      "title": "מנהל/ת פרויקטים טכנולוגיים בדיגיטל",
+      "url": "",
+      "applicationMethod": "קבוצת אפקה דניאלה",
+      "status": "🚫 Skip (Score: 22/100) — This is a pure Technical Project Manager role — E2E delivery, budget ownership, steering committees, Jira/MS Project, matrix management. It has zero overlap with Niv's analytics background. There is no SQL, no BI, no insight generation — this is project governance, not data analysis. Applying would be a waste of time.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 22,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1782819741259"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-28",
