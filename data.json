@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-06T18:47:40.316Z",
+    "lastUpdated": "2026-07-08T08:14:03.761Z",
     "jobCount": 356
   },
   "trackerJobs": [
@@ -579,7 +579,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-22",
+      "lastUpdate": "2026-07-08",
       "company": "Mami",
       "title": "Product Analyst",
       "url": "https://www.linkedin.com/jobs/view/4430388036",
@@ -594,8 +594,8 @@
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": true,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
