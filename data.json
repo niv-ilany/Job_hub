@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-08T08:14:03.761Z",
+    "lastUpdated": "2026-07-08T11:38:16.627Z",
     "jobCount": 356
   },
   "trackerJobs": [
@@ -215,24 +215,24 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-30",
+      "lastUpdate": "2026-07-08",
       "company": "checkpoint",
       "title": "Global Revenue Operations Project Manager",
       "url": "",
       "applicationMethod": "",
       "status": "🚫 Skip (Score: 28/100) — This is a pure project management / process coordination role, not a data or analytics role. There is no SQL, BI, dashboards, or analytical deliverables mentioned anywhere. Niv's entire value proposition — SQL, Tableau, A/B testing, cohort analysis, LTV — is completely irrelevant here. This would be a lateral career move into a different profession.",
-      "interviewNotes": "",
+      "interviewNotes": "משרה תחת revops רוחבי\ncustomer lifecycle \nהובלת יוזמות \nזיהוי bottlenecks\n\n26-30 אני גמיש \n\nתהליך - אורי מנהל מגייס אבל בר ראש צוות תחתיו \nבר תיצור קשר \nאם כן תשלח קייס סטאדי\nראיון אישי\nשלב נוסף\nHR\nממליצים",
       "companySize": null,
       "companyType": "B2B",
       "processOverride": null,
       "fitScore": 28,
-      "numInterviews": null,
+      "numInterviews": 1,
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
+      "gotResponse": true,
       "thankYouEmail": null,
-      "interviewed": null,
+      "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
       "analyticsTest": null,
