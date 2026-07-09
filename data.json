@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-09T08:27:46.120Z",
+    "lastUpdated": "2026-07-09T16:49:45.427Z",
     "jobCount": 356
   },
   "trackerJobs": [
@@ -1281,7 +1281,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "",
+      "lastUpdate": "2026-07-09",
       "company": "Chargeflow",
       "title": "AI Business Analyst, GTM",
       "url": "https://www.linkedin.com/jobs/view/4418682135",
@@ -1296,8 +1296,8 @@
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
