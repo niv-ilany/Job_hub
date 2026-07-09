@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-08T11:38:52.262Z",
+    "lastUpdated": "2026-07-09T06:16:19.853Z",
     "jobCount": 356
   },
   "trackerJobs": [
@@ -553,7 +553,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-07-06",
+      "lastUpdate": "2026-07-09",
       "company": "Buildots",
       "title": "Business Process Manager",
       "url": "https://www.linkedin.com/jobs/view/4426480210",
@@ -568,7 +568,7 @@
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
+      "gotResponse": true,
       "thankYouEmail": null,
       "interviewed": true,
       "choseNotToApply": null,
