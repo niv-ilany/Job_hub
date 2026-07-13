@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-13T06:49:08.042Z",
+    "lastUpdated": "2026-07-13T06:51:58.606Z",
     "jobCount": 357
   },
   "trackerJobs": [
@@ -241,13 +241,13 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-07-08",
+      "lastUpdate": "2026-07-13",
       "company": "checkpoint",
       "title": "Global Revenue Operations Project Manager",
       "url": "",
       "applicationMethod": "",
       "status": "🚫 Skip (Score: 28/100) — This is a pure project management / process coordination role, not a data or analytics role. There is no SQL, BI, dashboards, or analytical deliverables mentioned anywhere. Niv's entire value proposition — SQL, Tableau, A/B testing, cohort analysis, LTV — is completely irrelevant here. This would be a lateral career move into a different profession.",
-      "interviewNotes": "משרה תחת revops רוחבי\ncustomer lifecycle \nהובלת יוזמות \nזיהוי bottlenecks\n\n26-30 אני גמיש \n\nתהליך - אורי מנהל מגייס אבל בר ראש צוות תחתיו \nבר תיצור קשר \nאם כן תשלח קייס סטאדי\nראיון אישי\nשלב נוסף\nHR\nממליצים",
+      "interviewNotes": "משרה תחת revops רוחבי\ncustomer lifecycle \nהובלת יוזמות \nזיהוי bottlenecks\n\n26-30 אני גמיש \n\nתהליך - אורי מנהל מגייס אבל בר ראש צוות תחתיו \nבר תיצור קשר \nאם כן תשלח קייס סטאדי\nראיון אישי\nשלב נוסף\nHR\nממליצים\n\nIntroductory Call – Completed ✅\nCase Study Assignment – Please complete the attached case study and submit it by July 16th at 10:00 AM.\nDetailed instructions are attached.\nInterview & Case Presentation – If your case study meets our expectations, we will invite you for an in-person interview, which will take place at our HQ in Tel Aviv. This step includes:\nAn interview.\nA case study presentation (in English).\nRevOps Manager Interview – If the interview goes well, we will schedule a short conversation with an additional revops manager.\nHR Interview – If you successfully complete the previous step, our HR team will contact you for a final discussion.\nFinal Approval – If all steps are successful, your application will be submitted for final approval by our HR Committee.\n \n\nPlease confirm that you have received this email and that you can proceed with Step 2 (Case Study Assignment).\n\nLet me know if you have any questions. Looking forward to your submission!",
       "companySize": null,
       "companyType": "B2B",
       "processOverride": null,
