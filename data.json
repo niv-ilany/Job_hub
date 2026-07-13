@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-13T06:51:58.606Z",
-    "jobCount": 357
+    "lastUpdated": "2026-07-13T11:03:55.218Z",
+    "jobCount": 358
   },
   "trackerJobs": [
+    {
+      "month": "2026-07",
+      "lastUpdate": "2026-07-13",
+      "company": "בנק דיסקונט דרך יעל תוכנה",
+      "title": "סוג של אנליסט",
+      "url": "",
+      "applicationMethod": "יעל תוכנה",
+      "status": "מנהל מגייסת התקשרה\n\nאנליסט לדרישה מול גורם עסקי \nיצירה של קהלים ופילוחים בDWי oracle\nעניין של תוכן שאנליסטים עושים \nתמונות של הבאנר מהשיווק ושמים את זה בפנים (בניה ) כדי לחבר למערכת וליצוא\nוללקוחות העסקיים - מבחינת הקמפיינים\n\nבניית מסעות לקוח - מרקטינג אוטומיישן\n\nלא עושים אנליזות מורכבות - תחקורים - לא מתעסקים - יש דוחות מובנים ומחלקת אנליזה שלמה שמתעסקת - עשוי להתרחב\n\nנותנים שירות רוחבי ואנחנו התקשרות של הלקוחות עם הבנק ורגולטורי. אוטומציה של הודעות ללקוחות וSMS על שינוי באנרים.\n\nיושבים בראשון \nיום אחד עבודה מהבית\n\nתהליך - ראיון פרונטלי וSQL בכתב \n\nאם כן זה ראיון עם מנהל המחלקה\n\nצוות של 8 חצי מזה אליסטים\nהתפקיד לא טריוויאלי של אנליסט - הרבה עבודה עסקית - מול לקוחות - הכרת המערכות\nuniqa\n\nאין שימוש בAI",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": null,
+      "numInterviews": 1,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": true,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": true,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1783940631257"
+    },
     {
       "month": "2026-07",
       "lastUpdate": "2026-07-13",
