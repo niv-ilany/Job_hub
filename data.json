@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-09T16:49:45.427Z",
-    "jobCount": 356
+    "lastUpdated": "2026-07-13T06:49:08.042Z",
+    "jobCount": 357
   },
   "trackerJobs": [
+    {
+      "month": "2026-07",
+      "lastUpdate": "2026-07-13",
+      "company": "Revolut",
+      "title": "Data Analyst (Finance)",
+      "url": "https://www.linkedin.com/jobs/view/4437960601",
+      "applicationMethod": "",
+      "status": "🚫 Skip (Score: 52/100) — This role is fundamentally a data engineering / regulatory reporting analyst hybrid, not a business/growth analytics role. The primary responsibilities center on building ETL processes, maintaining reporting infrastructure, and ensuring regulatory compliance — areas where Niv has no meaningful experience. While SQL is a match, the finance-domain focus is on Israeli financial services/banking regulation, not the marketing or product analytics Niv specializes in.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 52,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": true,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1783925344073"
+    },
     {
       "month": "2026-06",
       "lastUpdate": "2026-06-30",
