@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-21T06:17:25.792Z",
-    "jobCount": 359
+    "lastUpdated": "2026-07-21T06:20:28.085Z",
+    "jobCount": 360
   },
   "trackerJobs": [
+    {
+      "month": "2026-07",
+      "lastUpdate": "2026-07-21",
+      "company": "SkyGini",
+      "title": "Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4437667818",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 72/100) — Strong alignment on SQL depth, AI-native workflow (Cursor, Claude — Niv literally ships solo apps with these), and autonomous builder mindset. However, the role explicitly asks for pipeline-building and data infrastructure ownership as primary responsibilities, which is a real gap. The 'nice to have' on BigQuery/data pipelines is soft-pedaled but the 'own the pipeline end-to-end from raw ingestion' in core duties is a hard engineering ask Niv doesn't fully cover.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 72,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": true,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1784614823612"
+    },
     {
       "month": "2026-07",
       "lastUpdate": "2026-07-21",
