@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-21T06:20:28.085Z",
+    "lastUpdated": "2026-07-21T06:22:16.374Z",
     "jobCount": 360
   },
   "trackerJobs": [
@@ -59,7 +59,7 @@
     },
     {
       "month": "2026-07",
-      "lastUpdate": "2026-07-13",
+      "lastUpdate": "2026-07-21",
       "company": "בנק דיסקונט דרך יעל תוכנה",
       "title": "סוג של אנליסט",
       "url": "",
@@ -77,7 +77,7 @@
       "gotResponse": null,
       "thankYouEmail": null,
       "interviewed": true,
-      "choseNotToApply": null,
+      "choseNotToApply": true,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
