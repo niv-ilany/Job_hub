@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-21T06:22:16.374Z",
-    "jobCount": 360
+    "lastUpdated": "2026-07-21T06:26:56.380Z",
+    "jobCount": 361
   },
   "trackerJobs": [
+    {
+      "month": "2026-07",
+      "lastUpdate": "2026-07-21",
+      "company": "PLAYSTUDIOS",
+      "title": "Business Analyst - myKONAMI",
+      "url": "https://www.linkedin.com/jobs/view/4437223401/",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 84/100) — Strong match on the fundamentals: B2C mobile gaming, SQL/Tableau, dashboards, monetization and retention analytics — all directly aligned with Niv's BeachBum experience. The role is slightly junior in framing (2+ years minimum, no 'Senior' title) but the scope — game economy, LiveOps, cross-functional stakeholders, actionable insights — plays right into Niv's wheelhouse. The degree requirement (STEM/Quant) is the one soft flag, but an MBA + 9 years of demonstrated analytics work typically overrides that.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 84,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": true,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1784615212234"
+    },
     {
       "month": "2026-07",
       "lastUpdate": "2026-07-21",
