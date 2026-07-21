@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-21T06:26:56.380Z",
+    "lastUpdated": "2026-07-21T07:36:41.653Z",
     "jobCount": 361
   },
   "trackerJobs": [
@@ -345,7 +345,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-07-13",
+      "lastUpdate": "2026-07-21",
       "company": "checkpoint",
       "title": "Global Revenue Operations Project Manager",
       "url": "",
@@ -356,7 +356,7 @@
       "companyType": "B2B",
       "processOverride": null,
       "fitScore": 28,
-      "numInterviews": 1,
+      "numInterviews": 2,
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
@@ -365,7 +365,7 @@
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
-      "analyticsTest": null,
+      "analyticsTest": true,
       "caseStudy": null,
       "id": "job-1782820012996"
     },
