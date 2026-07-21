@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-21T07:37:35.487Z",
-    "jobCount": 361
+    "lastUpdated": "2026-07-21T07:40:50.037Z",
+    "jobCount": 362
   },
   "trackerJobs": [
+    {
+      "month": "2026-07",
+      "lastUpdate": "2026-07-21",
+      "company": "Kape / ExpressVPN",
+      "title": "(Senior) Business Analyst – User Acquisition & Growth",
+      "url": "https://www.linkedin.com/jobs/view/4436716487",
+      "applicationMethod": "",
+      "status": "✅ Apply (Score: 89/100) — This is a near-ideal match for Niv. The role is squarely in B2C subscription analytics with explicit focus on LTV/CAC, ROAS, A/B testing, retention, churn, and funnel — all areas where Niv has direct, recent experience. The BI + SQL core requirement, marketing stakeholder orientation, and Israel-based location all align tightly. The one honest flag is a light collaboration requirement with R&D on data infrastructure, but that's secondary to the core analytics mandate.",
+      "interviewNotes": "פניתי לדיאנה לגבי משרה שמצאתי \n\nהעבירה את כל המידע כולל תרגיל קודם למנהלת מגייסת גסיקה\nהתראיינתי עם גסיהק\nששלחה תקגיל נוסף\nעשיתי מצת \nכעת נקבע ראיון במשרדים בו אציג את התוצר",
+      "companySize": null,
+      "companyType": "B2C",
+      "processOverride": null,
+      "fitScore": 89,
+      "numInterviews": 2,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": true,
+      "gotResponse": true,
+      "thankYouEmail": null,
+      "interviewed": true,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": true,
+      "caseStudy": null,
+      "id": "job-1784619646521"
+    },
     {
       "month": "2026-07",
       "lastUpdate": "2026-07-21",
