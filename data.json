@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-21T07:36:41.653Z",
+    "lastUpdated": "2026-07-21T07:37:19.713Z",
     "jobCount": 361
   },
   "trackerJobs": [
@@ -683,13 +683,13 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-07-09",
+      "lastUpdate": "2026-07-21",
       "company": "Buildots",
       "title": "Business Process Manager",
       "url": "https://www.linkedin.com/jobs/view/4426480210",
       "applicationMethod": "",
       "status": "🚫 Skip (Score: 52/100) — This is a Strategic PMO / Business Operations role, not a data analyst role. While Niv has strong data skills and some of the required tools appear (Tableau, Excel), the core of this job is project management, change management, cross-departmental process design, and internal consulting — none of which are Niv's primary professional identity or demonstrated track record. Niv would likely be screened out early as an analytics specialist applying to a process/operations management position.\n\nהיה ראיון שני מוצלח \nנפגשתי עם מנהלת מרשימה \nשדיברה יפה והסבירה יפה על התפקיד \nוגם ציינה שאני הייתי נעים מאוד ברור ומדויק",
-      "interviewNotes": "לcustomer excelence Kמחלקת customer office \n\nתפקיד ניהול תהליכים ורויקטים פנימייים בעולמות הלקוח GTM ואופרציה\n\nמחקר ועד הוצאה לפועל \n\nדירקטורית מובילה אתהצוות \n\nועד אחת CCO\n\n\n\nתפקיד מאוד מאוד רוחבי\n\nתפקיד של הנהלה ללא סמכות \n\nמקבל אתגר ולדעת איך לפצח ועם מי לדבר ואיך לבנות תוכנית עבודה\n\n\n\n4 ימים מהמשרד \n\n\n\nשלב הבא רוני דירקטורית - מקצועי והכרות אישית\n\nמטלת בית - \n\nהצגה במשרד בפניה ודירקטור נוסף\n\nראיונות עם ממשקי עבודה \n\nHR ממליצים והצעה",
+      "interviewNotes": "לcustomer excelence Kמחלקת customer office \n\nתפקיד ניהול תהליכים ורויקטים פנימייים בעולמות הלקוח GTM ואופרציה\n\nמחקר ועד הוצאה לפועל \n\nדירקטורית מובילה אתהצוות \n\nועד אחת CCO\n\n\n\nתפקיד מאוד מאוד רוחבי\n\nתפקיד של הנהלה ללא סמכות \n\nמקבל אתגר ולדעת איך לפצח ועם מי לדבר ואיך לבנות תוכנית עבודה\n\n\n\n4 ימים מהמשרד \n\n\n\nשלב הבא רוני דירקטורית - מקצועי והכרות אישית\n\nמטלת בית - \n\nהצגה במשרד בפניה ודירקטור נוסף\n\nראיונות עם ממשקי עבודה \n\nHR ממליצים והצעה\n\nלא התקדמו על רקע שאני יותר אנליטי מאופרטיבי - אסף עדיין מנסה",
       "companySize": null,
       "companyType": "B2B",
       "processOverride": null,
@@ -699,7 +699,7 @@
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
