@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-21T07:37:19.713Z",
+    "lastUpdated": "2026-07-21T07:37:35.487Z",
     "jobCount": 361
   },
   "trackerJobs": [
@@ -1853,13 +1853,13 @@
     },
     {
       "month": "2026-05",
-      "lastUpdate": "2026-05-31",
+      "lastUpdate": "2026-07-21",
       "company": "Migdal Group",
       "title": "Business Analyst",
       "url": "https://www.linkedin.com/jobs/view/4390826578",
       "applicationMethod": "דובי לפלר",
       "status": "✅ Apply (Score: 78/100) — Good fit for Niv's profile with strong SQL/Excel requirements and business analysis focus. The insurance domain is new but the analytical skills transfer well. Main concern is the 2-4 years experience requirement versus Niv's 9 years - he may be overqualified.",
-      "interviewNotes": "ראיון ראשון מול מגייסת \nציפיות שכר אמרתי 24 אלף\nאמרה שיום עבודה מהבית מגיע עם חצי שנה של וותק",
+      "interviewNotes": "ראיון ראשון מול מגייסת \nציפיות שכר אמרתי 24 אלף\nאמרה שיום עבודה מהבית מגיע עם חצי שנה של וותק\n\nאין מענה הרבה זמן בטח אבוד",
       "companySize": "1001-5000",
       "companyType": null,
       "processOverride": null,
@@ -1869,7 +1869,7 @@
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
