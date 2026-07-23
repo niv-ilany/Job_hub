@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-21T09:57:27.737Z",
-    "jobCount": 363
+    "lastUpdated": "2026-07-23T06:05:39.529Z",
+    "jobCount": 364
   },
   "trackerJobs": [
+    {
+      "month": "2026-07",
+      "lastUpdate": "2026-07-23",
+      "company": "שירות התעסוקה / מרכז מב\"ת (AI בתעסוקה)",
+      "title": "מנהל/ת תחום מחקר ודאטה",
+      "url": "",
+      "applicationMethod": "בן דב",
+      "status": "🚫 Skip (Score: 52/100) — This is a government policy research leadership role focused on labor market forecasting, policy writing, and academic-style research publication — not a BI/analytics role. Niv's core strengths (Tableau, SQL, A/B testing, marketing funnels, LTV) are largely irrelevant here. The role requires a Master's degree in Statistics, Data Science, Economics, or Industrial Engineering, and experience writing policy papers and presenting to government bodies — neither of which Niv has. The MBA in Marketing from Bar-Ilan is unlikely to satisfy the degree requirement as stated.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 52,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1784786734710"
+    },
     {
       "month": "2026-07",
       "lastUpdate": "2026-07-21",
