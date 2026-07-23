@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-23T06:05:39.529Z",
-    "jobCount": 364
+    "lastUpdated": "2026-07-23T06:10:01.619Z",
+    "jobCount": 365
   },
   "trackerJobs": [
+    {
+      "month": "2026-07",
+      "lastUpdate": "2026-07-23",
+      "company": "",
+      "title": "GTM Ops / GTM Engineer",
+      "url": "",
+      "applicationMethod": "עמית דניאל",
+      "status": "🚫 Skip (Score: 52/100) — This role is fundamentally a RevOps/GTM Engineering position centered on HubSpot administration, CRM data hygiene, workflow automation, and GTM system-building — not a data analyst role. While Niv has strong B2B marketing analytics experience and understands funnel/attribution conceptually, he lacks the deep HubSpot admin expertise, CRM ops ownership, and automation/workflow orchestration background that are the core of this job. SQL and dashboards are listed as a bonus, not the primary requirement.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 52,
+      "numInterviews": 1,
+      "applied": true,
+      "viaEmployee": true,
+      "viaLinkedin": null,
+      "gotResponse": true,
+      "thankYouEmail": null,
+      "interviewed": true,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1784786997985"
+    },
     {
       "month": "2026-07",
       "lastUpdate": "2026-07-23",
