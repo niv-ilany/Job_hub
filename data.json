@@ -1,19 +1,19 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-23T06:10:01.619Z",
+    "lastUpdated": "2026-07-23T06:21:09.459Z",
     "jobCount": 365
   },
   "trackerJobs": [
     {
       "month": "2026-07",
       "lastUpdate": "2026-07-23",
-      "company": "",
+      "company": "ALTA",
       "title": "GTM Ops / GTM Engineer",
       "url": "",
       "applicationMethod": "עמית דניאל",
       "status": "🚫 Skip (Score: 52/100) — This role is fundamentally a RevOps/GTM Engineering position centered on HubSpot administration, CRM data hygiene, workflow automation, and GTM system-building — not a data analyst role. While Niv has strong B2B marketing analytics experience and understands funnel/attribution conceptually, he lacks the deep HubSpot admin expertise, CRM ops ownership, and automation/workflow orchestration background that are the core of this job. SQL and dashboards are listed as a bonus, not the primary requirement.",
-      "interviewNotes": "",
+      "interviewNotes": "מנהלת מגייסת - אלינה \nMKTG ENG\nטליה תוכן \n\nתפקיד לא קיים \nנדרש לייצר מעק\n\nאלנבי רוטשילד - עוברים למגדלי סונל\n4 פעמים מהמשרד",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
