@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-24T08:44:29.766Z",
+    "lastUpdated": "2026-07-24T08:44:44.885Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -553,7 +553,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-25",
+      "lastUpdate": "2026-07-24",
       "company": "Trivago (Innovation Center / formerly Holisto)",
       "title": "Senior Data Analyst",
       "url": "https://il.indeed.com/viewjob?jk=ef7ba06eebd2afca&tk=1jrup8uj8hn50800&from=serp&vjs=3",
@@ -568,8 +568,8 @@
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
