@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-24T08:42:06.213Z",
+    "lastUpdated": "2026-07-24T08:42:11.316Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -1463,7 +1463,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-03",
+      "lastUpdate": "2026-07-24",
       "company": "Aligned",
       "title": "Product data analyst",
       "url": "https://www.linkedin.com/jobs/view/4418381339",
@@ -1478,8 +1478,8 @@
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
@@ -1515,7 +1515,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-01",
+      "lastUpdate": "2026-07-24",
       "company": "Mize",
       "title": "Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4422568269",
@@ -1530,8 +1530,8 @@
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
