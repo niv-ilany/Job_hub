@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-24T08:43:17.268Z",
+    "lastUpdated": "2026-07-24T08:43:27.778Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -1021,7 +1021,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-21",
+      "lastUpdate": "2026-07-24",
       "company": "Payouts.com",
       "title": "GTM Intelligence & RevOps Associate",
       "url": "https://www.linkedin.com/jobs/view/4428587334",
@@ -1036,8 +1036,8 @@
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": true,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
