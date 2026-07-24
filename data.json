@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-24T08:43:49.784Z",
+    "lastUpdated": "2026-07-24T08:43:55.294Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -709,7 +709,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-24",
+      "lastUpdate": "2026-07-24",
       "company": "R2Net (Signet Jewelers / JamesAllen.com / Blue Nile)",
       "title": "Product Analyst",
       "url": "",
@@ -724,8 +724,8 @@
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
