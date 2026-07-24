@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-24T08:40:44.522Z",
+    "lastUpdated": "2026-07-24T08:41:24.736Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -1879,7 +1879,7 @@
     },
     {
       "month": "2026-05",
-      "lastUpdate": "2026-05-31",
+      "lastUpdate": "2026-07-24",
       "company": "Keshet Media Group",
       "title": "Data Analyst - Commercial Division",
       "url": "https://www.linkedin.com/jobs/view/4406442834",
@@ -1894,8 +1894,8 @@
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
