@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-24T08:44:00.447Z",
+    "lastUpdated": "2026-07-24T08:44:06.454Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -605,7 +605,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-25",
+      "lastUpdate": "2026-07-24",
       "company": "Bright Data",
       "title": "Data Analyst (LLM & AI)",
       "url": "https://brightdata.com/careers/data-analyst-llm-ai",
@@ -620,8 +620,8 @@
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
