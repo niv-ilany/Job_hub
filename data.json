@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-24T08:44:06.454Z",
+    "lastUpdated": "2026-07-24T08:44:16.085Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -631,7 +631,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-25",
+      "lastUpdate": "2026-07-24",
       "company": "הראל ביטוח ופיננסים",
       "title": "Data Analyst",
       "url": "https://career.adamtotal.co.il/Jobs/JobDetails?token=NWk1WHJWZkVhOEFXdFROZnNleGR5a21kZllIaGd2WU5MUVJoaDROTFdOTnQzelpTcS8xQTk4V0FadUg1RElUa2dIdVpncVo0czNjZ0xSSXVaczFDWVE9PQ==&shr=&eid=",
@@ -646,8 +646,8 @@
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
