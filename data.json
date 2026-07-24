@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-24T08:42:18.763Z",
+    "lastUpdated": "2026-07-24T08:42:22.364Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -1359,7 +1359,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-10",
+      "lastUpdate": "2026-07-24",
       "company": "Medulla",
       "title": "Product Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4425468394",
@@ -1374,8 +1374,8 @@
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": true,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
@@ -2191,7 +2191,7 @@
     },
     {
       "month": "2026-04",
-      "lastUpdate": "2026-04-26",
+      "lastUpdate": "2026-07-24",
       "company": "Clover Security",
       "title": "Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4397784874",
@@ -2206,8 +2206,8 @@
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
