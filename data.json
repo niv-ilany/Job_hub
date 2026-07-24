@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-24T08:44:16.085Z",
+    "lastUpdated": "2026-07-24T08:44:29.766Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -579,7 +579,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-25",
+      "lastUpdate": "2026-07-24",
       "company": "מטריקס (עבור חברת בריאות מובילה)",
       "title": "Data Analyst — מחלקת דיגיטל, בריאות",
       "url": "https://www.matrix.co.il/jobs/%D7%9E%D7%A9%D7%A8%D7%94/%d7%9c%d7%97%d7%91%d7%a8%d7%aa-%d7%91%d7%a8%d7%99%d7%90%d7%95%d7%aa-%d7%9e%d7%95%d7%91%d7%99%d7%9c%d7%94-%d7%93%d7%a8%d7%95%d7%a9%d7%94-data-analyst/",
@@ -594,8 +594,8 @@
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": null,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
