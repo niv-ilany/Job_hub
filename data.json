@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-24T08:43:27.778Z",
+    "lastUpdated": "2026-07-24T08:43:31.500Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -969,7 +969,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-06-21",
+      "lastUpdate": "2026-07-24",
       "company": "Torox",
       "title": "Product Operations Lead",
       "url": "https://www.linkedin.com/jobs/view/4425763554/",
@@ -984,8 +984,8 @@
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": true,
-      "gotResponse": null,
-      "thankYouEmail": null,
+      "gotResponse": true,
+      "thankYouEmail": true,
       "interviewed": null,
       "choseNotToApply": null,
       "sqlTest": null,
