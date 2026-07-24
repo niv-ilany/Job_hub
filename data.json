@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-23T06:26:17.560Z",
+    "lastUpdated": "2026-07-24T08:35:20.393Z",
     "jobCount": 365
   },
   "trackerJobs": [
@@ -59,13 +59,13 @@
     },
     {
       "month": "2026-07",
-      "lastUpdate": "2026-07-21",
+      "lastUpdate": "2026-07-24",
       "company": "MIRO",
       "title": "Senior Marketing Data Analyst",
       "url": "",
       "applicationMethod": "Gstat",
       "status": "SQL snowflake \nlooker\nb2b SAAS\n\n26-30 שכר\n\nראיון מרחוק עם מנהל השיווק",
-      "interviewNotes": "",
+      "interviewNotes": "Senior Marketing Data Analyst –Remote Position\nA global SaaS company is looking for a highly skilled Data Analyst to join its global Marketing & Growth Analytics team.\nThis is a full-time remote role, where you’ll take ownership of marketing and growth analytics while partnering with global teams across the business.\nResponsibilities:\n* Analyze marketing performance, user funnels, growth initiatives, and SaaS business metrics. \n* Generate insights from large-scale datasets and translate data into actionable business recommendations. \n* Partner with Marketing, Growth, and Business teams to drive data-informed decisions. \n* Own analytics processes independently, from raw data exploration to presenting insights. \n\nדרישות\n* 3+ years of experience as a Data Analyst in a business-oriented analytics role- Mandatory.\n* Mandatory experience in PLG (Product-Led Growth) companies – global SaaS / Freemium environments- Mandatory. \n* Strong experience in Marketing Analytics and Business Analytics -Mandatory. \n* 3+ years of experience with SQL, including work with large-scale datasets-Mandatory.  \n* Experience with Snowflake – strong advantage. \n* Experience with Looker / LookML – strong advantage. \n* Fluent English – mandatory.",
       "companySize": null,
       "companyType": null,
       "processOverride": null,
