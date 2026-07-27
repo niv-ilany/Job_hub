@@ -1,10 +1,36 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-27T07:25:07.312Z",
-    "jobCount": 366
+    "lastUpdated": "2026-07-27T10:51:11.543Z",
+    "jobCount": 367
   },
   "trackerJobs": [
+    {
+      "month": "2026-07",
+      "lastUpdate": "2026-07-27",
+      "company": "חברה לא ידועה",
+      "title": "Analyst – Automotive/Logistics Operations",
+      "url": "",
+      "applicationMethod": "",
+      "status": "🚫 Skip (Score: 52/100) — This role is an operational/logistics analyst position in the automotive sector, focused on fleet performance, SLA tracking, supplier monitoring, and process efficiency — a world away from Niv's marketing, growth, and product analytics background. The mandatory requirement for R as a working tool is a hard disqualifier, and there is zero overlap with Niv's B2C/gaming/SaaS or marketing funnel experience. The domain mismatch (logistics ops vs. growth/marketing analytics) is deep, not superficial.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 52,
+      "numInterviews": null,
+      "applied": true,
+      "viaEmployee": null,
+      "viaLinkedin": true,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1785149467624"
+    },
     {
       "month": "2026-07",
       "lastUpdate": "2026-07-24",
