@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-25T13:41:38.628Z",
+    "lastUpdated": "2026-07-27T07:02:11.763Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -111,7 +111,7 @@
     },
     {
       "month": "2026-07",
-      "lastUpdate": "2026-07-21",
+      "lastUpdate": "2026-07-27",
       "company": "Kape / ExpressVPN",
       "title": "(Senior) Business Analyst – User Acquisition & Growth",
       "url": "https://www.linkedin.com/jobs/view/4436716487",
@@ -122,17 +122,17 @@
       "companyType": "B2C",
       "processOverride": null,
       "fitScore": 89,
-      "numInterviews": 2,
+      "numInterviews": 3,
       "applied": true,
       "viaEmployee": null,
       "viaLinkedin": true,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
       "analyticsTest": true,
-      "caseStudy": null,
+      "caseStudy": true,
       "id": "job-1784619646521"
     },
     {
