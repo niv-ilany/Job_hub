@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-27T07:02:11.763Z",
+    "lastUpdated": "2026-07-27T07:02:27.266Z",
     "jobCount": 366
   },
   "trackerJobs": [
@@ -1099,7 +1099,7 @@
     },
     {
       "month": "2026-06",
-      "lastUpdate": "2026-07-09",
+      "lastUpdate": "2026-07-27",
       "company": "Anecdotes",
       "title": "Product Data Analyst",
       "url": "https://www.linkedin.com/jobs/view/4429561928/",
@@ -1110,17 +1110,17 @@
       "companyType": null,
       "processOverride": null,
       "fitScore": 62,
-      "numInterviews": 2,
+      "numInterviews": 3,
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": true,
       "analyticsTest": null,
-      "caseStudy": null,
+      "caseStudy": true,
       "id": "job-1782047706860"
     },
     {
