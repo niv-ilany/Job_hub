@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-30T12:24:42.368Z",
+    "lastUpdated": "2026-07-30T12:26:15.461Z",
     "jobCount": 368
   },
   "trackerJobs": [
@@ -137,7 +137,7 @@
     },
     {
       "month": "2026-07",
-      "lastUpdate": "2026-07-24",
+      "lastUpdate": "2026-07-30",
       "company": "MIRO",
       "title": "Senior Marketing Data Analyst",
       "url": "",
@@ -153,7 +153,7 @@
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
