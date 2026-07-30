@@ -254,6 +254,9 @@ table.t-table tr:hover td { background: #fdfcfa; }
 .t-badge-interviewed { background: #fff3e0; color: #c8773a; }
 .t-badge-applied { background: #e8f4e6; color: #2d5a27; }
 .t-badge-notapplied { background: #eef2f8; color: #3a5c8c; }
+.t-badge-upcoming { background: #eef0ff; color: #3a4dd6; border: 1px solid #c2c9ff; }
+tr.t-row-upcoming td { background: #f8f9ff; }
+tr.t-row-upcoming:hover td { background: #f1f3ff; }
 
 .t-icon-btn { background: none; border: 1px solid var(--border); border-radius: 5px; cursor: pointer; padding: 3px 7px; font-size: 11px; transition: all .15s; color: var(--text-muted); }
 .t-icon-btn:hover { background: var(--bg); color: var(--text); }
@@ -648,6 +651,7 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
 
   <div class="tracker-tabs-bar">
     <button class="t-tab active" onclick="setTrackerTab('open',this)">🟢 Open</button>
+    <button class="t-tab" onclick="setTrackerTab('upcoming',this)">📅 Upcoming Interviews</button>
     <button class="t-tab" onclick="setTrackerTab('interviewed',this)">🟠 Interviewed</button>
     <button class="t-tab" onclick="setTrackerTab('applied',this)">Applied</button>
     <button class="t-tab" onclick="setTrackerTab('closed',this)">✕ Closed</button>
@@ -667,8 +671,9 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
           <th onclick="tSortBy('companyType')" data-col="companyType">Type ↕</th>
           <th>Process</th>
           <th>Status</th>
+          <th onclick="tSortBy('nextInterviewDate')" data-col="nextInterviewDate">Next Interview ↕</th>
           <th>Method</th>
-          <th onclick="tSortBy('numInterviews')" data-col="numInterviews"># Int ↕</th>
+          <th onclick="tSortBy('numInterviews')" data-col="numInterviews"># Stages ↕</th>
           <th>Tests</th>
           <th onclick="tSortBy('fitScore')" data-col="fitScore" title="Analyzer fit score">Fit ↕</th>
           <th>Notes</th>
@@ -742,7 +747,8 @@ The more text the better." style="width:100%;height:280px;background:var(--surfa
         </select>
         <div class="field-hint" style="margin-top:4px">Leave as "Auto-detect" to let the app decide based on checkboxes and notes</div>
       </div>
-      <div class="form-group"><label class="form-label"># Interviews</label><input class="form-input" id="f-numInterviews" placeholder="0"></div>
+      <div class="form-group"><label class="form-label"># Stages</label><input class="form-input" id="f-numInterviews" placeholder="0"></div>
+      <div class="form-group"><label class="form-label">Next Interview Date</label><input type="date" class="form-input" id="f-nextInterviewDate"></div>
       <div class="form-group full">
         <label class="form-label">Flags</label>
         <div class="checkbox-row">
@@ -882,6 +888,28 @@ function statusBadge(j) {
   const L = { interviewed:'🟠 Interviewed', applied:'🟢 Applied', notapplied:'🔵 Not Applied' };
   return `<span class="t-badge t-badge-${s}">${L[s]}</span>`;
 }
+// An interview is "upcoming" if a next-interview date is set and it's today or later
+function isUpcomingInterview(j) {
+  if (!j.nextInterviewDate) return false;
+  const today = new Date(); today.setHours(0,0,0,0);
+  const d = new Date(j.nextInterviewDate);
+  return !isNaN(d) && d >= today;
+}
+function daysUntil(dateStr) {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const d = new Date(dateStr);
+  return Math.round((d - today) / 86400000);
+}
+function nextInterviewBadge(j) {
+  if (!j.nextInterviewDate) return '<span style="color:var(--text-dim);font-size:11px">–</span>';
+  const upcoming = isUpcomingInterview(j);
+  const n = daysUntil(j.nextInterviewDate);
+  const dLabel = upcoming ? (n===0 ? 'Today' : n===1 ? 'Tomorrow' : `in ${n}d`) : 'past';
+  const dateLabel = new Date(j.nextInterviewDate).toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  return upcoming
+    ? `<span class="t-badge t-badge-upcoming">📅 ${esc(dateLabel)} · ${dLabel}</span>`
+    : `<span style="font-size:11px;color:var(--text-dim)">${esc(dateLabel)}</span>`;
+}
 function processBadge(j) {
   const ps = processStatus(j);
   const closedLabel = j.processOverride === 'closed_rejected' ? '✕ Rejected'
@@ -922,6 +950,7 @@ function getFiltered() {
     if (tTab === 'interviewed' && getStatus(j) !== 'interviewed') return false;
     if (tTab === 'notapplied'  && getStatus(j) !== 'notapplied') return false;
     if (tTab === 'pending'     && processStatus(j) !== 'pending') return false;
+    if (tTab === 'upcoming'    && !isUpcomingInterview(j)) return false;
     if (q) {
       const hay = [j.company,j.title,j.status,j.applicationMethod,j.interviewNotes].join(' ').toLowerCase();
       if (!hay.includes(q)) return false;
@@ -957,12 +986,22 @@ function tSorted(arr) {
 // ─────────────────────────────────────────────────────────────
 function renderTracker() {
   let filtered = tSorted(getFiltered());
-  // In Open tab: interviewed processes always float to top
+  // In Open tab: jobs with an upcoming interview float to the very top (soonest first),
+  // then already-interviewed processes, then the rest
   if (tTab === 'open') {
+    const upcoming = filtered
+      .filter(j => isUpcomingInterview(j))
+      .sort((a,b) => new Date(a.nextInterviewDate) - new Date(b.nextInterviewDate));
+    const remaining = filtered.filter(j => !isUpcomingInterview(j));
     filtered = [
-      ...filtered.filter(j => j.interviewed),
-      ...filtered.filter(j => !j.interviewed)
+      ...upcoming,
+      ...remaining.filter(j => j.interviewed),
+      ...remaining.filter(j => !j.interviewed)
     ];
+  }
+  // In Upcoming tab: always sort soonest first regardless of column sort
+  if (tTab === 'upcoming') {
+    filtered = [...filtered].sort((a,b) => new Date(a.nextInterviewDate) - new Date(b.nextInterviewDate));
   }
   document.getElementById('t-count').textContent = `Showing ${filtered.length} of ${jobs.length} jobs`;
 
@@ -982,13 +1021,14 @@ function renderTracker() {
     const method = [j.viaEmployee&&'👤', j.viaLinkedin&&'💼'].filter(Boolean).join(' ') || '–';
     const numInt = j.numInterviews != null ? j.numInterviews : (j.interviewed ? '1+' : '–');
     const noteTxt = (j.status||j.interviewNotes||j.applicationMethod||'').substring(0,70);
-    return `<tr>
+    return `<tr${isUpcomingInterview(j) ? ' class="t-row-upcoming"' : ''}>
       <td style="color:var(--text-dim);white-space:nowrap;font-size:11px;font-family:'JetBrains Mono',monospace">${esc(j.month||'–')}</td>
       <td><div class="t-company">${esc(j.company||'–')}</div>${urlHtml}</td>
       <td><div class="t-title-sm">${esc(j.title||'–')}</div></td>
       <td>${j.companyType ? `<span class="b2x-badge ${j.companyType==='B2C'?'b2c':j.companyType==='B2B'?'b2b':''}" style="font-size:10px">${esc(j.companyType)}</span>` : '<span style="color:var(--text-dim);font-size:11px">–</span>'}</td>
       <td>${processBadge(j)}</td>
       <td>${statusBadge(j)}</td>
+      <td style="white-space:nowrap">${nextInterviewBadge(j)}</td>
       <td style="font-size:13px">${method}</td>
       <td style="text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px">${numInt}</td>
       <td style="font-size:10px;color:var(--text-dim)">${esc(tests)||'–'}</td>
@@ -1093,13 +1133,14 @@ function openEditModal(id) {
   document.getElementById('f-companyType').value     = j.companyType||'';
   document.getElementById('f-processOverride').value = j.processOverride||'';
   document.getElementById('f-numInterviews').value = j.numInterviews!=null?j.numInterviews:'';
+  document.getElementById('f-nextInterviewDate').value = j.nextInterviewDate||'';
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => {
     document.getElementById('f-'+k).checked = !!j[k];
   });
   document.getElementById('modal-overlay').classList.remove('hidden');
 }
 function clearForm() {
-  ['f-month','f-lastUpdate','f-company','f-title','f-url','f-applicationMethod','f-status','f-interviewNotes','f-companySize','f-companyType','f-processOverride','f-numInterviews'].forEach(id => document.getElementById(id).value='');
+  ['f-month','f-lastUpdate','f-company','f-title','f-url','f-applicationMethod','f-status','f-interviewNotes','f-companySize','f-companyType','f-processOverride','f-numInterviews','f-nextInterviewDate'].forEach(id => document.getElementById(id).value='');
   const afStatus = document.getElementById('autofill-status'); if (afStatus) afStatus.textContent = '';
   const coHint = document.getElementById('company-hint'); if (coHint) coHint.innerHTML = '';
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => document.getElementById('f-'+k).checked=false);
@@ -1124,6 +1165,7 @@ function saveJob() {
     processOverride:  document.getElementById('f-processOverride').value||null,
     fitScore:         (editId ? (jobs.find(j=>j.id===editId)||{}).fitScore : null) || document._pendingFitScore || null,
     numInterviews: document.getElementById('f-numInterviews').value!=='' ? parseFloat(document.getElementById('f-numInterviews').value) : null,
+    nextInterviewDate: document.getElementById('f-nextInterviewDate').value || null,
   };
   ['applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','sqlTest','analyticsTest','caseStudy'].forEach(k => {
     data[k] = document.getElementById('f-'+k).checked || null;
@@ -1156,7 +1198,8 @@ function openDetail(id) {
     ['Status Notes', esc(j.status)],
     ['Interview Notes', esc(j.interviewNotes)],
     ['Company Size', j.companySize],
-    ['# Interviews', j.numInterviews],
+    ['# Stages', j.numInterviews],
+    ['Next Interview Date', j.nextInterviewDate ? nextInterviewBadge(j) : null],
     ['Applied', j.applied?'✅':'–'],
     ['Via Employee', j.viaEmployee?'✅':'–'],
     ['Via LinkedIn', j.viaLinkedin?'✅':'–'],
@@ -1239,7 +1282,7 @@ This will replace your current ${jobs.length} jobs.`;
 }
 
 function exportCSV() {
-  const cols = ['month','company','title','url','applicationMethod','status','interviewNotes','companySize','applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','numInterviews','sqlTest','analyticsTest','caseStudy','lastUpdate'];
+  const cols = ['month','company','title','url','applicationMethod','status','interviewNotes','companySize','applied','viaEmployee','viaLinkedin','gotResponse','thankYouEmail','interviewed','choseNotToApply','numInterviews','nextInterviewDate','sqlTest','analyticsTest','caseStudy','lastUpdate'];
   const rows = getFiltered().map(j => cols.map(c=>`"${String(j[c]??'').replace(/"/g,'""')}"`).join(','));
   const csv = [cols.join(','), ...rows].join('\n');
   const a = document.createElement('a');
@@ -1314,7 +1357,7 @@ function renderSearchAnalysis() {
     <div class="a-grid4" style="margin-top:-10px">
       <div class="kpi-card"><div class="kpi-num">${viaEmp}</div><div class="kpi-label">Via Employee</div><div class="kpi-sub">${applied>0?(viaEmp/applied*100).toFixed(0):'0'}% of applied</div></div>
       <div class="kpi-card"><div class="kpi-num">${viaLI}</div><div class="kki-label kpi-label">Via LinkedIn</div></div>
-      <div class="kpi-card red"><div class="kpi-num">${totalInt}</div><div class="kpi-label">Total Interview Rounds</div></div>
+      <div class="kpi-card red"><div class="kpi-num">${totalInt}</div><div class="kpi-label">Total Stages</div></div>
       <div class="kpi-card purple"><div class="kpi-num">${sqlTest+anTest+caseS}</div><div class="kpi-label">Tests Taken</div><div class="kpi-sub">SQL:${sqlTest} Analytics:${anTest} Case:${caseS}</div></div>
     </div>
 
@@ -1395,9 +1438,9 @@ function renderSearchAnalysis() {
         </div>
       </div>
       <div class="analysis-section">
-        <div class="a-section-title">Most Interview Rounds</div>
+        <div class="a-section-title">Most Stages</div>
         <table class="mini-table">
-          <thead><tr><th>Company</th><th>Rounds</th><th>Tests</th></tr></thead>
+          <thead><tr><th>Company</th><th>Stages</th><th>Tests</th></tr></thead>
           <tbody>
             ${topInt.map(j=>`<tr>
               <td><div style="font-weight:500">${esc(j.company)}</div><div style="font-size:10px;color:var(--text-dim)">${esc(j.title)}</div></td>
@@ -1449,8 +1492,8 @@ function renderSearchAnalysis() {
           <div class="insight-icon">🏆</div>
           <div class="insight-title">Longest Process</div>
           <div class="insight-body">
-            <strong>${topInt[0]?.company||'Unity'}</strong> had the most rounds (${topInt[0]?.numInterviews||8}).
-            Processes with 4+ rounds are common at product-led companies — prep more deeply for take-home exercises.
+            <strong>${topInt[0]?.company||'Unity'}</strong> had the most stages (${topInt[0]?.numInterviews||8}).
+            Processes with 4+ stages are common at product-led companies — prep more deeply for take-home exercises.
           </div>
         </div>
         <div class="insight-card">
