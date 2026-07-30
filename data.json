@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-30T13:47:50.228Z",
+    "lastUpdated": "2026-07-30T13:47:58.359Z",
     "jobCount": 368
   },
   "trackerJobs": [
@@ -112,7 +112,7 @@
     },
     {
       "month": "2026-07",
-      "lastUpdate": "2026-07-23",
+      "lastUpdate": "2026-07-30",
       "company": "שירות התעסוקה / מרכז מב\"ת (AI בתעסוקה)",
       "title": "מנהל/ת תחום מחקר ודאטה",
       "url": "",
@@ -134,7 +134,8 @@
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
-      "id": "job-1784786734710"
+      "id": "job-1784786734710",
+      "nextInterviewDate": "2026-08-02"
     },
     {
       "month": "2026-07",
