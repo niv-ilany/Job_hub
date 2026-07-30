@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-07-30T12:26:15.461Z",
+    "lastUpdated": "2026-07-30T12:26:29.768Z",
     "jobCount": 368
   },
   "trackerJobs": [
@@ -85,7 +85,7 @@
     },
     {
       "month": "2026-07",
-      "lastUpdate": "2026-07-25",
+      "lastUpdate": "2026-07-30",
       "company": "ALTA",
       "title": "GTM Ops / GTM Engineer",
       "url": "",
@@ -106,7 +106,7 @@
       "choseNotToApply": null,
       "sqlTest": null,
       "analyticsTest": null,
-      "caseStudy": null,
+      "caseStudy": true,
       "id": "job-1784786997985"
     },
     {
