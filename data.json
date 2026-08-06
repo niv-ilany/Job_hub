@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-06T05:44:36.419Z",
+    "lastUpdated": "2026-08-06T05:45:01.206Z",
     "jobCount": 368
   },
   "trackerJobs": [
@@ -59,7 +59,7 @@
     },
     {
       "month": "2026-07",
-      "lastUpdate": "2026-07-31",
+      "lastUpdate": "2026-08-06",
       "company": "Hypernative",
       "title": "Partner Growth Analyst",
       "url": "https://www.comeet.com/jobs/hypernative/8A.00E/partner-growth-analyst/99.E6F",
@@ -70,19 +70,19 @@
       "companyType": "B2B",
       "processOverride": null,
       "fitScore": 58,
-      "numInterviews": null,
+      "numInterviews": 2,
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
       "gotResponse": true,
       "thankYouEmail": null,
-      "interviewed": null,
+      "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
       "analyticsTest": null,
       "caseStudy": null,
       "id": "job-1784882440968",
-      "nextInterviewDate": "2026-08-03"
+      "nextInterviewDate": "2026-08-17"
     },
     {
       "month": "2026-07",
