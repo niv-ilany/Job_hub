@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-02T18:39:57.445Z",
+    "lastUpdated": "2026-08-06T05:43:42.251Z",
     "jobCount": 368
   },
   "trackerJobs": [
@@ -113,7 +113,7 @@
     },
     {
       "month": "2026-07",
-      "lastUpdate": "2026-08-02",
+      "lastUpdate": "2026-08-06",
       "company": "שירות התעסוקה / מרכז מב\"ת (AI בתעסוקה)",
       "title": "מנהל/ת תחום מחקר ודאטה",
       "url": "https://www.taasuka.gov.il/media/3vajify0/%D7%A7%D7%95%D7%9C-%D7%A7%D7%95%D7%A8%D7%90-%D7%9E%D7%A0%D7%94%D7%9C-%D7%AA%D7%97%D7%95%D7%9D-%D7%9E%D7%97%D7%A7%D7%A8-%D7%95%D7%93%D7%90%D7%98%D7%94.pdf",
@@ -129,7 +129,7 @@
       "viaEmployee": null,
       "viaLinkedin": null,
       "gotResponse": true,
-      "thankYouEmail": null,
+      "thankYouEmail": true,
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
