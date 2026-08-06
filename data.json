@@ -1,7 +1,7 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-06T05:43:42.251Z",
+    "lastUpdated": "2026-08-06T05:43:56.604Z",
     "jobCount": 368
   },
   "trackerJobs": [
@@ -192,7 +192,7 @@
     },
     {
       "month": "2026-07",
-      "lastUpdate": "2026-07-30",
+      "lastUpdate": "2026-08-06",
       "company": "PLAYSTUDIOS",
       "title": "Business Analyst - myKONAMI",
       "url": "https://www.linkedin.com/jobs/view/4437223401/",
@@ -203,7 +203,7 @@
       "companyType": null,
       "processOverride": null,
       "fitScore": 84,
-      "numInterviews": 1,
+      "numInterviews": 3,
       "applied": true,
       "viaEmployee": true,
       "viaLinkedin": null,
@@ -212,7 +212,7 @@
       "interviewed": true,
       "choseNotToApply": null,
       "sqlTest": null,
-      "analyticsTest": null,
+      "analyticsTest": true,
       "caseStudy": null,
       "id": "job-1784615212234",
       "nextInterviewDate": "2026-08-03"
