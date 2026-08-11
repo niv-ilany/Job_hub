@@ -1,10 +1,37 @@
 {
   "_meta": {
     "description": "Niv Ilany — Job Search Hub data file. Auto-saved by the app.",
-    "lastUpdated": "2026-08-06T05:45:01.206Z",
-    "jobCount": 368
+    "lastUpdated": "2026-08-11T07:14:15.828Z",
+    "jobCount": 369
   },
   "trackerJobs": [
+    {
+      "month": "2026-08",
+      "lastUpdate": "2026-08-11",
+      "company": "Qodo",
+      "title": "Data Analyst",
+      "url": "https://www.linkedin.com/jobs/view/4448862352/",
+      "applicationMethod": "",
+      "status": "⚠️ Apply with caution (Score: 74/100) — Qodo is a B2B developer tooling/AI company, which is a partial fit — Niv has B2B SaaS analytics experience from Checkmarx and Mend, and his 2026 indie app projects genuinely demonstrate AI-native working style. However, the explicit 'build and maintain the modeled data layer' requirement plus the primary stakeholder being the R&D/product engineering team (not marketing or growth) are meaningful mismatches. The role skews toward product analytics in a deeply technical context, which is adjacent to but not squarely in Niv's strongest lane.",
+      "interviewNotes": "",
+      "companySize": null,
+      "companyType": null,
+      "processOverride": null,
+      "fitScore": 74,
+      "numInterviews": null,
+      "nextInterviewDate": null,
+      "applied": null,
+      "viaEmployee": null,
+      "viaLinkedin": null,
+      "gotResponse": null,
+      "thankYouEmail": null,
+      "interviewed": null,
+      "choseNotToApply": null,
+      "sqlTest": null,
+      "analyticsTest": null,
+      "caseStudy": null,
+      "id": "job-1786432451757"
+    },
     {
       "month": "2026-07",
       "lastUpdate": "2026-07-27",
